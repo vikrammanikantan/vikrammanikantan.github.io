@@ -117,7 +117,7 @@ input, select, textarea {
 
 		a:hover {
 			border-bottom-color: transparent;
-			color: #4acaa8 !important;
+			color: #0F084B !important;
 		}
 
 	strong, b {
@@ -1848,7 +1848,7 @@ input, select, textarea {
 		input[type="email"]:focus,
 		select:focus,
 		textarea:focus {
-			border-color: #4acaa8;
+			border-color: #0F084B;
 		}
 
 	select {
@@ -1953,7 +1953,7 @@ input, select, textarea {
 
 		input[type="checkbox"]:focus + label:before,
 		input[type="radio"]:focus + label:before {
-			border-color: #4acaa8;
+			border-color: #0F084B;
 		}
 
 	input[type="checkbox"] + label:before {
@@ -2402,7 +2402,7 @@ input, select, textarea {
 			}
 
 			ul.feature-icons li:before {
-				background: #4acaa8;
+				background: #0F084B;
 				border-radius: 100%;
 				color: #ffffff;
 				display: block;
@@ -2618,7 +2618,7 @@ input, select, textarea {
 		input[type="reset"].primary,
 		input[type="button"].primary,
 		.button.primary {
-			background-color: #4acaa8;
+			background-color: #0F084B;
 			color: #ffffff !important;
 		}
 
@@ -2687,6 +2687,15 @@ input, select, textarea {
 
 /* Header */
 
+	:root{
+		--white: #ffffff;
+		--light: #E4EFF1;
+		--med: #26408B;
+		--dark: #0F084B;
+		--textdark: #322E18;
+		--verydark: #0D0221;
+	}
+
 	#header {
 		display: -moz-flex;
 		display: -webkit-flex;
@@ -2700,7 +2709,7 @@ input, select, textarea {
 		-webkit-justify-content: space-between;
 		-ms-justify-content: space-between;
 		justify-content: space-between;
-		background: #4acaa8;
+		background: var(--dark);
 		color: #d2f2e9;
 		height: 100%;
 		overflow-y: auto;
@@ -2712,15 +2721,16 @@ input, select, textarea {
 	}
 
 		#header h1, #header h2, #header h3, #header h4, #header h5, #header h6 {
-			color: #ffffff;
+			/* color of text in the header*/
+			color: var(--light);
 		}
 
-			#header h1 a, #header h2 a, #header h3 a, #header h4 a, #header h5 a, #header h6 a {
-				color: #ffffff;
-			}
+		#header h1 a, #header h2 a, #header h3 a, #header h4 a, #header h5 a, #header h6 a {
+			color: var(--light);
+		}
 
 		#header header p {
-			color: #b7eadc;
+			color: var(--light);
 		}
 
 		#header a {
@@ -2728,7 +2738,7 @@ input, select, textarea {
 		}
 
 			#header a:hover {
-				color: #ffffff !important;
+				color: var(--white) !important;
 			}
 
 		#header > header {
@@ -2751,7 +2761,7 @@ input, select, textarea {
 			}
 
 			#header > header p {
-				color: #d2f2e9;
+				color: #A6CFD5;
 				font-style: italic;
 				margin: 1em 0 0 0;
 			}
@@ -2772,7 +2782,8 @@ input, select, textarea {
 			}
 
 				#header > footer .icons li a {
-					color: #b7eadc;
+					/* changing the color of the icons in the header*/
+					color: #A6CFD5;
 				}
 
 		#header > nav {
@@ -2789,7 +2800,7 @@ input, select, textarea {
 			}
 
 				#header > nav ul li {
-					border-top: solid 2px #5ccfb1;
+					border-top: solid 2px var(--light);
 					display: block;
 					padding: 0;
 				}
@@ -2800,15 +2811,17 @@ input, select, textarea {
 						-ms-transition: none;
 						transition: none;
 						border: 0;
-						color: #ffffff !important;
+						/* color of the text of the navigation when not active*/
+						color: var(--light) !important;
 						display: block;
 						padding: 0.85em 0;
 						text-decoration: none;
 					}
 
 						#header > nav ul li a.active {
-							background: #fff;
-							color: #4acaa8 !important;
+							/*color of navigation box when active*/
+							background: var(--light);
+							color: var(--dark) !important;
 						}
 
 					#header > nav ul li:first-child {
@@ -2825,7 +2838,8 @@ input, select, textarea {
 /* Main */
 
 	#main > section {
-		border-top: solid 6px #f4f4f4;
+		/* the borders between sections*/
+		border-top: solid 6px var(--white);
 	}
 
 		#main > section > .container {
@@ -3030,8 +3044,8 @@ input, select, textarea {
 				top: 0;
 				width: 100%;
 				z-index: 10001;
-				background: #222;
-				color: #fff;
+				background: #fff;
+				color: #000;
 				min-width: 320px;
 			}
 
@@ -3076,7 +3090,7 @@ input, select, textarea {
 					}
 
 					#titleBar .toggle:before {
-						background: #4acaa8;
+						background: #0F084B;
 						color: #ffffff;
 						content: '\f0c9';
 						display: block;
