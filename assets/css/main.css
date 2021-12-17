@@ -1785,12 +1785,12 @@ input, select, textarea {
 	}
 
 	header.major h2 {
-		color: #000000;
+		color: var(--textmed);
 		font-size: 3.5em;
 	}
 
 		header.major h2 + p {
-			color: #000;
+			color: var(--textdark);
 			font-size: 1.75em;
 			font-weight: 700;
 			margin-top: -0.75em;
@@ -2689,11 +2689,14 @@ input, select, textarea {
 
 	:root{
 		--white: #ffffff;
-		--light: #E4EFF1;
+		--light: #ffffff;
 		--med: #26408B;
 		--dark: #0F084B;
-		--textdark: #322E18;
 		--verydark: #0D0221;
+
+		--textvdark: #0D0C07;
+		--textdark: #292615;
+		--textmed: #322E18;
 	}
 
 	#header {
@@ -2710,7 +2713,7 @@ input, select, textarea {
 		-ms-justify-content: space-between;
 		justify-content: space-between;
 		background: var(--dark);
-		color: #d2f2e9;
+		color: var(--light);
 		height: 100%;
 		overflow-y: auto;
 		position: fixed;
@@ -2761,7 +2764,7 @@ input, select, textarea {
 			}
 
 			#header > header p {
-				color: #A6CFD5;
+				color: var(--light);
 				font-style: italic;
 				margin: 1em 0 0 0;
 			}
@@ -2831,7 +2834,8 @@ input, select, textarea {
 /* Wrapper */
 
 	#wrapper {
-		background: #fff;
+		/* color of the background behind the text*/
+		background: var(--white);
 		padding-right: 23em;
 	}
 
@@ -2946,7 +2950,10 @@ input, select, textarea {
 
 	}
 
-/* Medium */
+/* Medium
+	For vertical phone browsers
+
+*/
 
 	#titleBar {
 		display: none;
@@ -3044,13 +3051,14 @@ input, select, textarea {
 				top: 0;
 				width: 100%;
 				z-index: 10001;
-				background: #fff;
+				background: var(--dark);
 				color: #000;
 				min-width: 320px;
 			}
 
 				#titleBar .title {
-					color: #fff;
+					/* color of the text in the title bar*/
+					color: var(--light);
 					display: block;
 					font-weight: 700;
 					height: 44px;
@@ -3094,7 +3102,7 @@ input, select, textarea {
 						color: #ffffff;
 						content: '\f0c9';
 						display: block;
-						font-size: 18px;
+						font-size: 16px;
 						height: 44px;
 						line-height: 44px;
 						position: absolute;
