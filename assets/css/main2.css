@@ -63,6 +63,10 @@ body, input, select, textarea, footer, header {
 	line-height: 1.75em;
 }
 
+p.shifted {
+    margin-left: 30px;
+}
+
 
 h1, h2, h3, h4, h5, h6 {
 	color: var(--textdark);
@@ -240,4 +244,9 @@ ul.icons {
 
 small {
 	font-size: 70%;
+}
+
+large {
+	font-size: 150%;
+	font-weight: 600;
 }
