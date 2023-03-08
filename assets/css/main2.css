@@ -38,15 +38,6 @@ section, summary, time, mark, audio, video {
 	font: inherit;
 	vertical-align: baseline;}
 
-
-body {
-	background-color: white;
-	font-family: menlo; 
-	padding-top: 80px;
-	padding-right: 0px;
-	padding-bottom: 80px;
-	padding-left: 0px;
-}
 /* Basic Settings */
 
 body {
@@ -68,13 +59,17 @@ body, input, select, textarea, footer, header {
 	color: var(--textdark);
 	background-color: var(--base3);
 	font-family: menlo; 
-	padding-top: 80px;
-	padding-right: 80px;
-	padding-bottom: 80px;
-	padding-left: 80px;
 	font-size: 12pt;
 	font-weight: 400;
 	line-height: 1.75em;
+
+	margin:auto; 
+	max-width: 800px;
+}
+
+body{
+	padding-top: 30px;
+	padding-bottom: 30px;
 }
 
 p.shifted {
@@ -128,6 +123,8 @@ h6 {
 p	{
 	color: #657b83;
 }
+
+
 
 
 /* LINK SETTINGS */
@@ -287,14 +284,24 @@ div.main {
 	max-width: 800px;
 }
 
+div.footer{
+	color:  var(--base2);
+	font-size: 140%;
+}
+
 img{
 	float: right;
 }
 
 @media screen and (max-width: 1000px) {
-	div.main {
+	body {
 		margin:auto; 
 		max-width: 500px;
+	}
+
+	div.footer{
+		color:  var(--base2);
+		font-size: 140%;
 	}
 }
 
@@ -302,14 +309,11 @@ img{
 	/* For mobile phones: */
 
 	body {
-		color: var(--base2);
 		background-color: var(--base3);
 		font-size: 12pt;
 
-		padding-top: 50px;
-		padding-right: 50px;
-		padding-bottom: 50px;
-		padding-left: 50px;
+		margin:auto; 
+		max-width: 400px;
 	}
 	
 	
@@ -348,6 +352,11 @@ img{
 		max-width: 500px;
 	}
 
+	div.footer{
+		color:  var(--base2);
+		font-size: 200%;
+	}
+
 	nav{
 		font-size: 140%;
 	}
@@ -360,11 +369,6 @@ img{
 		display: block;
 		margin-left: auto;
 		margin-right: auto;
-	}
-
-	div.main {
-		margin:auto; 
-		max-width: 400px;
 	}
 
 	h1{
