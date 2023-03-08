@@ -286,3 +286,95 @@ div.main {
 	margin:auto; 
 	max-width: 800px;
 }
+
+img{
+	float: right;
+}
+
+@media screen and (max-width: 800px) {
+	div.main {
+		margin:auto; 
+		max-width: 600px;
+	}
+}
+
+@media screen and (max-width: 620px) {
+	/* For mobile phones: */
+
+	body {
+		color: var(--base2);
+		background-color: var(--base3);
+		font-size: 12pt;
+
+		padding-top: 50px;
+		padding-right: 50px;
+		padding-bottom: 50px;
+		padding-left: 50px;
+	}
+	
+	
+	h1, h2, h3, h4, h5, h6 {
+		color: var(--textvdark);
+		font-weight: 700;
+		line-height: 1em;
+		margin: 0 0 0.5625em 0;
+	}
+
+	small {
+		font-size: 100%;
+	}
+	
+	xsmall {
+		font-size: 70%;
+	}
+	
+	large {
+		font-size: 140%;
+		font-weight: 600;
+	}
+
+	xlarge {
+		font-size: 160%;
+		font-weight: 700;
+	}
+	
+	legacy {
+		font-size: 12pt;
+		color: var(--textmed);
+	}
+
+	div.main {
+		margin:auto; 
+		max-width: 500px;
+	}
+
+	nav{
+		font-size: 140%;
+	}
+
+	img{
+		float: none;
+		padding-top: 10px;
+		padding-bottom: 10px;
+
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	div.main {
+		margin:auto; 
+		max-width: 400px;
+	}
+
+	h1{
+		padding-top: 10px;
+		padding-bottom: 10px;
+
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	
+}
