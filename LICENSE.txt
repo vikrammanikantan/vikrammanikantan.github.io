@@ -1,3 +1,4 @@
 Copyright (c) Vikram Manikantan, 2023.
 
-This code may be used, with permission from the owner, for personal use only. Credit to the original source should also be included in the form: "Adapted from Vikram Manikantan 2023: https://github.com/vikrammanikantan/vikrammanikantan.github.io"
+This code may be used, with permission from the owner, for personal use only. 
+Credit to the original source should also be included in the form: "Adapted from Vikram Manikantan 2023: https://github.com/vikrammanikantan/vikrammanikantan.github.io"
