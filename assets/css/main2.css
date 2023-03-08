@@ -43,9 +43,9 @@ body {
 	background-color: white;
 	font-family: menlo; 
 	padding-top: 80px;
-	padding-right: 80px;
+	padding-right: 0px;
 	padding-bottom: 80px;
-	padding-left: 80px;
+	padding-left: 0px;
 }
 /* Basic Settings */
 
@@ -68,9 +68,9 @@ body, input, select, textarea, footer, header {
 	color: var(--textdark);
 	background-color: var(--base3);
 	font-family: menlo; 
-	padding-top: 50px;
+	padding-top: 80px;
 	padding-right: 80px;
-	padding-bottom: 50px;
+	padding-bottom: 80px;
 	padding-left: 80px;
 	font-size: 12pt;
 	font-weight: 400;
@@ -78,7 +78,7 @@ body, input, select, textarea, footer, header {
 }
 
 p.shifted {
-    margin-left: 30px;
+    margin-left: 0px;
 }
 
 
@@ -291,14 +291,14 @@ img{
 	float: right;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1000px) {
 	div.main {
 		margin:auto; 
-		max-width: 600px;
+		max-width: 500px;
 	}
 }
 
-@media screen and (max-width: 620px) {
+@media screen and (max-width: 680px) {
 	/* For mobile phones: */
 
 	body {
@@ -368,12 +368,17 @@ img{
 	}
 
 	h1{
-		padding-top: 10px;
-		padding-bottom: 10px;
+		margin-top: 15px;
+		margin-bottom: 15px;
 
 		display: block;
 		margin-left: auto;
 		margin-right: auto;
+		width: 100%;
+	}
+
+	p.intro{
+		text-align: center;
 	}
 
 	
