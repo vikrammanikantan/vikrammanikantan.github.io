@@ -2,7 +2,22 @@
 @import url("fontawesome-all.min.css");
 @import url("https://fonts.googleapis.com/css?family=Lato:400,400italic,700,700italic|Source+Code+Pro:400");
 
+:root{
+	--white: white;
+	--base03: #002b36;
+	--base02: #073642;
+	--base01: #586e75;
+	--base00: #657b83;
+	--base0: #839496;
+	--base1: #93a1a1;
+	--base2: #eee8d5;
+	--base3: #fdf6e3;
+	--black: black;
 
+	--textvdark: #002b36;
+	--textdark: #073642;
+	--textmed: #586e75;
+}
 
 /* Reset everything first */
 html, body, div, span, applet, object,
@@ -50,8 +65,8 @@ body {
 	}
 
 body, input, select, textarea, footer, header {
-	color: var(--textvdark);
-	background-color: #F8DEE2;
+	color: var(--textdark);
+	background-color: var(--base3);
 	font-family: menlo; 
 	padding-top: 50px;
 	padding-right: 80px;
@@ -68,7 +83,7 @@ p.shifted {
 
 
 h1, h2, h3, h4, h5, h6 {
-	color: var(--textdark);
+	color: var(--textvdark);
 	font-weight: 700;
 	line-height: 1em;
 	margin: 0 0 0.5625em 0;
@@ -111,7 +126,7 @@ h6 {
 }
 
 p	{
-	color: black;
+	color: #657b83;
 }
 
 
@@ -241,6 +256,12 @@ ul.icons {
 			width:80%; /* The width is fixed by pixels */
 	}
 
+p {
+	color: var(--textdark);
+
+}
+
+
 small {
 	font-size: 90%;
 }
@@ -256,7 +277,7 @@ large {
 
 legacy {
 	font-size: 100%;
-	color: #888888;
+	color: var(--textmed);
 }
 
 .body-link:hover { color: darkmagenta; }
