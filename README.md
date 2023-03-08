@@ -1,3 +1,7 @@
-# Vikram Manikantan's Website Repository
+# READ ME
 
-Welcome to the repository for my website. I use a template from html5up, it's great. 
+Website: www.vikrammanikantan.com
+Contact: vik@arizona.edu
+Hosted by: github.io
+
+This website was my first shot at creating one from scratch in html and css. Happy to help if anyone is also getting started!
