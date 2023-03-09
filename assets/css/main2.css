@@ -292,7 +292,7 @@ div.main {
 	max-width: 1000px;
 
 	position: relative;
-	min-height: 80vh;
+	min-height: 85vh;
 }
 
 div.footer{
@@ -377,7 +377,7 @@ img{
 	}
 	
 	xsmall {
-		font-size: 70%;
+		font-size: 40%;
 	}
 	
 	large {
