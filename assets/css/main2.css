@@ -290,6 +290,9 @@ legacy {
 div.main {
 	margin:auto; 
 	max-width: 1000px;
+
+	position: relative;
+	min-height: 80vh;
 }
 
 div.footer{
@@ -298,14 +301,25 @@ div.footer{
 	page-break-before: always;
 	padding-top: 15px;
 	text-align: center;
+
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	height: 2.5rem;
 }
 
-div.copyright{
+a.copyright{
 	color:  var(--base2);
 	font-size: 100%;
 	break-before: always;
 	text-align: center;
+
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	height: 2.5rem;
 }
+
 
 nav {
 	margin:auto;
