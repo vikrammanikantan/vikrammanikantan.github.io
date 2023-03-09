@@ -64,7 +64,7 @@ body, input, select, textarea, footer, header {
 	line-height: 1.75em;
 
 	margin:auto; 
-	max-width: 800px;
+	max-width: 900px;
 }
 
 body{
@@ -75,6 +75,7 @@ body{
 p.shifted {
     margin-left: 0px;
 }
+
 
 
 h1, h2, h3, h4, h5, h6 {
@@ -91,7 +92,7 @@ h1, h2, h3, h4, h5, h6 {
 	}
 
 h1 {
-	font-size: 2.2em;
+	font-size: 2.6em;
 	line-height: 1.5em;
 }
 
@@ -258,6 +259,13 @@ p {
 
 }
 
+hr {
+	height: 1px;
+	background-color: var(--base2);
+	border: none;
+	margin-top: 20px;
+}
+
 
 small {
 	font-size: 90%;
@@ -281,31 +289,48 @@ legacy {
 
 div.main {
 	margin:auto; 
-	max-width: 800px;
+	max-width: 1000px;
 }
 
 div.footer{
 	color:  var(--base2);
 	font-size: 140%;
+	page-break-before: always;
+	padding-top: 15px;
+	text-align: center;
+}
+
+div.copyright{
+	color:  var(--base2);
+	font-size: 100%;
+	break-before: always;
+	text-align: center;
+}
+
+nav {
+	margin:auto;
+	text-align: center;
+	padding-bottom: 20px;
 }
 
 img{
 	float: right;
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1130px) {
 	body {
 		margin:auto; 
-		max-width: 500px;
+		max-width: 600px;
 	}
 
 	div.footer{
 		color:  var(--base2);
 		font-size: 140%;
+		page-break-before: always;
 	}
 }
 
-@media screen and (max-width: 680px) {
+@media screen and (max-width: 780px) {
 	/* For mobile phones: */
 
 	body {
@@ -313,7 +338,12 @@ img{
 		font-size: 12pt;
 
 		margin:auto; 
-		max-width: 400px;
+		max-width: 380px;
+	}
+
+	nav {
+		margin:auto;
+		text-align: center;
 	}
 	
 	
@@ -322,6 +352,10 @@ img{
 		font-weight: 700;
 		line-height: 1em;
 		margin: 0 0 0.5625em 0;
+	}
+
+	h1.img{
+		margin:auto;
 	}
 
 	small {
@@ -354,15 +388,19 @@ img{
 
 	div.footer{
 		color:  var(--base2);
-		font-size: 200%;
+		font-size: 180%;
+		max-width: 300px;
+		page-break-before: always;
+		text-align: center;
 	}
 
 	nav{
-		font-size: 140%;
+		font-size: 130%;
 	}
 
 	img{
 		float: none;
+		text-align: center;
 		padding-top: 10px;
 		padding-bottom: 10px;
 
