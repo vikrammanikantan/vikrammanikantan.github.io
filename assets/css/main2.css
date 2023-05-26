@@ -156,25 +156,41 @@ a:link {
 	color: #C92C46;
 	background-color: transparent;
 	text-decoration: none;
-  }
-  
-  a:visited {
+}
+
+a:visited {
 	color: #C92C46;
 	background-color: transparent;
 	text-decoration: none;
-  }
-  
-  a:hover {
+}
+
+a:hover {
 	color: darkmagenta;
 	background-color: transparent;
 	text-decoration: none;
-  }
-  
-  a:active {
+}
+
+a:active {
 	color: black;
 	background-color: transparent;
 	text-decoration: none;
-  }
+}
+
+a.title{
+	font-size: 200%;
+	color: black;
+	text-decoration: none;
+	font-weight: 800;
+	
+
+}
+
+a.title:hover{
+	color: darkmagenta;
+	text-decoration: none;
+	background-color: transparent;
+
+}
 
 /* IMAGE SETTINGS */
 
@@ -343,7 +359,7 @@ a.copyright{
 nav {
 
 	margin:auto;
-	text-align: center;
+	text-align: left;
     padding-top: 10px;
 	padding-bottom: 10px;
 
@@ -466,5 +482,6 @@ img{
 		text-align: center;
 	}
 
+	
 	
 }
