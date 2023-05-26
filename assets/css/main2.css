@@ -110,26 +110,19 @@ h1.name{
 }
 
 h2 {
+	text-indent: 5px;
 	font-size: 1.5em;
 	line-height: 1.5em;
 	color: var(--base02);
 	display: inline;
 
-}
 
-.box h2 {
-	display: flex;
-	align-items: center;
-	gap: 2px;
-  }
-  
-.box h2::after {
-	content: "";
-	width: 5px;
-	height: 20px;
-	background: var(--base01);
+    /*
+	padding: 5px;
+	box-shadow: 4px 4px 0 var(--base02);
+	outline-color: var(--base02);
+	outline-style: solid;*/
 
-	display: inline-block;
 }
 
 h3 {
@@ -199,12 +192,24 @@ a.title{
 	font-weight: 800;
 }
 
-a.title:hover{
-	color: darkmagenta;
+a.titlehome{
+	font-size: 200%;
+	color: var(--base02);
 	text-decoration: none;
-	background-color: transparent;
-
+	font-weight: 800;
 }
+
+a.nav{
+	padding: 7.3px;
+}
+a.navselected{
+	padding: 5px;
+	box-shadow: 4px 4px 0 var(--base02);
+	outline-color: var(--base02);
+	outline-style: solid;
+}
+
+
 
 /* IMAGE SETTINGS */
 
@@ -372,7 +377,11 @@ a.copyright{
 
 
 nav {
-	box-shadow: 0 5px 0 var(--base02);
+	box-shadow: 0 7px 0 var(--base02);
+	outline-style: solid;
+	outline-width: 2px;
+	outline-color: var(--base3);
+
 	text-align: left;
     padding-top: 15px;
 	padding-bottom: 10px;
@@ -419,7 +428,7 @@ img{
 		font-size: 12pt;
 
 		margin:auto; 
-		max-width: 380px;
+		max-width: 370px;
 	}
 
 	
@@ -476,10 +485,11 @@ img{
 
 	div.footer{
 		color:  var(--base2);
-		font-size: 180%;
-		max-width: 300px;
+		font-size: 200%;
+		max-width: 370px;
 		page-break-before: always;
 		text-align: center;
+		align-items: center;
 	}
 
 	nav{
