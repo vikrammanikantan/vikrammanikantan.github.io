@@ -137,7 +137,7 @@ h6 {
 }
 
 p	{
-	color: #657b83;
+	color: var(--base01);
 	margin-top: 15px;
 	margin-bottom: 15px;
 }
@@ -305,9 +305,8 @@ legacy {
 .body-link:hover { color: darkmagenta; }
 
 div.main {
-	margin:auto; 
+	margin:auto;
 	max-width: 1000px;
-
 	position: relative;
 	min-height: 85vh;
 }
@@ -342,13 +341,14 @@ a.copyright{
 
 
 nav {
+
 	margin:auto;
 	text-align: center;
-	padding: 10px;
+    padding-top: 10px;
+	padding-bottom: 10px;
 
 	position: sticky;
 	top:0;
-
 	background-color: var(--base3);
 }
 
@@ -426,7 +426,7 @@ img{
 	}
 
 	div.main {
-		margin:auto; 
+		margin:auto;
 		max-width: 500px;
 	}
 
