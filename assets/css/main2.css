@@ -386,7 +386,7 @@ nav {
 
 	text-align: left;
     padding-top: 15px;
-	padding-bottom: 0px;
+	padding-bottom: 4px;
 
 	position: sticky;
 	top:0;
@@ -482,6 +482,8 @@ img{
 
 	div.main {
 		margin:auto;
+		padding-left: 3px;
+		padding-right: 3px;
 		max-width: 500px;
 	}
 
