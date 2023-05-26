@@ -329,7 +329,8 @@ large {
 
 legacy {
 	font-size: 100%;
-	color: var(--textmed);
+	color: var(--base01);
+	text-decoration: none;
 }
 
 .body-link:hover { color: darkmagenta; }
@@ -373,7 +374,7 @@ a.copyright{
 nav {
 	box-shadow: 0 5px 0 var(--base02);
 	text-align: left;
-    padding-top: 10px;
+    padding-top: 15px;
 	padding-bottom: 10px;
 
 	position: sticky;
@@ -400,9 +401,6 @@ img{
 
 	nav {
 		text-align: center;
-
-		padding-top: 10px;
-		padding-bottom: 10px;
 		padding-left: 100px;
 		padding-right: 100px;
 
@@ -428,11 +426,6 @@ img{
 	nav {
 		text-align: center;
 		position: sticky;
-
-		padding-top: 20px;
-		padding-bottom: 20px;
-
-		margin-bottom: 10px;
 
 		padding-left: 0px;
 		padding-right: 0px;
