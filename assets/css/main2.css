@@ -75,6 +75,7 @@ body{
 section.element{
 	margin-top: 20px;
 	margin-bottom: 10px;
+	padding-top: 10px;
 	background-color: var(--base3);
 }
 
@@ -385,7 +386,7 @@ nav {
 
 	text-align: left;
     padding-top: 15px;
-	padding-bottom: 5px;
+	padding-bottom: 0px;
 
 	position: sticky;
 	top:0;
