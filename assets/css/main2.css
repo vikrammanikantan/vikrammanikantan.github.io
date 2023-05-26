@@ -117,11 +117,11 @@ h2 {
 	display: inline;
 
 
-    
 	padding: 5px;
 	box-shadow: 4px 4px 0 var(--base02);
 	outline-color: var(--base02);
 	outline-style: solid;
+	outline-width: 2px;
 
 }
 
@@ -207,6 +207,7 @@ a.navselected{
 	box-shadow: 4px 4px 0 var(--base02);
 	outline-color: var(--base02);
 	outline-style: solid;
+	outline-width: 2px;
 }
 
 
@@ -377,14 +378,14 @@ a.copyright{
 
 
 nav {
-	box-shadow: 0 7px 0 var(--base02);
+	box-shadow: 0 15px 0 var(--base02);
 	outline-style: solid;
-	outline-width: 2px;
+	outline-width: 10px;
 	outline-color: var(--base3);
 
 	text-align: left;
     padding-top: 15px;
-	padding-bottom: 10px;
+	padding-bottom: 5px;
 
 	position: sticky;
 	top:0;
