@@ -73,7 +73,7 @@ body{
 }
 
 section.element{
-	margin-top: 10px;
+	margin-top: 20px;
 	margin-bottom: 10px;
 	background-color: var(--base3);
 }
@@ -112,9 +112,24 @@ h1.name{
 h2 {
 	font-size: 1.5em;
 	line-height: 1.5em;
-
+	color: var(--base02);
 	display: inline;
 
+}
+
+.box h2 {
+	display: flex;
+	align-items: center;
+	gap: 2px;
+  }
+  
+.box h2::after {
+	content: "";
+	width: 5px;
+	height: 20px;
+	background: var(--base01);
+
+	display: inline-block;
 }
 
 h3 {
@@ -179,11 +194,9 @@ a:active {
 
 a.title{
 	font-size: 200%;
-	color: black;
+	color: var(--base02);
 	text-decoration: none;
 	font-weight: 800;
-	
-
 }
 
 a.title:hover{
@@ -329,7 +342,7 @@ div.main {
 }
 
 div.footer{
-	color:  var(--base2);
+	color:  var(--base3);
 	font-size: 140%;
 	page-break-before: always;
 	padding-bottom: 0px;
@@ -358,6 +371,7 @@ a.copyright{
 
 
 nav {
+	box-shadow: 0 5px 0 var(--base02);
 	text-align: left;
     padding-top: 10px;
 	padding-bottom: 10px;
@@ -383,6 +397,20 @@ img{
 		page-break-before: always;
 
 	}
+
+	nav {
+		text-align: center;
+
+		padding-top: 10px;
+		padding-bottom: 10px;
+		padding-left: 100px;
+		padding-right: 100px;
+
+		position: sticky;
+		
+		top:0;
+		background-color: var(--base3);
+	}
 }
 
 @media screen and (max-width: 780px) {
@@ -396,12 +424,18 @@ img{
 		max-width: 380px;
 	}
 
+	
 	nav {
-		text-align: left;
+		text-align: center;
 		position: sticky;
 
-		padding-top: 10px;
-		padding-bottom: 10px;
+		padding-top: 20px;
+		padding-bottom: 20px;
+
+		margin-bottom: 10px;
+
+		padding-left: 0px;
+		padding-right: 0px;
 
 		top:0;
 		background-color: var(--base3);
@@ -456,7 +490,7 @@ img{
 	}
 
 	nav{
-		font-size: 130%;
+		font-size: 100%;
 	}
 
 	img{
@@ -482,7 +516,26 @@ img{
 	p.intro{
 		text-align: center;
 	}
+}
 
-	
-	
+.blinking-cursor {
+	font-weight: 800;
+	font-size: 200%;
+	color: var(--base02);
+	margin-left: 0px;
+
+	-webkit-animation: 1s blink step-end infinite;
+	-moz-animation: 1s blink step-end infinite;
+	-ms-animation: 1s blink step-end infinite;
+	-o-animation: 1s blink step-end infinite;
+	animation: 1s blink step-end infinite;
+}
+
+@keyframes blink {
+	from, to {
+		color: transparent;
+	}
+	50% {
+		color: black;
+	}
 }
