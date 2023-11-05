@@ -6,7 +6,7 @@
 /* defining base colors */
 :root{
 	--white: white;
-	--base03: #002b36;
+	--base03: #001613; /* 002b36 */
 	--base02: #073642;
 	--base01: #586e75;
 	--base00: #657b83;
@@ -16,8 +16,8 @@
 	--base3: #fdf6e3;
 	--black: black;
 
-	--textvdark: #002b36;
-	--textdark: #073642;
+	--textvdark: #ffffff;
+	--textdark: #ffffff;
 	--textmed: #586e75;
 }
 
@@ -43,8 +43,8 @@ section, summary, time, mark, audio, video {
 /* Basic Settings */
 
 body, input, select, textarea, footer, header {
-	color: var(--textdark);
-	background-color: var(--base3);
+	color: var(--white);
+	background-color: var(--base03);
 	font-family: menlo; 
 	font-size: 12pt;
 	font-weight: 400;
@@ -63,7 +63,7 @@ section.element{
 	margin-top: 20px;
 	margin-bottom: 10px;
 	padding-top: 10px;
-	background-color: var(--base3);
+	background-color: var(--base03);
 }
 
 p.shifted {
@@ -73,7 +73,7 @@ p.shifted {
 
 
 h1, h2, h3, h4, h5, h6 {
-	color: var(--textvdark);
+	color: var(--white);
 	font-weight: 700;
 	line-height: 1em;
 	margin: 0 0 0.5625em 0;
@@ -206,7 +206,7 @@ img {
 	width: 250px;
 	height: 250px;
 	object-fit: cover;
-	border-radius: 50%;
+	border-radius: 0%;
 }
 
 
