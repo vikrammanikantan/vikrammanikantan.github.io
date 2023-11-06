@@ -110,11 +110,11 @@ a:hover {
 	width: 900px; /* Full width */
 	transition: top 0.3s; /* Transition effect when sliding down (and up) */
 
-	padding-top: 10px;
+	padding-top: 0px;
 
 	position: fixed;
 
-	box-shadow: 0 1px 0 var(--white);
+	box-shadow: 0 5px 0 var(--white);
 	outline-style: solid;
 	outline-width: 0px;
 	outline-color: var(--base03);
@@ -133,6 +133,7 @@ a:hover {
 	color: var(--white);
 	width: 120px;
 	padding: 10px;
+	padding-top: 20px;
 	text-align: center;
 	line-height: 40px;
 	font-size: 20px;
