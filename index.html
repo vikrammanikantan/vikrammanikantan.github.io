@@ -1,22 +1,66 @@
 <!DOCTYPE html>
-
-<meta name="viewport" content="width=device-width, initial-scale=1.0">		
-
-<head>
-    <title>Vikram Manikantan</title>
-    <link rel="icon" type="image/x-icon" href="images/favicon.png" style="height: 50;width: 50;aspect-ratio: 1;">
-    <link rel="stylesheet" href="assets/css/main.css" />
-</head>
-
-
-
 <html lang="en-US">
-	<div class="main">
 
-        <section class="element">
-            <img src="images/profile.jpg" alt="Profile photo">  
-            <p class="intro" style="font-weight: bolder; font-style:italic;"> 2nd year PhD in theoretical/computational astrophysics studying compact objects</p>
-        </section> 
-    </div>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">		
+        
+        <title>Vikram Manikantan</title>
+        <link rel="icon" type="image/x-icon" href="images/favicon_ 2.png" style="height: 50;width: 50;aspect-ratio: 1;">
+        <link rel="stylesheet" href="assets/css/main.css" />
 
+    </head>
+
+    <body>
+
+        <div class="navbar" id="navbar"> 
+
+            <!-- <span class="blinking-cursor" style="margin-left: -10px;">.</span> -->
+            <a href="index.html"> <img src="images/favicon_ 2.png"  style="width: 50px;"> </a>
+            <a href="research.html">research</a> 
+            <a href="outreach.html">outreach</a> 
+            <a href="music.html">music</a> 
+            <a href="contact.html">contact</a> 
+        </div>
+
+        <div class="main">
+
+            <!-- first row, name and photo -->
+            <div class="row" id="landing" style=" height:100vh; width:100%;  grid-row-start: 1; grid-row-end: 1; justify-content: flex-start; padding-top: 30px; padding-bottom: 100px; align-items: center;">
+
+                <div style="width: 40%; align-self:center; justify-self: flex-start;">
+                    <img src="images/favicon_ 2.png" height="200px">
+
+                    <p style="font-size:xxx-large; font-weight: 900; font-style:italic; font-family: hershey-heavy; line-height: 100%;"> Vikram Manikantan</p>
+
+                    <p style="font-size: 20px; font-weight: normal; margin-top: 5%; font-style:normal; line-height: 100%;"> computational astrophysicist</p>
+                </div>
+
+                <div style="width: 40%; height: 80%;">
+                    <div style="width: 230px; height: 80%; transform: skewX(-10deg); overflow:hidden; float: right;">
+                        <img src="images/profile.jpg" style="object-fit: cover; width: 140%; height: 100%; transform:skewX(10deg) translateX(-13%);">
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- second row,  -->
+            <div class="row" style="height: 100%;  grid-row-start: 2; grid-row-end: 2; padding: 0px; justify-content: center; overflow: hidden;">
+                <img src="images/sim_image.png" width="100%">
+            </div>
+
+
+            <!-- third row, -->
+            <div class="row" style="height: 300px;  grid-row-start: 3; grid-row-end: 3;">
+                this is the third row in my grid
+            </div>
+
+            <!-- fourth row, -->
+            <div class="row" style="height: 300px;  grid-row-start:auto; grid-row-end: auto;">
+                this is the fourth row in my grid
+            </div>
+        </div>
+
+        <script src="assets/js/navbar.js"></script>
+
+        </body>
 </html>

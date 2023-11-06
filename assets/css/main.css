@@ -2,6 +2,21 @@
 @import url("fontawesome-all.min.css");
 @import url("https://fonts.googleapis.com/css?family=Lato:400,400italic,700,700italic|Source+Code+Pro:400");
 
+@font-face{
+	font-family: hershey-light;
+	src: url(../webfonts/AVHersheySimplexLight.ttf)
+}
+
+@font-face{
+	font-family: hershey-medium;
+	src: url(../webfonts/AVHersheySimplexMedium.ttf)
+}
+
+@font-face{
+	font-family: hershey-heavy;
+	src: url(../webfonts/AVHersheySimplexHeavy.ttf)
+}
+
 
 /* defining base colors */
 :root{
@@ -45,8 +60,8 @@ section, summary, time, mark, audio, video {
 body, input, select, textarea, footer, header {
 	color: var(--white);
 	background-color: var(--base03);
-	font-family: menlo; 
-	font-size: 12pt;
+	font-family: hershey-medium; 
+	font-size: 20pt;
 	font-weight: 400;
 	line-height: 1.75em;
 
@@ -57,86 +72,6 @@ body, input, select, textarea, footer, header {
 body{
 	padding-top: 30px;
 	padding-bottom: 30px;
-}
-
-section.element{
-	margin-top: 20px;
-	margin-bottom: 10px;
-	padding-top: 10px;
-	background-color: var(--base03);
-}
-
-p.shifted {
-    margin-left: 0px;
-}
-
-
-
-h1, h2, h3, h4, h5, h6 {
-	color: var(--white);
-	font-weight: 700;
-	line-height: 1em;
-	margin: 0 0 0.5625em 0;
-}
-
-	h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
-		border: 0;
-		color: inherit;
-		text-decoration: none;
-	}
-
-h1 {
-	font-size: 2.6em;
-	line-height: 1.5em;
-}
-
-h1.name{
-	text-align: left;
-	white-space: nowrap;
-	font-size: 200%;
-	margin: 0 0 0 0;
-}
-
-h2 {
-	text-indent: 5px;
-	font-size: 1.5em;
-	line-height: 1.5em;
-	color: var(--base02);
-	display: inline;
-
-
-	padding: 5px;
-	box-shadow: 4px 4px 0 var(--base02);
-	outline-color: var(--base02);
-	outline-style: solid;
-	outline-width: 2px;
-
-}
-
-h3 {
-	font-size: 1.25em;
-	line-height: 1.5em;
-}
-
-h4 {
-	font-size: 1.0em;
-	line-height: 1.5em;
-}
-
-h5 {
-	font-size: 0.7em;
-	line-height: 1.5em;
-}
-
-h6 {
-	font-size: 0.4em;
-	line-height: 1.5em;
-}
-
-p	{
-	color: var(--base01);
-	margin-top: 15px;
-	margin-bottom: 15px;
 }
 
 
@@ -150,191 +85,101 @@ a {
 
 /* unvisited link */
 a:link {
-	color: #C92C46;
-	background-color: transparent;
-	text-decoration: none;
-}
-
-a:visited {
-	color: #C92C46;
+	color: var(--textvdark);
 	background-color: transparent;
 	text-decoration: none;
 }
 
 a:hover {
-	color: darkmagenta;
+	color: var(--textvdark);
 	background-color: transparent;
 	text-decoration: none;
 }
 
-a:active {
-	color: black;
-	background-color: transparent;
-	text-decoration: none;
-}
+/* NAV BAR SETTINGS */
 
-a.title{
-	font-size: 200%;
-	color: var(--base02);
-	text-decoration: none;
-	font-weight: 800;
-}
+.navbar {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	max-width: 100vw;
 
-a.titlehome{
-	font-size: 200%;
-	color: var(--base02);
-	text-decoration: none;
-	font-weight: 800;
-}
+	justify-content: center;
 
-a.nav{
-	padding: 7.3px;
-}
-a.navselected{
-	padding: 5px;
-	box-shadow: 4px 4px 0 var(--base02);
-	outline-color: var(--base02);
+	top: -100px; /* Hide the navbar 50 px outside of the top view */
+	width: 900px; /* Full width */
+	transition: top 0.3s; /* Transition effect when sliding down (and up) */
+
+	padding-top: 10px;
+
+	position: fixed;
+
+	box-shadow: 0 1px 0 var(--white);
 	outline-style: solid;
-	outline-width: 2px;
-}
+	outline-width: 0px;
+	outline-color: var(--base03);
+	background-color: var(--base03);
 
+	z-index: 5;
+  }
 
+/* Style the navbar links */
+.navbar > a{
 
-/* IMAGE SETTINGS */
+	background-color: var(--base03);
 
-img {
-	width: 250px;
-	height: 250px;
-	object-fit: cover;
-	border-radius: 0%;
-}
+	display: block;
 
+	color: var(--white);
+	width: 120px;
+	padding: 10px;
+	text-align: center;
+	line-height: 40px;
+	font-size: 20px;
 
-
-/* Feature Icons */
-
-ul.feature-icons {
-	list-style: none;
-	padding-left: 0;
-}
-
-	ul.feature-icons li {
-		text-decoration: none;
-		display: inline-block;
-		margin: 0 0 1.6875em 0;
-		padding: 0.35em 0 0 3.5em;
-		position: relative;
-		vertical-align: top;
-		width: 48%;
-	}
-
-		ul.feature-icons li:before {
-			-moz-osx-font-smoothing: grayscale;
-			-webkit-font-smoothing: antialiased;
-			display: inline-block;
-			font-style: normal;
-			font-variant: normal;
-			text-rendering: auto;
-			line-height: 1;
-			text-transform: none !important;
-			font-family: 'Font Awesome 5 Free';
-			font-weight: 400;
-		}
-
-		ul.feature-icons li:before {
-			background: #0F084B;
-			border-radius: 100%;
-			color: var(--light);
-			display: block;
-			height: 2.5em;
-			left: 0;
-			line-height: 2.5em;
-			position: absolute;
-			text-align: center;
-			top: 0;
-			width: 2.5em;
-		}
-
-/* Icons */
-
-ul.icons {
-	cursor: default;
-	list-style: none;
-	padding-left: 0;
-}
-
-	ul.icons li {
-		display: inline-block;
-		padding: 0 1em 0 0;
-	}
-
-		ul.icons li:last-child {
-			padding-right: 0 !important;
-		}
-
-		ul.icons li .icon:before {
-			font-size: 1.25em;
-		}
-
-		#header > footer .icons {
-			margin: 0;
-		}
-
-		#header > footer .icons li a {
-			/* changing the color of the icons in the header*/
-			color: var(--light);
-		}
-
-		ul.feature-icons li {
-			display: block;
-			width: 100%;
-		}
-
-	#container{
-		/*Styling for any element with the id="container" */
-			width:80%; /* The width is fixed by pixels */
-	}
-
-p {
-	color: var(--textdark);
 
 }
 
-hr {
-	height: 1px;
-	background-color: var(--base2);
-	border: none;
-	margin-top: 20px;
+.navbar a:hover {
+	background-color: #fff;
+	color: var(--base03);
 }
 
+/* creating a grid for the main content */
+.main {
+	padding-top: 20px;
 
-small {
-	font-size: 90%;
-}
+	display: grid;
+	column-count: 1;
+	gap: 10px 10px;
 
-xsmall {
-	font-size: 70%;
-}
-
-large {
-	font-size: 150%;
-	font-weight: 600;
-}
-
-legacy {
-	font-size: 100%;
-	color: var(--base01);
-	text-decoration: none;
-}
-
-.body-link:hover { color: darkmagenta; }
-
-div.main {
 	margin:auto;
 	max-width: 1000px;
 	position: relative;
 	min-height: 85vh;
 }
+
+/* defining flexboxes for each row */
+.main > div.row{
+
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+
+	padding-top: 10px;
+
+	width:100%;
+
+}
+
+/* defining each item within the flexbox */
+.row > div{
+	margin: 5%;
+	text-align: left;
+	line-height: 75px;
+	font-size: 30px;
+}
+
 
 div.footer{
 	color:  var(--base3);
@@ -365,47 +210,11 @@ a.copyright{
 }
 
 
-nav {
-	box-shadow: 0 15px 0 var(--base02);
-	outline-style: solid;
-	outline-width: 10px;
-	outline-color: var(--base3);
-
-	text-align: left;
-    padding-top: 15px;
-	padding-bottom: 4px;
-
-	position: sticky;
-	top:0;
-	background-color: var(--base3);
-}
-
-img{
-	float: right;
-}
-
+/* narrow screens */
 @media screen and (max-width: 1130px) {
 	body {
 		margin:auto; 
 		max-width: 600px;
-	}
-
-	div.footer{
-		color:  var(--base2);
-		font-size: 140%;
-		page-break-before: always;
-
-	}
-
-	nav {
-		text-align: center;
-		padding-left: 100px;
-		padding-right: 100px;
-
-		position: sticky;
-		
-		top:0;
-		background-color: var(--base3);
 	}
 }
 
@@ -413,7 +222,7 @@ img{
 	/* For mobile phones: */
 
 	body {
-		background-color: var(--base3);
+		background-color: var(--base03);
 		font-size: 12pt;
 
 		margin:auto; 
@@ -421,95 +230,6 @@ img{
 	}
 
 	
-	nav {
-		text-align: center;
-		position: sticky;
-
-		padding-left: 0px;
-		padding-right: 0px;
-
-		top:0;
-		background-color: var(--base3);
-	}
-	
-	
-	h1, h2, h3, h4, h5, h6 {
-		color: var(--textvdark);
-		font-weight: 700;
-		line-height: 1em;
-		margin: 0 0 0.5625em 0;
-	}
-
-	h1.img{
-		margin:auto;
-	}
-
-	small {
-		font-size: 100%;
-	}
-	
-	xsmall {
-		font-size: 40%;
-	}
-	
-	large {
-		font-size: 140%;
-		font-weight: 600;
-	}
-
-	xlarge {
-		font-size: 160%;
-		font-weight: 700;
-	}
-	
-	legacy {
-		font-size: 12pt;
-		color: var(--textmed);
-	}
-
-	div.main {
-		margin:auto;
-		padding-left: 3px;
-		padding-right: 3px;
-		max-width: 500px;
-	}
-
-	div.footer{
-		color:  var(--base2);
-		font-size: 200%;
-		max-width: 370px;
-		page-break-before: always;
-		text-align: center;
-		align-items: center;
-	}
-
-	nav{
-		font-size: 100%;
-	}
-
-	img{
-		float: none;
-		text-align: center;
-		padding-top: 10px;
-		padding-bottom: 10px;
-
-		display: block;
-		margin-left: auto;
-		margin-right: auto;
-	}
-
-	h1{
-		margin-top: 15px;
-		margin-bottom: 15px;
-
-		text-align: center; 
-		margin: auto;
-		width: 100%;
-	}
-
-	p.intro{
-		text-align: center;
-	}
 }
 
 .blinking-cursor {
