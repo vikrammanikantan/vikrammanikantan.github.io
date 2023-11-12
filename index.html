@@ -10,60 +10,139 @@
 
     </head>
 
-    <body>
+    <body id="top">
 
         <div class="navbar" id="navbar"> 
 
             <!-- <span class="blinking-cursor" style="margin-left: -10px;">.</span> -->
-            <a href="index.html"> <img src="images/favicon.png"  style="width: 50px;"> </a>
-            <a href="research.html">research</a> 
-            <a href="outreach.html">outreach</a> 
-            <a href="music.html">music</a> 
-            <a href="contact.html">contact</a> 
+            <a href="#top"> <img src="images/favicon.png"  style="width: 50px;"> </a>
+            <a href="#research">research</a> 
+            <a href="#outreach">outreach</a> 
+            <a href="#music">music</a> 
+            <a href="#contact">contact</a> 
         </div>
 
         <div class="main">
 
             <!-- first row, name and photo -->
-            <div class="row" id="landing" style=" height:100vh; width:100%;  grid-row-start: 1; grid-row-end: 1; justify-content: flex-start; padding-top: 0px; padding-bottom: 0px; align-items: center;">
+            <!-- additions: 1. down arrow, link to next section, 2. slow fade in, 3. typing animation for text -->
+            <div class="row black" id="landing" style="align-items: center; align-content: center; justify-content: center; height: 95vh; padding-top: 0px;">
 
-                <div style="width: 60%; align-self:center; justify-self: flex-start;">
+                <div style="width: 40vw;">
                     <img src="images/favicon.png" style="height:100px;">
 
-                    <p style="font-size:40px; font-weight: 900; font-style:italic; line-height: 100%;"> Vikram Manikantan</p>
+                    <p style="font-size:40px; font-weight: 900; font-style:italic; line-height: 100%; padding: 0;">Vikram Manikantan</p>
 
-                    <p style="font-size: 20px; font-weight: normal; margin-top: 5%; font-style:normal; line-height: 100%;"> computational astrophysicist</p>
+                    <p style="font-size: 20px; font-weight: 500; margin-top: 3%; font-style:normal; line-height: 100%; padding: 0;"> computational astrophysicist</p>
                 </div>
 
-                <div style="width: 18%; height: 80%;">
-                    <div style="width: 230px; height: 80%; transform: skewX(-12deg); overflow:hidden; float: right;">
+                <div style="height: 80%; width: 30vw;">
+                    <div style="width: 210px; height: 80%; transform: skewX(-12deg); overflow:hidden; float:inline-end;">
                         <img src="images/profile.jpg" style="object-fit: cover; width: 160%; height: 100%; transform:skewX(12deg) translateX(-17%);">
                     </div>
                 </div>
 
+                <div style="width: 80vw; min-height: 50px; max-height: 5vh; justify-content: center; align-items: center; text-align: center;"> 
+                    <a href="#aboutme">
+                        <span class="blinking-cursor" style="font-size: 200%; font-weight: 600; line-height: 1px; font-stretch:ultra-condensed;"> 
+                            &#9073
+                        </span>
+                    </a>
+                </div>
+
             </div>
 
+            <div class="row break" id="aboutme"></div>
+
             <!-- second row,  -->
-            <div class="row" style="grid-row-start: 2; grid-row-end: 2; padding: 0px; justify-content: left; overflow: hidden;">
-                <div>
-                    <h1> about me </h1>
+            <div class="row white" id="aboutme2">
+                <div style="">
+                    <h1 style="filter: invert(1);"> about me </h1>
+                </div>
+
+                <div style="width: 80vw; min-height: 50px; max-height: 5vh; align-self: flex-end; text-align: center;"> 
+                    <a href="#research">
+                        <span class="blinking-cursor" style="font-size: 200%; font-weight: 700; line-height: 1px; filter: invert(1);"> 
+                            &#9073
+                        </span>
+                    </a>
                 </div>
             </div>
 
+            <div class="row left" style="grid-row-start: 3;">  </div>
+            <div class="row right">  </div>
+            
 
             <!-- third row, -->
-            <div class="row" style="grid-row-start: 3; grid-row-end: 3;">
+            <div class="row break" id="research" style="background-color: #fff;"></div>
+            <div class="row black" id="research2">
                 <div>
                     <h1> research </h1>
+                </div>
+
+                <div style="width: 80vw; min-height: 50px; max-height: 5vh; align-self: flex-end; text-align: center;"> 
+                    <a href="#outreach">
+                        <span class="blinking-cursor" style="font-size: 200%; font-weight: 700; line-height: 1px; filter: invert(0);"> 
+                            &#9073
+                        </span>
+                    </a>
                 </div>
             </div>
 
             <!-- fourth row, -->
-            <div class="row" style="grid-row-start:auto; grid-row-end: auto;">
+            <div class="row break" id="outreach" style="background-color: #000;"></div>
+            <div class="row white" id="outreach2">
                 <div>
-                    <h1> outreach </h1>
+                    <h1 style="filter: invert(1);"> outreach </h1>
+                </div>
+
+                <div style="width: 80vw; min-height: 50px; max-height: 5vh; align-self: flex-end; text-align: center;"> 
+                    <a href="#music">
+                        <span class="blinking-cursor" style="font-size: 200%; font-weight: 700; line-height: 1px; filter: invert(1);"> 
+                            &#9073
+                        </span>
+                    </a>
                 </div>
             </div>
+
+            <div class="row left" style="grid-row-start: 7;">  </div>
+            <div class="row right">  </div>
+
+            <!-- fifth row, -->
+            <div class="row break" id="music" style="background-color: #fff;"></div>
+            <div class="row black" id="music">
+                <div>
+                    <h1> music </h1>
+
+                    <p>
+                        poor man's yacht club: <a href="www.instagram.com/pmyctunes"> [instagram]</a>
+                    </p>
+                </div>
+
+                <div style="width: 80vw; min-height: 50px; max-height: 5vh; align-self: flex-end; text-align: center;"> 
+                    <a href="#contact">
+                        <span class="blinking-cursor" style="font-size: 200%; font-weight: 700; line-height: 1px; filter: invert(0);"> 
+                            &#9073
+                        </span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="row break" id="contact" style="background-color: #000;"></div>
+            <div class="row white" id="contact">
+                <div>
+                    <h1 style="filter: invert(1);"> contact </h1>
+                    <p style="color: #000;">
+                        Email me: <a href="mailto:vik@arizona.edu" title="E-mail">vik@arizona.edu</a> <br>
+                        Github: <a href="https://www.github.com/vikrammanikantan" title="github"  target="_blank">vikrammanikantan</a><br>
+                        Twitter: <a href="https://www.twitter.com/astro_vik" title="twitter"  target="_blank">@astro_vik</a><br>
+                        Linkedin: <a href="https://www.linkedin.com/in/vikrammanikantan" title="linkedin"  target="_blank">in/vikrammanikantan</a>
+                    </p>
+                </div>
+            </div>
+
+            <div class="row left" style="grid-row-start: 11;">  </div>
+            <div class="row right">  </div>
         </div>
 
         <script src="assets/js/navbar.js"></script>
