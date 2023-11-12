@@ -28,7 +28,7 @@ html {
 /* defining base colors */
 :root{
 	--white: white;
-	--base03: #000 ; /* #001613; /* 002b36 */
+	--base03: #001613; /* 002b36 */
 	--base02: #073642;
 	--base01: #586e75;
 	--base00: #657b83;
@@ -38,8 +38,8 @@ html {
 	--base3: #fdf6e3;
 	--black: black;
 
-	--textvdark: #ffffff;
-	--textdark: #ffffff;
+	--textvdark: #fdf6e3;
+	--textdark: #fdf6e3;
 	--textmed: #586e75;
 }
 
@@ -66,7 +66,7 @@ section, summary, time, mark, audio, video {
 
 body, input, select, textarea, footer, header {
 	color: var(--white);
-	background-color: #000;
+	background-color: var(--base03);
 	font-family: 'Fira Code'; 
 	font-size: 20pt;
 	font-weight: 400;
@@ -122,7 +122,7 @@ a:hover {
 	max-width: 100vw;
 	width: 100vw; /* Full width */
 
-	box-shadow: 0 5px 0 var(--white);
+	box-shadow: 0 5px 0 var(--base3);
 	outline-style: solid;
 	outline-width: 0px;
 	outline-color: var(--base03);
@@ -138,12 +138,12 @@ a:hover {
 
 	display: block;
 
-	color: var(--white);
+	color: var(--base3);
 	width: 120px;
 	margin: 0;
 	padding: 10px;
 	padding-top: 20px;
-	padding-bottom: 0px;
+	padding-bottom: 4px;
 	text-align: center;
 	line-height: 40px;
 	font-size: 18px;
@@ -152,7 +152,7 @@ a:hover {
 }
 
 .navbar a:hover {
-	background-color: #fff;
+	background-color: var(--base3);
 	color: var(--base03);
 	/* filter: invert(1); */
 }
@@ -164,7 +164,7 @@ a:hover {
 
 	display: grid;
 	column-count: 3;
-	grid-template-columns: 10vw 80vw 10vw;
+	grid-template-columns: 15vw 70vw 15vw;
 
 	gap: 0px 0px;
 
@@ -172,7 +172,7 @@ a:hover {
 
 	position: relative;
 	min-height: 85vh;
-	background-color: #000;
+	
 }
 
 /* defining flexboxes for each row */
@@ -193,19 +193,18 @@ a:hover {
 
 	padding: 0;
 
-	width: 80vw;
+	width: 70vw;
 	height: calc(100vh - 120px);
 	background-color: none;
 }
 
 /* design for columns, one white one black */
 div.row.white{
-	background-color:#fff;
+	background-color:var(--base3);
 	padding-top: 30px;
 }
 
 div.row.black{
-	background-color:#000;
 	padding-top: 30px;
 }
 
@@ -229,9 +228,9 @@ div.row.left{
 
 	padding-top: 30px;
 	height: calc(100vh - 120px);
-	width: 10vw;
+	width: 15vw;
 
-	background-color: #fff;
+	background-color: var(--base3);
 }
 
 div.row.right{
@@ -242,9 +241,9 @@ div.row.right{
 
 	padding-top: 30px;
 	height: calc(100vh - 120px);
-	width: 10vw;
+	width: 15vw;
 
-	background-color: #fff;
+	background-color: var(--base3);
 }
 
 /* might have to add another row element here such that the first one is the background, and the second one actually contains all the content */
@@ -267,7 +266,7 @@ div.row.right{
 h1{
 	font-size: 30px;
 	font-weight: 700;
-	background-color: var(--white);
+	background-color: var(--base3);
 
 	color: var(--base03);
 
@@ -340,7 +339,7 @@ a.copyright{
 
 	font-weight: 800;
 	font-size: 100%;
-	color: #fff;
+	color: var(--base3);
 	margin-left: 0px;
 
 	-webkit-animation: 3s blink ease-in-out infinite;
@@ -353,7 +352,7 @@ a.copyright{
 
 @keyframes blink {
 	0% {
-		color: #fff;
+		color: var(--base3);
 	}
 	50% {
 		color: transparent;
