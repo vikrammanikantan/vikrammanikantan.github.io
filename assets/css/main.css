@@ -41,6 +41,10 @@ html {
 	--textvdark: #fdf6e3;
 	--textdark: #fdf6e3;
 	--textmed: #586e75;
+
+	--animation-type: ease-in-out;
+	--time-animate: 3s
+	;
 }
 
 /* Reset everything first */
@@ -78,9 +82,11 @@ body, input, select, textarea, footer, header {
 
 body{
 	padding-top: 30px;
-	padding-bottom: 30px;
+	padding-bottom: 0px;
 
 	align-items: center;
+
+	margin-bottom: 0;
 }
 
 
@@ -160,10 +166,57 @@ a:hover {
 	filter: invert(0.9);
 }
 
+/* FOOTER */
+.footer {
+
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+
+	width: 100vw; /* Full width */
+
+	box-shadow: 0 5px 0 var(--base3);
+	outline-style: solid;
+	outline-width: 0px;
+	outline-color: var(--base03);
+	background-color: var(--base03);
+
+	z-index: 5;
+  }
+
+/* Style the navbar links */
+.footer > a{
+
+	background-color: var(--base03);
+
+	display: block;
+
+	color: var(--base3);
+	width: 120px;
+	margin: 0;
+	padding: 0px;
+
+	text-align: center;
+	line-height: 40px;
+	font-size: 18px;
+
+
+}
+
+.footer a:hover {
+	background-color: var(--base3);
+	color: var(--base03);
+}
+
+.footer a:hover img{
+	filter: invert(0.9);
+}
+
 
 /* creating a grid for the main content: 3 columns, column 1 and 3 are just for spacing. Content is in column 2 */
 .main {
-	padding-top: 10px;
+	padding-top: 0px;
 
 	display: grid;
 	column-count: 3;
@@ -175,6 +228,9 @@ a:hover {
 
 	position: relative;
 	min-height: 85vh;
+
+	margin:0;
+	padding-bottom: 0;
 	
 }
 
@@ -185,21 +241,22 @@ a:hover {
 	grid-row-end: auto;
 	grid-column-start: 2;
 	grid-column-end: 2;
-
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
 
 	justify-content: start;
-	align-content: top;
+	align-content: flex-start;
 
 	margin: 0;
 
 	padding: 0;
 
 	width: 70vw;
-	height: calc(100vh - 120px);
-	background-color: none;
+	/* height: calc(100vh - 120px); */
+	height: auto;
+
+	background-color: auto;
 }
 
 /* design for columns, one white one black */
@@ -231,7 +288,8 @@ div.row.left{
 	grid-column-end: 1;
 
 	padding-top: 30px;
-	height: calc(100vh - 120px);
+	/* height: calc(100vh - 120px); */
+	height: auto;
 	width: 15vw;
 
 	background-color: var(--base3);
@@ -244,7 +302,8 @@ div.row.right{
 	grid-column-end: 3;
 
 	padding-top: 30px;
-	height: calc(100vh - 120px);
+	/* height: calc(100vh - 120px); */
+	height: auto;
 	width: 15vw;
 
 	background-color: var(--base3);
@@ -255,7 +314,6 @@ div.row.right{
 /* defining each item within the flexbox */
 .row > div{
 
-	margin: 0;
 	padding: 0;
 	text-align: left;
 
@@ -288,12 +346,13 @@ h1{
 	height: 80px;
 	width: fit-content;
 
-	margin-left: 0;
+	margin-left: 10px;
+	margin-bottom: 5px;
 }
 
 p{
 	font-size: x-large;
-	padding: 20px;
+	padding: 0px;
 }
 
 div.footer{
@@ -350,26 +409,83 @@ a img{
 	/* For mobile phones: */
 }
 
-.blinking-cursor {
+.blinking-cursor1 {
 
 	font-weight: 800;
 	font-size: 100%;
 	color: var(--base3);
 	margin-left: 0px;
 
-	-webkit-animation: 3s blink ease-in-out infinite;
-	-moz-animation: 3s blink ease-in-out infinite;
-	-ms-animation: 3s blink ease-in-out infinite;
-	-o-animation: 3s blink ease-in-out infinite;
-	animation: 3s blink ease-in-out infinite;
+	-webkit-animation: var(--time-animate) blink var(--animation-type) infinite;
+	-moz-animation: var(--time-animate) blink var(--animation-type) infinite;
+	-ms-animation: var(--time-animate) blink var(--animation-type) infinite;
+	-o-animation: var(--time-animate) blink var(--animation-type) infinite;
+	animation: var(--time-animate) blink var(--animation-type) infinite;
 }
 
 
 @keyframes blink {
 	0% {
+		color: transparent;
+	}
+	25%{
 		color: var(--base3);
 	}
-	50% {
+	100%{
+		color:transparent;
+	}
+}
+
+.blinking-cursor2 {
+
+	font-weight: 800;
+	font-size: 100%;
+	color: var(--base3);
+	margin-left: 0px;
+
+	-webkit-animation: var(--time-animate) blink2 var(--animation-type) infinite;
+	-moz-animation: var(--time-animate) blink2 var(--animation-type) infinite;
+	-ms-animation: var(--time-animate) blink2 var(--animation-type) infinite;
+	-o-animation: var(--time-animate) blink2 var(--animation-type) infinite;
+	animation: var(--time-animate) blink2 var(--animation-type) infinite;
+}
+
+
+@keyframes blink2 {
+	0% {
 		color: transparent;
+	}
+	50% {
+		color: var(--base3);
+	}
+	100%{
+		color:transparent;
+	}
+}
+
+.blinking-cursor3 {
+
+	font-weight: 800;
+	font-size: 100%;
+	color: var(--base3);
+	margin-left: 0px;
+
+	-webkit-animation: var(--time-animate) blink3 var(--animation-type) infinite;
+	-moz-animation: var(--time-animate) blink3 var(--animation-type) infinite;
+	-ms-animation: var(--time-animate) blink3 var(--animation-type) infinite;
+	-o-animation: var(--time-animate) blink3 var(--animation-type) infinite;
+	animation: var(--time-animate) blink3 var(--animation-type) infinite;
+}
+
+
+@keyframes blink3 {
+	0%{
+		color:transparent;
+	}
+	75% {
+		color: var(--base3);
+	}
+	100%{
+		color:transparent;
 	}
 }
