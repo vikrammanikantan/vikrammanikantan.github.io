@@ -7,6 +7,6 @@ function scrollFunction() {
   if (window.scrollY > 50) {
     document.getElementById("navbar").style.top = "0px";
   } else {
-    document.getElementById("navbar").style.top = "-100px";
+    document.getElementById("navbar").style.top = "-140px";
   }
 }
