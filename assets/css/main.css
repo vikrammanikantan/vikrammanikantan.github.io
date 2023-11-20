@@ -57,7 +57,7 @@ body, input, select, textarea, footer, header {
 	color: var(--base2);
 	background-color: var(--base03);
 	font-family: 'Fira Code'; 
-	font-family: monaco;
+	font-family: monaco,Consolas,Lucida Console,monospace;
 	font-size: 18pt;
 	font-weight: 400;
 	line-height: 0px;
