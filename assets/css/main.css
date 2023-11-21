@@ -13,7 +13,8 @@ html {
 /* defining base colors */
 :root{
 	--white: white;
-	--base03: #001613; /* 002b36 */
+	/* --base03: #001613; */
+	--base03: #000000;
 	--base02: #073642;
 	--base01: #586e75;
 	--base00: #657b83;
@@ -123,7 +124,7 @@ a:hover {
 	outline-color: var(--base03);
 	background-color: var(--base03);
 
-	z-index: 10;
+	z-index: 1000;
   }
 
 /* Style the navbar links */
@@ -243,6 +244,8 @@ a:hover {
 
 	width: 70vw;
 	height: auto;
+
+	z-index: 10;
 }
 
 /* design for rows, one white one black */
