@@ -9,4 +9,6 @@ function scrollFunction() {
   } else {
     document.getElementById("navbar").style.top = "-140px";
   }
+  var x = document.getElementById("navbar");
+  x.className = "navbar";
 }

@@ -67,6 +67,15 @@ body, input, select, textarea, footer, header {
 	max-width: 100vw;
 }
 
+mark {
+	font-style: italic;
+	background-color:#ff659f ;
+	background-color: var(--base01);
+	color: var(--base3);
+	padding-left: 3px;
+	padding-right: 3px;
+}
+
 body{
 	padding-top: 30px;
 	padding-bottom: 0px;
@@ -77,9 +86,6 @@ body{
 
 	margin-bottom: 0;
 }
-
-
-
 
 /* LINK SETTINGS */
 
@@ -124,6 +130,8 @@ a:hover {
 	outline-color: var(--base03);
 	background-color: var(--base03);
 
+	overflow: hidden;
+
 	z-index: 1000;
   }
 
@@ -131,20 +139,19 @@ a:hover {
 .navbar > a{
 
 	background-color: var(--base03);
+	color: var(--base3);
 
 	display: block;
-
-	color: var(--base3);
-	width: 120px;
-	margin: 0;
+	text-align: center;
+	float: center;
 	padding: 10px;
 	padding-top: 20px;
 	padding-bottom: 10px;
-	text-align: center;
-	line-height: 40px;
 	font-size: 18px;
 
-
+	width: 120px;
+	margin: 0;
+	line-height: 40px;
 }
 
 .navbar a:hover {
@@ -154,6 +161,10 @@ a:hover {
 
 .navbar a:hover img{
 	filter: invert(0.9);
+}
+
+.navbar .icon {
+	display: none;
 }
 
 /* FOOTER */
@@ -221,6 +232,8 @@ a:hover {
 
 	margin:0;
 	padding-bottom: 0;
+
+	overflow: hidden;
 	
 }
 
@@ -325,7 +338,14 @@ div.row.right{
 .row > div.pub{
 	min-width: 200px;
 	width: 350px; 
+	max-width: 90vw;
 	margin: 20px 20px 20px 0px;
+}
+
+.pub mark{
+	font-style: normal;
+	color: var(--black);
+	background-color: yellow;
 }
 
 .row > div.header {
@@ -438,6 +458,11 @@ a img{
 		text-align: center;
 	}
 
+	.row > div.pub{
+		width: 60%;
+		min-width: 380px;
+	}
+
 	h1{
 		margin:auto;
 	}
@@ -450,35 +475,66 @@ a img{
 	.main {
 		grid-template-columns: 5vw 90vw 5vw;
 	}
-
 	.main > div.row{
 		justify-content: center;
 		width: 90vw;
 	}
-
 	.row > div{
 		text-align: center;
 	}
-
 	div.header{
 		text-align: center;
 	}
-
 	div.row.left{
 		width: 5vw;
 	}
-
 	div.row.break{
 
 		width: 100vw;
 	}
-	
 	div.row.right{
 		width: 5vw;
 	}
-
+	.row > div.pub{
+		width: 380px;
+	}
 	h1{
 		margin:auto;
+	}
+	.navbar{
+		justify-content: left;
+		height: fit-content;
+	}
+
+	.navbar a:not(:first-child){
+		display: none;
+	}
+	.navbar a.icon {
+		margin: auto;
+		margin-right: 0;
+		display: block;
+	}
+
+	.navbar.responsive {
+		position: fixed;
+		height: fit-content;
+		transition: 0.5s;
+	}
+	.navbar.responsive a:first-child{
+		width: 120px;
+		order: -3;
+	}
+
+	.navbar.responsive a {
+		display: block;
+		text-align: center;
+		width: 100vw;
+	}
+	.navbar.responsive .icon {
+		margin: auto;
+		order: -2;
+		margin-right: 0;
+		width: 120px;
 	}
 
 }
