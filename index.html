@@ -7,48 +7,48 @@
         <title>Vikram Manikantan</title>
         <link rel="icon" type="image/x-icon" href="images/favicon.png" style="height: 50;width: 50;aspect-ratio: 1;">
         <link rel="stylesheet" href="assets/css/main.css" />
+        <base target="_blank">
 
     </head>
 
     <body id="top">
 
         <div class="navbar" id="navbar"> 
-            <a href="#top" class="active"> <img src="images/favicon.png"  style="width: 50px;"> </a>
+            <a href="#top" class="active" target="_self"> <img src="images/favicon.png"  style="width: 50px;"> </a>
 
-            <a href="#aboutme">research</a> 
-            <a href="#outreach">outreach</a> 
-            <a href="#music">music</a> 
-            <a href="#contact">contact</a> 
-            <a href="javascript:void(0);" style="font-size:20px;" class="icon" onclick="myFunction()">&#9776;</a>
+            <a href="#aboutme" target="_self">research</a> 
+            <a href="#outreach" target="_self">outreach</a> 
+            <a href="#music" target="_self">music</a> 
+            <a href="#contact" target="_self">contact</a> 
+            <a href="javascript:void(0);" style="font-size:20px;" class="icon" target="_self" onclick="myFunction()">&#9776;</a>
         </div>
 
         <div class="main">
 
             <!-- first row: LANDING PAGE -->
-            <!-- additions: 1. down arrow, link to next section done, 2. slow fade in done, 3. typing animation for text -->
-            <div class="row black" id="landing" style="height:auto; min-height: 85vh; padding-top: 0px; justify-content: center; align-content: flex-end;">
+            <div class="row black" id="landing" style="height:auto; min-height: 90vh; padding-top: 0px; justify-content: center; align-content: center; margin-top: 0vh;;">
 
-                <div style="min-width: 400px; width: 55%; padding-top: 30px;">
+                <div style="min-width: 400px; width: 55%;">
                     <img src="images/favicon.png" style="height:100px; padding-bottom: 10px;">
 
                     <p style="font-size:40px; font-weight: 900; font-style:italic; line-height: 120%; padding: 0;">Vikram Manikantan</p>
 
                     <p style="font-size: 20px; font-weight: 500; margin-top: 3%; font-style:normal; line-height: 100%; padding: 0;"> computational astrophysicist</p>
 
-                    <p style="font-size: 20px; font-weight: 500; margin-top: 50px; font-style:normal; line-height: 140%;"> email me: <a href="mailto:vik@arizona.edu" title="E-mail">vik@arizona.edu</a> <br>
+                    <p style="font-size: 20px; font-weight: 500; margin-top: 50px; font-style:normal; line-height: 140%;"> email: <a href="mailto:vik@arizona.edu" title="E-mail">vik@arizona.edu</a> <br>
                         twitter: <a href="https://www.twitter.com/astro_vik" title="twitter"  target="_blank">@astro_vik</a><br>
                         github: <a href="https://www.github.com/vikrammanikantan" title="github"  target="_blank">vikrammanikantan</a><br>
                         orcID: <a href="https://orcid.org/0000-0003-0547-6158" title="orcid" target="_blank"> 0000-0003-0547-6158</a>
                     </p>
                 </div>
 
-                <div style="width: 40%; padding-top: 20px; align-content: center; min-width:350px; max-width: 500px;">
+                <div style="width: 40%; align-content: center; min-width:350px; max-width: 500px;">
                     <img src="images/profile.png" style="object-fit: cover; width: 100%;">
                 </div>
         
                 <!-- down arrow -->
-                <div style="width: 100%; min-width: 0; max-width: 100vw; height: 40px; justify-content: center; text-align:center; margin-top: 80px; z-index: 10;"> 
-                    <a href="#aboutme">
+                <div style="width: 100%; min-width: 0; max-width: 100vw; height: 40px; justify-content: center; text-align:center; margin-top: 80px;align-self: flex-end; z-index: 10;"> 
+                    <a href="#aboutme" target="_self" style="text-decoration: none;">
                         <span class="blinking-cursor" style="font-size: 400%; font-weight: 600; line-height: 1px; font-stretch:ultra-condensed;"> 
                             &#9013
                         </span>
@@ -57,12 +57,12 @@
 
             </div>
 
+            <!-- second row: about me + image -->
             <div class="row break" id="aboutme"></div>
-
-            <div class="row black" id="aboutme2" style="justify-content: center; min-height: 90vh; padding-top: 20px; grid-column-start: 1; grid-column-end: 3; width: 100vw; z-index: 3; overflow:visible;">
+            <div class="row black" id="aboutme2" style="justify-content: center; min-height: 90vh; padding-top: 10px; grid-column-start: 1; grid-column-end: 3; width: 100vw; z-index: 3; overflow:visible;">
                 
-                <div class="box" style="text-align: center; width: 80%; margin-top: 20px;">
-                    <p style="padding: 15px;">
+                <div class="box" style="text-align: center; width: 80%; margin-top: 30px;">
+                    <p style="padding: 10px;">
                         I am a <mark>computational astrophysicist</mark> and PhD student at Steward Observatory, at the University of Arizona. I study the <mark>multi-messenger</mark> nature of <mark>compact objects</mark> such as binary black holes, neutron stars, supernovae, and other high-energy transients, using <mark>numerical tools</mark> such as IllinoisGRMHD, H-AMR, and Athena++.
                     </p>
                 </div>
@@ -72,7 +72,7 @@
                 </div>
 
                 <div style="width: 100%; min-width: 0; max-width: 100vw; height: 20px; justify-content: center; text-align:center; margin-top: 5vh;"> 
-                    <a href="#research">
+                    <a href="#research" target="_self" style="text-decoration: none;">
                         <span class="blinking-cursor" style="font-size: 400%; font-weight: 600; line-height: 1px; font-stretch:ultra-condensed;"> 
                             &#9013
                         </span>
@@ -90,19 +90,19 @@
 
                 <div class="pub">
                     <p>
-                        <mark> Manikantan V.</mark>, Kaaz N., Jacquemin-Ide J., Musoke G., Chatterjee K., Liska M., Tchekhovskoy A., 2023. <i style="font-style: italic;">Winds and Disk Turbulence Exert Equal Torques on Thick Magnetically Arrested Disks</i>, arXiv, <a href="https://www.arxiv.org/abs/2310.11490" target="_blank" style="color: var(--base03); text-decoration: underline;">arxiv.org/abs/2310.11490</a>
+                        <mark> Manikantan V.</mark>, <a href="https://ciera.northwestern.edu/directory/nicholas-omahen/">Kaaz N.</a>, <a href="https://ciera.northwestern.edu/directory/jonatan-jacquemin-ide/">Jacquemin-Ide J.</a>, <a href="https://www.uva.nl/en/profile/m/u/g.musoke/g.musoke.html?cb">Musoke G.</a>, <a href="https://koushikchatterjeeastro.wordpress.com/"> Chatterjee K.</a>, <a href="https://www.matthewliska.com/"> Liska M.</a>, <a href="https://ciera.northwestern.edu/directory/sasha-tchekhovskoy/">Tchekhovskoy A.</a>, 2023. <i style="font-style: italic;">Winds and Disk Turbulence Exert Equal Torques on Thick Magnetically Arrested Disks</i>, arXiv, <a href="https://www.arxiv.org/abs/2310.11490" target="_blank" style="text-decoration: underline;">arxiv.org/abs/2310.11490</a>. Submitted to ApJ.
                     </p>
                 </div>
                 
                 <div class="pub">
                     <p>
-                        <mark> Manikantan V.</mark>, Paschalidis V., Bozzola G., 2024 (in prep). <i style="font-style: italic;">Orbital Eccentricity Induces Minidisk Variability from Accreting Black Hole Binaries</i>
+                        [In prep] <mark> Manikantan V.</mark>, <a href="https://www.as.arizona.edu/people/faculty/vasileios-paschalidis">Paschalidis V.</a>, <a href="https://sbozzolo.github.io/">Bozzola G.</a>, 2024. <i style="font-style: italic;">Eccentric Black Hole Binary Accretion.</i>
                     </p>
                 </div>
 
                 <div class="pub">
                     <p>
-                        <mark> Manikantan V.</mark>, Paschalidis V., Bozzola G., 2024 (in prep). <i style="font-style: italic;"> Persistent Minidisk Formation at Large (30M) Black Hole Binary Separations</i>
+                        [In prep] <mark> Manikantan V.</mark>, <a href="https://www.as.arizona.edu/people/faculty/vasileios-paschalidis">Paschalidis V.</a>, <a href="https://sbozzolo.github.io/">Bozzola G.</a>, 2024. <i style="font-style: italic;">Large Separation Black Hole Binary Accretion.</i>
                     </p>
                 </div>
 
@@ -117,6 +117,22 @@
                 <div class="header">
                     <h1> outreach </h1>
                 </div>
+
+                <div class="outreach">
+                    <h2><a href="https://timestep.arizona.edu/" target="_blank">TIMESTEP</a></h2>
+                    <p><mark>Graduate Student Coordinator</mark> of the Research Apprenticeship program, a mentorship program supporting second-year undergraduates from minoritized backgrounds entering astrophysics research.</p>
+                </div>
+
+                <div class="outreach">
+                    <h2><a href="https://www.github.com/vikrammanikantan/compass" target="_blank">COMPASS</a></h2>
+                    <p><mark>Co-organizer and instructor</mark> for COMPASS, a computational and mathematical workshop for incoming undergraduates that aims to remove barriers to entering STEM through technical training.</p>
+                </div>
+
+                <div class="outreach">
+                    <h2><a>Steward Social Media</a></h2>
+                    <p><mark>Graduate Student Lead</mark> for Steward Observatory's new social media initiative which includes creating and running our Instagram, Twitter, and Facebook accounts, as well as developing content to post three times a week.</p>
+                </div>
+
             </div>
 
             <!-- fifth row: MUSIC -->
@@ -153,19 +169,28 @@
             <div class="row left" style="grid-row-start: 9; ">  </div>
             <div class="row right">  </div>
 
-            <!-- sixth row: CONTACT -->
+            <!-- sixth row: SOCIALS -->
             <div class="row break" id="contact" style="background-color: var(--base3);"></div>
-            <div class="row black" id="contact" style="justify-content: flex-start; align-content: flex-start; height: auto; padding-bottom: 20px;">
+            <div class="row black" id="contact" style="justify-content: flex-start; align-content: flex-start; padding-bottom: 20px;">
                 <div class="header">
                     <h1 style="filter: invert(0);"> contact </h1>
                 </div>
                 
-                <div style="width: 35vw;">
+                <div style="width: 35vw; margin: auto; margin-top: 2%;">
                     <p>
-                        Email me: <a href="mailto:vik@arizona.edu" title="E-mail">vik@arizona.edu</a> <br>
+                        9am-5pm, Office 201<br>
+                        Steward Observatory <br>
+                        933 N Cherry Avenue <br>
+                        Tucson, AZ, 85719.
+                    </p>
+                    <br>
+                    <p>
+                        Email: <a href="mailto:vik@arizona.edu" title="E-mail">vik@arizona.edu</a> <br>
                         Github: <a href="https://www.github.com/vikrammanikantan" title="github"  target="_blank">vikrammanikantan</a><br>
                         Twitter: <a href="https://www.twitter.com/astro_vik" title="twitter"  target="_blank">@astro_vik</a><br>
-                        Linkedin: <a href="https://www.linkedin.com/in/vikrammanikantan" title="linkedin"  target="_blank">in/vikrammanikantan</a>
+                        Linkedin: <a href="https://www.linkedin.com/in/vikrammanikantan" title="linkedin"  target="_blank">in/vikrammanikantan</a> <br>
+                        orcID: <a href="https://orcid.org/0000-0003-0547-6158" title="orcid" target="_blank"> 0000-0003-0547-6158</a> <br>
+                        NASA/ADS: <a href="https://ui.adsabs.harvard.edu/search/q=author%3A%22Manikantan%2C%20Vikram%22"> my papers</a>
                     </p>
                 </div>
 
