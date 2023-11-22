@@ -459,8 +459,9 @@ a img{
 	}
 
 	.row > div.pub{
-		width: 60%;
+		width: 380px;
 		min-width: 380px;
+		text-align: center;
 	}
 
 	h1{
