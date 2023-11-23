@@ -72,6 +72,8 @@ body, input, select, textarea, footer, header {
 	max-width: 100vw;
 }
 
+/* TEXT FORMATTING */
+
 mark {
 	font-style: italic;
 	background-color: var(--highlight-dark) ;
@@ -86,7 +88,6 @@ body{
 	padding-bottom: 0px;
 
 	font-size: 15pt;
-
 	align-items: center;
 
 	margin-bottom: 0;
@@ -95,7 +96,7 @@ body{
 p{
 	font-size: large;
 	padding: 0px;
-	line-height: 175%;
+	line-height: 160%;
 }
 
 p.name{
@@ -121,6 +122,46 @@ p.titlecontact{
 	margin-top: 50px; 
 	font-style:normal;
 	line-height: 140%;
+}
+
+h1{
+	
+	font-size: 30px;
+	font-weight: 700;
+	line-height: 250%;
+	background-color: var(--base3);
+
+	color: var(--base03);
+
+	padding-left: 10px;
+	padding-right: 10px;
+
+	transform: skewX(-10deg);
+
+	height: 250%;
+	width: fit-content;
+
+	margin-left: 7px;
+	margin-bottom: 0px;
+}
+
+h2{
+	font-size: 24px;
+	font-weight: 500;
+	font-style: italic;
+	line-height: 200%;
+
+	background-color: var(--highlight-dark);
+	width: fit-content;
+
+	padding-right: 6px;
+	margin: auto;
+	margin-left: 0;
+	margin-bottom: 10px;
+}
+
+h2 a:hover{
+	color: var(--highlight-dark);
 }
 
 img.logo{
@@ -346,7 +387,7 @@ div.row.right{
 	min-width: 200px;
 	width: 380px; 
 	max-width: 90vw;
-	margin: 20px 20px 20px 0px;
+	margin: 0px 20px 20px 0px;
 }
 
 .pub mark{
@@ -368,7 +409,7 @@ div.row.right{
 	min-width: 300px;
 	width: 45%; 
 	max-width: 90vw;
-	margin: 20px 20px 20px 0px;
+	margin: 0px 20px 20px 0px;
 }
 
 .outreach mark{
@@ -394,50 +435,11 @@ div.row.right{
 	box-shadow: 7px 7px 0 var(--base3);
 	background-color: var(--base03);
 
+	width: 800px; 
+	margin-top: 5vh;
+
 	max-width: 90vw;
 
-}
-
-
-/* TEXT FORMATTING */
-
-h1{
-	
-	font-size: 30px;
-	font-weight: 700;
-	line-height: 250%;
-	background-color: var(--base3);
-
-	color: var(--base03);
-
-	padding-left: 10px;
-	padding-right: 10px;
-
-	transform: skewX(-10deg);
-
-	height: 250%;
-	width: fit-content;
-
-	margin-left: 10px;
-	margin-bottom: 0px;
-}
-
-h2{
-	font-size: 24px;
-	font-weight: 500;
-	font-style: italic;
-	line-height: 200%;
-	background-color: var(--highlight-dark);
-	
-	width: fit-content;
-	margin: auto;
-	margin-left: 0;
-	padding-right: 6px;
-	margin-bottom: 5px;
-}
-
-h2 a:hover{
-	color: var(--highlight-dark);
 }
 
 
@@ -508,17 +510,22 @@ a img{
 
 	.row > div.pub{
 		width: 380px;
-		min-width: 250px;
+		min-width: 300px;
 		text-align: center;
 	}
 	
 	.row > div.outreach{
 		width: 380px;
-		min-width: 380px;
+		min-width: 300px;
+		text-align: center;
 	}
 
 	h1, h2{
 		margin:auto;
+	}
+
+	img.logo{
+		margin-top: 50px;
 	}
 
 
@@ -552,9 +559,15 @@ a img{
 		width: 100vw;
 	}
 
-	.row > div.pub, .row > div.outreach{
+	.row > div.pub{
 		width: 350px;
-		min-width: none;
+		min-width: 300px;
+		max-width: 90vw;
+	}
+
+	.row > div.outreach{
+		width: 350px;
+		min-width: 300px;
 		max-width: 90vw;
 	}
 
@@ -583,6 +596,7 @@ a img{
 
 	img.logo{
 		height: 80px;
+		margin-top: 70px;
 	}
 
 	img.profile{
