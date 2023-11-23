@@ -6,7 +6,7 @@
 
 *, html {
 	scroll-behavior: smooth !important;
-	scroll-margin-top: 100px;
+	scroll-margin-top: 0px;
   }
 
 
@@ -54,6 +54,7 @@ section, summary, time, mark, audio, video {
 	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;
+	line-height: 150%;
 }
 
 /* Basic Settings */
@@ -94,6 +95,7 @@ body{
 p{
 	font-size: large;
 	padding: 0px;
+	line-height: 175%;
 }
 
 /* LINK SETTINGS */
@@ -407,7 +409,7 @@ h1{
 	
 	font-size: 30px;
 	font-weight: 700;
-	line-height: 75px;
+	line-height: 250%;
 	background-color: var(--base3);
 
 	color: var(--base03);
@@ -417,7 +419,7 @@ h1{
 
 	transform: skewX(-10deg);
 
-	height: 80px;
+	height: 250%;
 	width: fit-content;
 
 	margin-left: 10px;
@@ -426,9 +428,9 @@ h1{
 
 h2{
 	font-size: 24px;
-	font-weight: 600;
+	font-weight: 500;
 	font-style: italic;
-	line-height: 50px;
+	line-height: 200%;
 	background-color: var(--highlight-dark);
 	
 	width: fit-content;
@@ -504,7 +506,7 @@ a img{
 	}
 
 	.row > div.pub{
-		width: 400px;
+		width: 380px;
 		min-width: 400px;
 		text-align: center;
 	}
@@ -526,32 +528,48 @@ a img{
 	.main {
 		grid-template-columns: 5vw 90vw 5vw;
 	}
+
 	.main > div.row{
 		justify-content: center;
 		width: 90vw;
 	}
+
 	.row > div{
 		text-align: center;
 	}
+
 	div.header{
 		text-align: center;
 	}
-	div.row.left{
+
+	div.row.left, div.row.right{
 		width: 5vw;
 	}
+
 	div.row.break{
 
 		width: 100vw;
 	}
-	div.row.right{
-		width: 5vw;
+
+	.row > div.pub, .row > div.outreach{
+		width: 350px;
 	}
-	.row > div.pub{
-		width: 380px;
-	}
+
 	h1{
+		font-size: 26px;
 		margin:auto;
 	}
+
+	h2{
+		font-size: 20px;
+		margin: auto;
+	}
+
+	p {
+		font-size: small;
+		line-height: 150%;
+	}
+
 	.navbar{
 		justify-content: left;
 		height: fit-content;
