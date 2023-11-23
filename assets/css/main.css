@@ -6,7 +6,7 @@
 
 *, html {
 	scroll-behavior: smooth !important;
-	scroll-margin-top: 0px;
+	scroll-margin-top: -5px;
   }
 
 
@@ -274,8 +274,9 @@ div.row.black.landing{
 	height:auto; 
 	min-height: 90vh; 
 	padding-top: 0px; 
+	margin: auto;
 	justify-content: center; 
-	align-content: center; 
+	align-content:flex-end;
 }
 
 /* between each row, a small break such that navbar doesn't hide the subheadings */
@@ -283,7 +284,7 @@ div.row.break{
 	align-items: center; 
 	justify-content: center; 
 	min-height: 0px;
-	height: 50px;
+	height: 5px;
 	width: 100vw;
 	grid-column-start: 1;
 	grid-column-end: 3;
@@ -581,7 +582,7 @@ a img{
 	}
 
 	img.logo{
-		height: 50px;
+		height: 0px;
 	}
 
 	img.profile{
