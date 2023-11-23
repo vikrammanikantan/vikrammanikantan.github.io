@@ -26,16 +26,15 @@
         <div class="main">
 
             <!-- first row: LANDING PAGE -->
-            <div class="row black" id="landing" style="height:auto; min-height: 90vh; padding-top: 0px; justify-content: center; align-content: center; margin-top: 0vh;;">
-
+            <div class="row black" class="landing" style="margin-top: 100px;">
                 <div style="min-width: 400px; width: 55%;">
-                    <img src="images/favicon.png" style="height:100px; padding-bottom: 10px;">
+                    <img src="images/favicon.png" class="logo">
 
-                    <p style="font-size:40px; font-weight: 900; font-style:italic; line-height: 120%; padding: 0;">Vikram Manikantan</p>
+                    <p class="name">Vikram Manikantan</p>
 
-                    <p style="font-size: 20px; font-weight: 500; margin-top: 3%; font-style:normal; line-height: 100%; padding: 0;"> computational astrophysicist</p>
+                    <p class="title"> computational astrophysicist</p>
 
-                    <p style="font-size: 20px; font-weight: 500; margin-top: 50px; font-style:normal; line-height: 140%;"> email: <a href="mailto:vik@arizona.edu" title="E-mail">vik@arizona.edu</a> <br>
+                    <p class="titlecontact"> email: <a href="mailto:vik@arizona.edu" title="E-mail">vik@arizona.edu</a> <br>
                         twitter: <a href="https://www.twitter.com/astro_vik" title="twitter"  target="_blank">@astro_vik</a><br>
                         github: <a href="https://www.github.com/vikrammanikantan" title="github"  target="_blank">vikrammanikantan</a><br>
                         orcID: <a href="https://orcid.org/0000-0003-0547-6158" title="orcid" target="_blank"> 0000-0003-0547-6158</a>
@@ -43,7 +42,7 @@
                 </div>
 
                 <div style="width: 40%; align-content: center; min-width:350px; max-width: 500px;">
-                    <img src="images/profile.png" style="object-fit: cover; width: 100%;">
+                    <img class="profile" src="images/profile.png">
                 </div>
         
                 <!-- down arrow -->
@@ -58,7 +57,7 @@
             </div>
 
             <!-- second row: about me + image -->
-            <div class="row break" id="aboutme"></div>
+            <div class="row break" id="aboutme" style="height: 5px;"></div>
             <div class="row black" id="aboutme2" style="justify-content: center; min-height: 90vh; padding-top: 10px; grid-column-start: 1; grid-column-end: 3; width: 100vw; z-index: 3; overflow:visible;">
                 
                 <div class="box" style="text-align: center; width: 80%; margin-top: 20px;">
@@ -194,15 +193,16 @@
                     </p>
                 </div>
 
-                <div style="width: 35vw; max-height: 100vh; overflow: hidden; margin: auto; margin-top:10px;">
+                <div style="width: 35vw; max-height: 100vh; overflow: hidden; margin: auto; margin-top:20px;">
                     <a class="twitter-timeline" data-width="400" data-height="500px" data-theme="light" href="https://twitter.com/astro_vik?ref_src=twsrc%5Etfw">Tweets by astro_vik</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
                 </div>
             </div>
 
-            
-            <div class="row black" id="footer" style="height: 100px;">
-                
-            </div>        
+            <!-- potential footer, future -->
+            <!-- <div class="row black" style="grid-column-start: 1;grid-column-end: 3; width: 100vw; box-shadow: 0px -1px 0 var(--base3); height: 40px; z-index: 1000;">
+
+                <a href="#top" class="active" target="_self"> <img src="images/favicon.png"  style="width: 50px;"> </a>
+            </div>         -->
         </div>
 
         <script src="assets/js/navbar.js"></script>

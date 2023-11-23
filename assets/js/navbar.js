@@ -1,14 +1,23 @@
 // When the user scrolls down 20px from the top of the document, slide down the navbar
 // When the user scrolls to the top of the page, slide up the navbar (50px out of the top view)
 
+let prevScrollPos = window.scrollY;
+
 window.onscroll = function() {scrollFunction()};
 
 function scrollFunction() {
-  if (window.scrollY > 50) {
+  const currentScrollPos = window.scrollY;
+
+  if (prevScrollPos > currentScrollPos) {
+    // user has scrolled up
     document.getElementById("navbar").style.top = "0px";
   } else {
-    document.getElementById("navbar").style.top = "-140px";
+    // user has scrolled down
+    document.getElementById("navbar").style.top = "-100px";
   }
+  // update previous scroll position
+  prevScrollPos = currentScrollPos;
+
   var x = document.getElementById("navbar");
   x.className = "navbar";
 }

@@ -98,6 +98,42 @@ p{
 	line-height: 175%;
 }
 
+p.name{
+	font-size:40px; 
+	font-weight: 900; 
+	font-style:italic; 
+	line-height: 120%; 
+	padding: 0;
+}
+
+p.title{
+	font-size: 20px; 
+	font-weight: 500; 
+	margin-top: 3%; 
+	font-style:normal; 
+	line-height: 100%; 
+	padding: 0;
+}
+
+p.titlecontact{
+	font-size: 20px; 
+	font-weight: 500; 
+	margin-top: 50px; 
+	font-style:normal;
+	line-height: 140%;
+}
+
+img.logo{
+	height:100px; 
+	padding-bottom: 10px;
+}
+
+img.profile{
+	object-fit: cover; 
+	width: 100%; 
+	padding-top: 10px;
+}
+
 /* LINK SETTINGS */
 a {
 	text-decoration: none;
@@ -124,7 +160,7 @@ a:hover {
 	justify-content: center;
 
 	position: fixed;
-	top: -150px; /* Hide the navbar 50 px outside of the top view */
+	top: 0px; /* Hide the navbar 50 px outside of the top view */
 	transition: top 0.3s; /* Transition effect when sliding down (and up) */
 	padding-top: 0px;
 
@@ -175,55 +211,6 @@ a:hover {
 	display: none;
 }
 /* NAVBAR END */
-
-
-/* FOOTER */
-.footer {
-
-	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
-	justify-content: center;
-
-	width: 100vw; /* Full width */
-
-	box-shadow: 0 5px 0 var(--base3);
-	outline-style: solid;
-	outline-width: 0px;
-	outline-color: var(--base03);
-	background-color: var(--base03);
-
-	z-index: 5;
-  }
-
-/* Style the navbar links */
-.footer > a{
-
-	background-color: var(--base03);
-
-	display: block;
-
-	color: var(--base3);
-	width: 120px;
-	margin: 0;
-	padding: 0px;
-
-	text-align: center;
-	line-height: 40px;
-	font-size: 18px;
-
-
-}
-
-.footer a:hover {
-	background-color: var(--base3);
-	color: var(--base03);
-}
-
-.footer a:hover img{
-	filter: invert(0.9);
-}
-/* END FOOTER */
 
 
 /* creating a grid for the main content: 3 columns, column 1 and 3 are just for spacing. Content is in column 2 */
@@ -281,6 +268,14 @@ div.row.white{
 
 div.row.black{
 	padding-top: 30px;
+}
+
+div.row.black.landing{
+	height:auto; 
+	min-height: 90vh; 
+	padding-top: 0px; 
+	justify-content: center; 
+	align-content: center; 
 }
 
 /* between each row, a small break such that navbar doesn't hide the subheadings */
@@ -479,6 +474,11 @@ a img{
 
 @media screen and (max-width: 1111px) {
 	/* For narrow screens: */
+
+	div.landing{
+		margin-top: 100px;
+	}
+
 	.main {
 		grid-template-columns: 15vw 70vw 15vw;
 	}
@@ -566,8 +566,25 @@ a img{
 	}
 
 	p {
-		font-size: small;
+		font-size: medium;
 		line-height: 150%;
+	}
+
+	p.name{
+		font-size: xx-large; 
+	}
+
+	p.title, p.titlecontact{
+		font-size: medium;
+	}
+
+	img.logo{
+		height: 50px;
+	}
+
+	img.profile{
+		width: 70%;
+		margin-top: 30px;
 	}
 
 	.navbar{
