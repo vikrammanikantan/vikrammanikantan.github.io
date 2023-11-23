@@ -171,8 +171,9 @@ img.logo{
 
 img.profile{
 	object-fit: cover; 
-	width: 100%; 
+	width: 90%; 
 	padding-top: 10px;
+	margin: auto;
 }
 
 /* LINK SETTINGS */
@@ -602,7 +603,7 @@ a img{
 	}
 
 	img.profile{
-		width: 90%;
+		width: 80%;
 		margin-top: 30px;
 	}
 
