@@ -93,7 +93,7 @@ body{
 	margin-bottom: 0;
 }
 
-p{
+p {
 	font-size: large;
 	padding: 0px;
 	line-height: 160%;
@@ -385,7 +385,7 @@ div.row.right{
 
 .row > div.pub{
 	min-width: 200px;
-	width: 380px; 
+	width: 45%; 
 	max-width: 90vw;
 	margin: 0px 20px 20px 0px;
 }
@@ -406,7 +406,7 @@ div.row.right{
 }
 
 .row > div.outreach{
-	min-width: 300px;
+	min-width: 200px;
 	width: 45%; 
 	max-width: 90vw;
 	margin: 0px 20px 20px 0px;
@@ -522,6 +522,7 @@ a img{
 
 	h1, h2{
 		margin:auto;
+		margin-bottom: 5px;
 	}
 
 	img.logo{
@@ -579,6 +580,7 @@ a img{
 	h2{
 		font-size: 20px;
 		margin: auto;
+		margin-bottom: 5px;
 	}
 
 	p {
