@@ -334,9 +334,9 @@ div.row.right{
 
 	height: fit-content;
 
-	min-width: 390px; 
+	min-width: 380px; 
 	width: 33vw;
-	max-width: 500px;
+	max-width: 90vwpx;
 	
 	margin:auto;
 }
@@ -393,7 +393,7 @@ div.row.right{
 	box-shadow: 7px 7px 0 var(--base3);
 	background-color: var(--base03);
 
-	max-width: 800px;
+	max-width: 90vw;
 
 }
 
@@ -554,7 +554,7 @@ a img{
 	.row > div.pub, .row > div.outreach{
 		width: 350px;
 		min-width: none;
-		max-width: none;
+		max-width: 90vw;
 	}
 
 	h1{
