@@ -343,7 +343,7 @@ div.row.right{
 
 .row > div.pub{
 	min-width: 200px;
-	width: 400px; 
+	width: 380px; 
 	max-width: 90vw;
 	margin: 20px 20px 20px 0px;
 }
@@ -507,7 +507,7 @@ a img{
 
 	.row > div.pub{
 		width: 380px;
-		min-width: 400px;
+		min-width: 250px;
 		text-align: center;
 	}
 	
@@ -553,6 +553,8 @@ a img{
 
 	.row > div.pub, .row > div.outreach{
 		width: 350px;
+		min-width: none;
+		max-width: none;
 	}
 
 	h1{
