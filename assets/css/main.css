@@ -100,7 +100,7 @@ p{
 }
 
 p.name{
-	font-size:40px; 
+	font-size:45px; 
 	font-weight: 900; 
 	font-style:italic; 
 	line-height: 120%; 
@@ -525,7 +525,7 @@ a img{
 	}
 
 	img.logo{
-		margin-top: 50px;
+		margin-top: 70px;
 	}
 
 
@@ -587,11 +587,11 @@ a img{
 	}
 
 	p.name{
-		font-size: xx-large; 
+		font-size: 36px; 
 	}
 
 	p.title, p.titlecontact{
-		font-size: medium;
+		font-size: 18px;
 	}
 
 	img.logo{
@@ -600,7 +600,7 @@ a img{
 	}
 
 	img.profile{
-		width: 70%;
+		width: 90%;
 		margin-top: 30px;
 	}
 
