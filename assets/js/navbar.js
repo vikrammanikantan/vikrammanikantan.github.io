@@ -12,13 +12,15 @@ function scrollFunction() {
     // user has scrolled up
     document.getElementById("navbar").style.top = "0px";
   } 
-  else if(currentScrollPos < 50){
-    document.getElementById("navbar").style.top = "0px";
-  }
   else {
     // user has scrolled down
     document.getElementById("navbar").style.top = "-100px";
   }
+
+  if(currentScrollPos < 50){
+    document.getElementById("navbar").style.top = "0px";
+  }
+  
   // update previous scroll position
   prevScrollPos = currentScrollPos;
 
