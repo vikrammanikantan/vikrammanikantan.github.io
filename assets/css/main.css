@@ -379,7 +379,7 @@ div.row.right{
 
 	min-width: 380px; 
 	width: 33vw;
-	max-width: 90vwpx;
+	max-width: 90vw;
 	
 	margin:auto;
 }
@@ -436,9 +436,12 @@ div.row.right{
 	box-shadow: 7px 7px 0 var(--base3);
 	background-color: var(--base03);
 
+	min-width: 200px;
 	width: 800px; 
-	margin-top: 5vh;
 
+
+	margin: auto;
+	margin-top: 5vh;
 	max-width: 90vw;
 
 }
