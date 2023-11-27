@@ -8,28 +8,28 @@
   }
 
 @font-face {
-	font-family: 'Fira Code';
+	font-family:'Fira Code';
 	src: url('webfonts/FiraCode-Medium.ttf') format('truetype');
 	font-weight: bolder;
 	font-style: normal;
 }
 
 @font-face {
-	font-family: 'Fira Code';
+	font-family:'Fira Code';
 	src: url('webfonts/FiraCode-Retina.ttf') format('truetype');
 	font-weight: bold;
 	font-style: normal;
 }
 
 @font-face {
-	font-family: 'Fira Code';
+	font-family:'Fira Code';
 	src: url('webfonts/FiraCode-Regular.ttf') format('truetype');
 	font-weight: normal;
 	font-style: normal;
 }
 
 @font-face {
-	font-family: 'Fira Code';
+	font-family:'Fira Code';
 	src: url('webfonts/FiraCode-Light.ttf') format('truetype');
 	font-weight: lighter;
 	font-style: normal;
