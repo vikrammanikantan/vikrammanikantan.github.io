@@ -88,8 +88,7 @@ section, summary, time, mark, audio, video {
 body, input, select, textarea, footer, header {
 	color: var(--base2);
 	background-color: var(--base03);
-	font-family: 'Fira Code';
-	/* font-family: monaco, monospace; */
+	font-family: 'Fira Code', monaco, monospace;
 	font-size: 18pt;
 	font-weight: normal;
 	line-height: 0px;
