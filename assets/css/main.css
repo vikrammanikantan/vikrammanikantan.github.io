@@ -416,6 +416,7 @@ div.row.right{
 	width: 45%; 
 	max-width: 90vw;
 	margin: 0px 20px 20px 0px;
+	text-align: justify;
 }
 
 .pub mark{
@@ -438,6 +439,7 @@ div.row.right{
 	width: 45%; 
 	max-width: 90vw;
 	margin: 0px 20px 20px 0px;
+	text-align: justify;
 }
 
 .outreach mark{
@@ -542,13 +544,13 @@ a img{
 	.row > div.pub{
 		width: 380px;
 		min-width: 300px;
-		text-align: center;
+		text-align: justify;
 	}
 	
 	.row > div.outreach{
 		width: 380px;
 		min-width: 300px;
-		text-align: center;
+		text-align: justify;
 	}
 
 	h1, h2{
@@ -595,12 +597,14 @@ a img{
 		width: 350px;
 		min-width: 300px;
 		max-width: 90vw;
+		text-align: justify;
 	}
 
 	.row > div.outreach{
 		width: 350px;
 		min-width: 300px;
 		max-width: 90vw;
+		text-align: justify;
 	}
 
 	h1{
