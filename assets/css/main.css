@@ -416,7 +416,7 @@ div.row.right{
 	width: 45%; 
 	max-width: 90vw;
 	margin: 0px 20px 20px 0px;
-	text-align: justify;
+	/* text-align: justify; */
 }
 
 .pub mark{
@@ -544,7 +544,7 @@ a img{
 	.row > div.pub{
 		width: 380px;
 		min-width: 300px;
-		text-align: justify;
+		/* text-align: justify; */
 	}
 	
 	.row > div.outreach{
@@ -597,7 +597,7 @@ a img{
 		width: 350px;
 		min-width: 300px;
 		max-width: 90vw;
-		text-align: justify;
+		/* text-align: justify; */
 	}
 
 	.row > div.outreach{
