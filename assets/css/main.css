@@ -50,9 +50,9 @@
 	--base3: #fdf6e3;
 	--black: black;
 
-	--textvdark: #fdf6e3;
-	--textdark: #fdf6e3;
-	--textmed: #586e75;
+	--textvdark: var(--base3);
+	--textdark: var(--base3);
+	--textmed: var(--base1);
 
 	--highlight-dark:rgb(225, 16, 121);
 	--highlight-light: yellow;
