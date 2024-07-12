@@ -338,7 +338,7 @@ div.row.black{
 
 div.row.black.landing{
 	height:auto; 
-	min-height: 90vh; 
+	min-height: 100vh; 
 	padding-top: 0px; 
 	margin: auto;
 	justify-content: center; 
