@@ -1,44 +1,34 @@
-@import url("https://fonts.googleapis.com/css?family=Lato:400,400italic,700,700italic|Source+Code+Pro:400");
-@import url("https://use.typekit.net/emv3zbo.css");
-@import url("/webfonts/");
+@import url("https://use.typekit.net/sdh6jxb.css");
 
 *, html {
 	scroll-behavior: smooth !important;
 	scroll-margin-top: -5px;
   }
 
-@font-face {
-	font-family:'Fira Code';
-	src: url('webfonts/FiraCode-Medium.ttf') format('truetype');
-	font-weight: bolder;
-	font-style: normal;
-}
-
-@font-face {
-	font-family:'Fira Code';
-	src: url('webfonts/FiraCode-Retina.ttf') format('truetype');
-	font-weight: bold;
-	font-style: normal;
-}
-
-@font-face {
-	font-family:'Fira Code';
-	src: url('webfonts/FiraCode-Regular.ttf') format('truetype');
-	font-weight: normal;
-	font-style: normal;
-}
-
-@font-face {
-	font-family:'Fira Code';
-	src: url('webfonts/FiraCode-Light.ttf') format('truetype');
-	font-weight: lighter;
-	font-style: normal;
-}
 
 
 /* defining base colors */
 :root{
 	--white: white;
+	--black: black;
+
+	--arizona-red:#AB0520;
+    --arizona-blue:#0C234B;
+
+    --bloom: #EF4056;
+    --sky: #81D3EB;
+    --leaf: #70B865;
+    --river: #007D84;
+    --mesa: #A95C42;
+
+    --chili: #8B0015;
+    --midnight: #001C48;
+    --azurite: #1E5288;
+    --oasis:#378DBD;
+
+	--warmgrey: #F4EDE5;
+    --coolgrey: #E2E9EB;
+
 	/* --base03: #001613; */
 	--base03: #000000;
 	--base02: #073642;
@@ -48,7 +38,6 @@
 	--base1: #93a1a1;
 	--base2: #eee8d5;
 	--base3: #fdf6e3;
-	--black: black;
 
 	--textvdark: var(--base3);
 	--textdark: var(--base3);
@@ -81,6 +70,19 @@ section, summary, time, mark, audio, video {
 	font: inherit;
 	vertical-align: baseline;
 	line-height: 150%;
+
+
+	/* font-family: "prestige-elite-std", monospace;
+	font-family: "ibm-plex-mono", sans-serif;
+	font-family: "logic-monoscript", mono;
+	font-family: "logic-monospace", mono;
+	font-family: gemeli-mono, sans-serif; */
+
+	font-family: ibm-plex-mono, serif;
+	font-weight: 400;
+	font-style: normal;
+	font-size: normal;
+
 }
 
 /* Basic Settings */
@@ -88,10 +90,6 @@ section, summary, time, mark, audio, video {
 body, input, select, textarea, footer, header {
 	color: var(--base2);
 	background-color: var(--base03);
-	font-family: 'Fira Code', monaco, monospace;
-	font-size: 18pt;
-	font-weight: normal;
-	line-height: 0px;
 
 	margin:auto; 
 	max-width: 100vw;
@@ -111,10 +109,8 @@ mark {
 body{
 	padding-top: 30px;
 	padding-bottom: 0px;
-
 	font-size: 15pt;
 	align-items: center;
-
 	margin-bottom: 0;
 }
 
@@ -152,7 +148,8 @@ p.titlecontact{
 h1{
 	
 	font-size: 30px;
-	font-weight: bold;
+	font-style: italic;
+	font-weight: 700;
 	line-height: 250%;
 	background-color: var(--base3);
 
@@ -174,8 +171,8 @@ h2{
 	font-size: 24px;
 	font-weight: normal;
 	font-style: italic;
-	line-height: 200%;
 
+	line-height: 200%;
 	background-color: var(--highlight-dark);
 	width: fit-content;
 
@@ -625,6 +622,7 @@ a img{
 
 	p.name{
 		font-size: 36px; 
+		font-style: italic;
 	}
 
 	p.title, p.titlecontact{
