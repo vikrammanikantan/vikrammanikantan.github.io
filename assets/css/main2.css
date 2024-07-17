@@ -1,6 +1,4 @@
-@import url('https://fonts.cdnfonts.com/css/menlo');
-@import url("fontawesome-all.min.css");
-@import url("https://fonts.googleapis.com/css?family=Lato:400,400italic,700,700italic|Source+Code+Pro:400");
+@import url("https://use.typekit.net/sdh6jxb.css");
 
 :root{
 	--white: white;
@@ -35,6 +33,7 @@ section, summary, time, mark, audio, video {
 	padding: 0;
 	border: 0;
 	font-size: 100%;
+	font-family: ibm-plex-mono, monospace;
 	font: inherit;
 	vertical-align: baseline;}
 
@@ -58,7 +57,7 @@ body {
 body, input, select, textarea, footer, header {
 	color: var(--textdark);
 	background-color: var(--base3);
-	font-family: menlo; 
+	font-family: ibm-plex-mono, monospace; 
 	font-size: 12pt;
 	font-weight: 400;
 	line-height: 1.75em;
@@ -112,6 +111,7 @@ h1.name{
 
 h2 {
 	text-indent: 5px;
+	font-style: italic;
 	font-size: 1.5em;
 	line-height: 1.5em;
 	color: var(--base02);
