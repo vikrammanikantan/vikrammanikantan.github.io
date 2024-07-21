@@ -94,6 +94,12 @@ h1{
 }
 
 h2{
+	font-size: 20pt;
+	font-weight: 700;
+	font-style: italic;
+}
+
+h3{
 	font-size: 14pt;
 	font-weight: 700;
 	font-style: italic;
@@ -102,47 +108,66 @@ h2{
 /* end basic settings */
 
 /* structure */
-div.row{
+div.landing{
 	width: 100vw;
 	min-height: 100vh;
 
 	display: flex;
-	flex-flow: row wrap;
+	flex-flow: row-reverse wrap;
+
+	background-image: linear-gradient(135deg, var(--arizona-blue), var(--arizona-red));
 	justify-content: center; /*align horizontal center*/
 }
 
-	div.row.landing{
-		background-image: linear-gradient(135deg, var(--arizona-blue), var(--arizona-red));
-	}
+.landing a{
+	text-decoration: none;
+	color: var(--white);
+}
+.landing a:hover{
+	color: var(--sky);
+}
 
-		.landing a{
-			text-decoration: none;
-			color: var(--white);
-		}
-		.landing a:hover{
-			color: var(--sky);
-		}
+.landing > div{
+	width: 40%;
+	
+	min-width: 300px;
+	max-width: 500px;
+	min-height: 100px;
 
-	div.row.one{
-		background-color: var(--warmgrey);
-	}
+	padding: 0px;
+	margin: 10px;
 
-	div.row.two{
-		background-color: var(--white);
-	}
+	align-self: center;
+	text-align: center;
 
-	.row > div{
-		width: 40%;
-		min-width: 300px;
-		max-width: 500px;
+	/* background-color: var(--coolgrey); */
+}
 
-		min-height: 300px;
+div.row{
+	width: 100vw;
+	min-height:100px;
 
-		/* background-color: var(--black); */
+	display: flex;
+	flex-flow: row wrap;
 
-		padding: 0px;
-		margin: 10px;
+	background-color: var(--warmgrey);
+}
 
-		align-self: center;
-	}
+div.content{
+	width: 80%;
+	display: flex;
+	flex-flow: row wrap;
+
+	background-color: #AAA;
+}
+
+.content > div{
+	min-height: 300px;
+
+	background-color: var(--coolgrey);
+
+	padding: 0px;
+	margin: 10px;
+	align-self:auto;
+}
 
