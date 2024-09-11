@@ -381,7 +381,7 @@ a.copyright{
 
 
 nav {
-	box-shadow: 0 15px 0 var(--base02);
+	box-shadow: 0 0px 0 var(--base02);
 	outline-style: solid;
 	outline-width: 10px;
 	outline-color: var(--base3);
