@@ -84,14 +84,18 @@ body{
 
 a{
 	color: var(--black);
-	text-decoration: none;
+	text-decoration: underline;
+	text-decoration-thickness: 1px;
+	text-underline-offset: 4px;
 	
 }
 
 a:hover{
-	text-decoration: underline;
-	text-decoration-thickness: 1px;
-	text-underline-offset: 4px;
+	text-decoration: none;
+}
+
+sup{
+	font-size: 11px;
 }
 
 div{
@@ -207,7 +211,7 @@ div.landing{
 	flex-wrap: wrap;
 	
 	justify-content: flex-start; /* Align items to the left */
-	align-items: center; /* Optionally center items vertically */
+	align-items:end; /* Optionally center items vertically */
 }
 
 .landing div{
