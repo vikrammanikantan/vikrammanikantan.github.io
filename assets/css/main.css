@@ -52,29 +52,76 @@
 	font-family: "garamond-premier-pro-display", serif;
 	font-weight: 300;
 	font-style: normal;
+
+	line-height: 1.15;
 }
 
+
+h1{
+	font-size: 70px;
+	font-weight: 300;
+	font-style: normal;
+}
+
+h2{
+	font-size: 40px;
+	font-weight: 300;
+	font-style: normal;
+	/* margin-top: 10px; */
+}
+
+h3{
+	font-size: 30px;
+	font-weight: 300;
+	font-style: normal;
+}
+
+body{
+	font-size: 24px;
+	font-weight: 300;
+	font-style: normal;
+}
+
+a{
+	color: var(--black);
+	text-decoration: none;
+	
+}
+
+a:hover{
+	text-decoration: underline;
+	text-decoration-thickness: 1px;
+	text-underline-offset: 4px;
+}
+
+div{
+	background-color: #fff;
+}
+
+
+/* grid for the entire website */
 .grid-container {
 	display: grid;
 	grid-template-columns: 10% 76% 10%;
 	column-gap: 2%;
 	row-gap: 20px;
-	background-color: var(--base2);
+	background-color: white;
 	padding: 10px;
 	margin: 0px;
-  }
+}
   
-  .grid-container > div {
-	background-color: var(--base3);
-	text-align: center;
+.grid-container > div {
+	background-color: white;
+	text-align: left;
 	grid-column: span;
 	padding: 0px 0px;
-	font-size: 30px;
-  }
+}
 
-  div.navbar {
+
+/* start navbar */
+div.navbar {
 	width: 100%;
-	grid-column: span 3;
+	/* grid-column: span 3; */
 	background-color: white;
 
 	display: grid;
@@ -86,101 +133,134 @@
 	position: fixed;
 	top: 0px;
 	align-items: center;
-  }
 
-  .navbar .icon {
-		display: none;
-  }
+	line-height: 200%;
+}
 
-  .title{
+/* drop down menu icon */
+.navbar .icon {
+	display: none;
+	text-decoration: none;
+	color: black;
+}
+
+/* title/name in the top left */
+.title{
 	grid-column: 1;
 	text-align: left;
 	font-size: 30px;
-  }
+	display: flex;
+	align-items: left;
+}
 
-  .links {
+/* page links */
+.links {
 	grid-column: 2;
 	display: flex;
 	align-items: right;
 	justify-content: right;
 
 	font-size: 25px;
-  }
+}
 
-  .links a{
+/* link formatting */
+.links a{
 	margin: 0px 20px;
 	text-decoration: none;
 	color: black;
-  }
+}
 
-  .links a:hover{
-	text-decoration: overline;
-  }
+/* hover formatting */
+.links a:hover{
+	text-decoration: underline;
+	text-decoration-thickness: 1px;
+	text-underline-offset: 4px;
+}
+/* end nav bar */
+
+/* start footer */
+div.footer{
+	width: 100%;
+	/* grid-column: span 3; */
+	background-color: white;
+	color: black;
+
+	text-align: center;
+	justify-content: bottom;
+
+	padding: 0px;
+	bottom: 0px;
+	align-items: center;
+
+	min-height: 50px;
+	font-size: 16px;
+}
+
+div.landing{
+	grid-column: 2;
+
+	margin-top: 50px;
+	min-height: 80vh;
+
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	
+	justify-content: flex-start; /* Align items to the left */
+	align-items: center; /* Optionally center items vertically */
+}
+
+.landing div{
+	text-align: left;
+	width: 60%;
+	min-width: 400px;
+}
+
+div.section{
+
+	grid-column: 2;
+	text-align: left;
+
+	min-height: 80vh;
+	padding-top: 50px;
 
 
-  
+}
 
-  div.landing{
-	  grid-column: 2;
-	  text-align: center;
-	  background-color: white;
-
-
-	  margin-top: 50px;
-	  min-height: 80vh;
-
-  }
-
-  div.section{
-
-	  grid-column: 2;
-	  text-align: center;
-
-	  background-color: white;
-	  min-height: 80vh;
-
-	  padding-top: 50px;
-  }
+.section .title{
+	width:100%;
+}
 
 
-  @media screen and (max-width: 750px) {
+@media screen and (max-width: 750px) {
 	/* For mobile phones: */
-
-	.navbar{
-		justify-content: left;
-		height: fit-content;
+	.navbar .icon {
+		display:block;
+		width: 50px;
 	}
 
-	.navbar links{
+	.navbar .title{
+		grid-column: span 3;
+		text-align: center;
+	}
+
+	.navbar .links {
 		display: none;
 	}
-	.navbar a.icon {
-		margin: auto;
-		margin-right: 0;
+
+	.navbar .responsive{
+		grid-column: span 3;
 		display: block;
+		align-items: center;
 	}
 
-	.navbar.responsive {
-		position: fixed;
-		height: fit-content;
-		transition: 0.5s;
-	}
-	.navbar.responsive a:first-child{
-		width: 120px;
-		order: -3;
-	}
-
-	.navbar.responsive a {
+	.navbar .responsive a{
 		display: block;
-		text-align: center;
+		text-align: left;
 		width: 100vw;
+		height: 50px;
 	}
-	.navbar.responsive .icon {
-		margin: auto;
-		order: -2;
-		margin-right: 0;
-		width: 120px;
-	}
-  }
+	
+}
 
 /* end basic settings */

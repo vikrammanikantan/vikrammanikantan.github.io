@@ -16,44 +16,86 @@
         <!-- nav bar always on -->
 
         <div class="navbar" id="navbar">
-            <a class="title" href="#top" target="_self" style="text-decoration: none; color: black;"> 
-                Vikram Manikantan
-            </a>
 
-            <div class="links">
-                <a href="#research" target="_self"> Research </a>
-                <a href="#outreach" target="_self"> Outreach </a>
-                <a href="#music" target="_self"> Music </a>
-                <a href="#contact" target="_self"> Contact </a>
-                <a href="javascript:void(0);" style="font-size:20px;" class="icon" target="_self" onclick="myFunction()">&#9776;</a>
+            <div class="title">
+                <a href="javascript:void(0);" style="font-size:30px;" class="icon" target="_self" onclick="myFunction()">+ </a>
+                <a href="#top" target="_self" onclick="close_nav()" style="text-decoration: none; color: black;"> 
+                    Vikram Manikantan
+                </a>
             </div>
-            
+
+            <div class="links" id="links">
+                <a href="#research" target="_self" onclick="close_nav()"> Research </a>
+                <a href="#outreach" target="_self" onclick="close_nav()"> Outreach </a>
+                <a href="#music" target="_self" onclick="close_nav()"> Music </a>
+                <a href="#contact" target="_self" onclick="close_nav()"> Contact </a>
+            </div>
         </div>
 
         <div class="grid-container">
 
+            <div class="landing">
+                
+                <div>
+                    <body>My name is <mark>Vikram Manikantan</mark>. I am an </body>
+                    <h2>Astrophysics PhD Student</h2>
+                    <body> at <a href="https://astro.arizona.edu/">Steward Observatory</a>, at the University of Arizona. I study</body>
+                    <h2>binary black holes, accretion disks, relativistic jets, and their multi-messenger emission</h2>
 
-            <div class="landing">Main</div>  
+                </div>
 
-            <div class="section" id="research"> research </div>
+            </div>  
 
-            <div class="section" id="outreach"> outreach </div>
+            <div class="section" id="research"> 
+                <div class="title">
+                    <h1> Research </h1>
+                </div>
+            </div>
 
-            <div class="section" id="music"> music </div>
+            <div class="section" id="outreach">
+                <h1> Outreach </h1>
+            </div>
 
-            <div class="section" id="contact"> contact </div>
+            <div class="section" id="music">  
+                <h1> Music </h1>
+            </div>
 
+            <div class="section" id="contact">
+                <h1> Contact </h1>
+                
+                <body>
+                    <mark>Github</mark>: <a href="https://github.com/vikrammanikantan">vikrammanikantan</a>
+                    <br>
+                    <mark>Email</mark>: <a href="mailto:vik@arizona.edu">vik@arizona.edu</a>
+                    <br>
+                    <mark>Twitter</mark>: <a href="https://www.twitter.com/astro_vik"  >@astro_vik</a>
+                    <br>
+                    <mark>Publications</mark>: <a href="https://scholar.google.com/citations?user=cscvnHUAAAAJ&hl=en"  >Google Scholar</a>; <a href="https://ui.adsabs.harvard.edu/search/q=author%3A%22Manikantan%2C%20Vikram%22"  >Astrophysics Data System (ADS)</a>
+                </body>
+            </div>
         </div>
-        
-        <script>
-            function myFunction() {
-              var x = document.getElementById("navbar");
-              if (x.className === "navbar") {
-                x.className += " responsive";
-              } else {
-                x.className = "navbar";
-              }
-            }
-        </script>
+
+
+        <div class="footer">
+            <body>
+                Copyright &copy; 2024, Vikram Manikantan
+            </body>
+        </div>
 
     </body>
+    
+    <script>
+        function myFunction() {
+            var x = document.getElementById("links");
+            if (x.className === "links") {
+            x.className += " responsive";
+            } else {
+            x.className = "links";
+            }
+        }
+
+        function close_nav(){
+            var x = document.getElementById("links");
+            x.className = "links";
+        }
+    </script>
