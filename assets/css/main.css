@@ -69,6 +69,8 @@ p{
 	font-size: 24px;
 	font-weight: 300;
 	font-style: normal;
+
+	margin-top: 0;
 }
 
 h1{
@@ -246,7 +248,7 @@ div.section{
 	text-align: left;
 
 	padding-top: 50px;
-	min-height: 80vh;
+	/* min-height: 80vh; */
 
 	display: flex;
 	flex-direction: row;
@@ -265,11 +267,13 @@ div.section{
 .section h1{
 	width: 100%;
 	height: fit-content;
+	/* margin: 0px; */
 }
 
 .section div.content{
 	width: 60%;
 	min-width: 400px;
+	padding-top: 0;
 }
 
 .section .image{
@@ -288,7 +292,7 @@ div.section{
 }
 
 
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 900px) {
 	/* For mobile phones: */
 	.navbar .icon {
 		display:block;
@@ -325,6 +329,12 @@ div.section{
 
 		align-items: center;
 		justify-content: center;
+	}
+
+	.section div.square{
+		width: 100%;
+		margin: auto;
+	
 	}
 	
 }
