@@ -43,20 +43,21 @@
 	--textdark: var(--base3);
 	--textmed: var(--base1);
 
-	--highlight-dark:rgb(225, 16, 121);
+	--highlight-dark:rgb(225, 16, 121, 0.5);
 	--highlight-light: yellow;
 
 	--animation-type: ease-in-out;
 	--time-animate: 3s;
 
 	font-family: "garamond-premier-pro-display", serif;
+
 	font-weight: 300;
 	font-style: normal;
 
-	line-height: 1.15;
+	line-height: 1.23;
 
 	padding: 0;
-	margin: 0;
+	margin: auto;
 }
 
 body{
@@ -73,8 +74,14 @@ p{
 	margin-top: 0;
 }
 
+ol{
+	font-size: 24px;
+	font-weight: 300;
+	font-style: normal;
+}
+
 h1{
-	font-size: 70px;
+	font-size: 64px;
 	font-weight: 300;
 	font-style: normal;
 }
@@ -96,7 +103,7 @@ a{
 	color: var(--black);
 	text-decoration: underline;
 	text-decoration-thickness: 1px;
-	text-underline-offset: 4px;
+	text-underline-offset: 3.5px;
 }
 
 a:hover{
@@ -108,8 +115,8 @@ sup{
 }
 /* text end */
 
-div{
-	background-color: #fff;
+img{
+	border-radius: 1%;
 }
 
 
@@ -137,7 +144,7 @@ div{
 div.navbar {
 	width: 100%;
 	/* grid-column: span 3; */
-	background-color: white;
+	background-color: rgba(255, 255, 255, 0.9);
 
 	display: grid;
 	grid-template-columns: 40% 44% 12%;
@@ -259,14 +266,15 @@ div.section{
 }
 
 
-.section h1, .section .content, .section .image{
-	background-color: #eee;
-}
+/* .section h1, .section .content, .section .image{
+	background-color: #fff;
+} */
 
 /* subtitles have 100% width, so nothing is inline with it */
 .section h1{
 	width: 100%;
 	height: fit-content;
+	margin-bottom: 10px;
 	/* margin: 0px; */
 }
 
@@ -281,13 +289,16 @@ div.section{
 	min-width: 300px;
 	display: flex;          /* Make .image a flex container */
 	justify-content: center;  /* Horizontally center */
-	align-items: left; 
+	align-items: center; 
+
+	margin-bottom: 30px;
 }
 
 .section div.square{
 	width: 30%;
 	min-width: 425px;
 	margin: auto;
+	margin-top: 0;
 
 }
 
