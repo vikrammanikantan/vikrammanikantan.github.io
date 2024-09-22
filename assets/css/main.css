@@ -302,6 +302,44 @@ div.section{
 
 }
 
+.mosaic {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr); /* Default: 4 equal columns */
+	gap: 10px;
+}
+
+.mosaic img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+/* Large images span more columns and rows for the mosaic effect */
+.mosaic .large {
+	grid-column: span 2;
+	grid-row: span 2;
+}
+
+.mosaic .tall {
+	grid-row: span 2;
+}
+
+.mosaic .wide {
+	grid-column: span 2;
+}
+
+  /* Responsive design for mobile devices */
+@media (max-width: 768px) {
+	.mosaic {
+		grid-template-columns: 1fr; /* 2 columns on smaller screens */
+	}
+
+	.large .tall .wide{
+		grid-column: span 1;
+		grid-row: span 1;
+	}
+}
+
 
 @media screen and (max-width: 900px) {
 	/* For mobile phones: */
