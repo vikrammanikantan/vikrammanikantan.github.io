@@ -342,7 +342,7 @@ div.section{
 }
 
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 768px) {
 	/* For mobile phones: */
 	.navbar .icon {
 		display:block;
@@ -384,7 +384,6 @@ div.section{
 	.section div.square{
 		width: 100%;
 		margin: auto;
-	
 	}
 	
 }
