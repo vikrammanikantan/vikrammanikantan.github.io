@@ -372,13 +372,19 @@ div.section{
 		height: 50px;
 	}
 
-
 	.section .image{
 		width: 100%;
 		min-width: 300px;
 
 		align-items: center;
 		justify-content: center;
+	}
+
+	.section div.content{
+		max-width: none;
+		min-width: none;
+		width: 100%; 
+		margin: auto;
 	}
 
 	.section div.square{
