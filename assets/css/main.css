@@ -43,7 +43,7 @@
 	--textdark: var(--base3);
 	--textmed: var(--base1);
 
-	--highlight-dark:rgb(225, 16, 121, 0.5);
+	--highlight-dark:rgb(225, 16, 121, 0.3);
 	--highlight-light: yellow;
 
 	--animation-type: ease-in-out;
