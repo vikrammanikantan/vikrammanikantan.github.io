@@ -10,6 +10,12 @@
     <link rel="stylesheet" href="https://use.typekit.net/qke6kvg.css" />
 
     <style>
+      :root { --nav-h: 64px; }            /* pick 60–72px to taste */
+      .nav { min-height: var(--nav-h); }  /* your existing .nav has padding; this stabilizes height */
+
+      html {
+        font-family: var(--font-body);
+      }
 
       :root {
         --bg: #0b0b10;
@@ -17,29 +23,26 @@
         --muted: #1a1b25;
         --text: #e6e7ee;
         --subtle: #b7b9c8;
-        --brand: #6aa8ff;
+        --brand: #e5ac12;
         --brand-2: #ff6aa8;
-        --hl: rgba(106, 168, 255, 0.18);
-        --ring: rgba(106,168,255,0.35);
+        --hl:  rgba(38,139,210,0.15);
+        --ring: rgba(38,139,210,0.35);
         --shadow: 0 10px 30px rgba(0,0,0,0.35);
         font-family: "garamond-premier-pro-display", serif;
       }
 
-      html {
-        font-family: var(--font-body);
+      /* Solarized Light - lighter background tweak */
+      :root[data-theme="light"] {
+        --bg:      #fefdf6;                  /* lightened from base3 */
+        --surface: #fdf6e3;                  /* base3 */
+        --muted:   #eee8d5;                  /* base2 */
+        --text:    #657b83;                  /* base00 */
+        --subtle:  #586e75;                  /* base01 */
+        --hl:  rgba(38,139,210,0.15);
+        --ring: rgba(38,139,210,0.35);
+        --shadow:  0 6px 20px rgba(0,0,0,0.06);
       }
 
-      /* Explicit theme palettes controlled by data-theme */
-      :root[data-theme="light"] {
-        --bg: #f7f7fb;
-        --surface: #ffffff;
-        --muted: #f1f2f6;
-        --text: #1a1a22;
-        --subtle: #51556a;
-        --hl: rgba(106,168,255,0.15);
-        --ring: rgba(106,168,255,0.45);
-        --shadow: 0 6px 20px rgba(0,0,0,0.08);
-      }
       :root[data-theme="dark"] {
         --bg: #0b0b10;
         --surface: #11121a;
@@ -53,6 +56,8 @@
         --shadow: 0 10px 30px rgba(0,0,0,0.35);
       }
 
+
+
       #theme-toggle { background: none; border: 1px solid transparent; border-radius: 8px; font-size: 18px; padding: 4px 8px; cursor: pointer; color: var(--text); }
       #theme-toggle:hover { background: var(--hl); }
 
@@ -63,9 +68,15 @@
                     conic-gradient(from 120deg at 50% 50%, var(--muted), var(--surface));
         color: var(--text);
         font-weight: 500;
-        font-size: 16px;
+        font-size: 18px;
         line-height: 1.6;
         font-family: "proxima-nova", ProximaNova, "Helvetica Neue", Arial, sans-serif;
+      }
+      html {
+        transition: background-color 0.3s ease, color 0.3s ease;
+      }
+      body, .card, img, .section-title {
+        transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
       }
       a { color: var(--brand); text-decoration: none; }
       a:hover { text-decoration: underline; }
@@ -99,7 +110,18 @@
       }
 
       /* ====== Hero ====== */
-      .hero { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 28px; align-items: center; padding: 28px 20px 10px; }
+      .hero {
+        display: grid;
+        grid-template-columns: 1.2fr 0.8fr;
+        gap: 28px;
+        align-items: center;
+        padding: 28px 20px 10px;
+        min-height: calc(100vh - var(--nav-h));   /* <-- full screen minus navbar */
+      }
+      @media (max-width: 900px) {
+        .hero { grid-template-columns: 1fr; padding-top: 18px; }
+      }
+
       .hero h1 { font-size: clamp(28px, 4vw, 44px); line-height: 1.15; margin: 0 0 8px; }
       .hero h2 { font-size: clamp(18px, 2.5vw, 24px); font-weight: 650; margin: 6px 0 2px; color: var(--subtle); }
       .lead { font-size: 17px; color: var(--subtle); }
@@ -184,15 +206,21 @@
       /* Anchor offset for sticky header */
       section, .hero { scroll-margin-top: 70px; }
 
-      mark { background: var(--hl); padding: 2px 6px; border-radius: 8px; border: 1px solid var(--ring); color: inherit; }
-      sup { font-size: 0.7em; opacity: 0.85; }
+      mark {
+        background: #ffff00;  /* light pink highlight */
+        color: inherit;
+        padding: 0;           /* no extra spacing */
+        border: none;         /* no border */
+        border-radius: 0;     /* no rounded edges */
+      }
 
-      html {
-        transition: background-color 0.3s ease, color 0.3s ease;
+      mark a,
+      mark a:hover,
+      mark a:focus {
+        text-decoration: none;
+        color: inherit;
       }
-      body, .card, img, .section-title {
-        transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
-      }
+      sup { font-size: 0.7em; opacity: 0.85; }
 
       #hero-photo {
         width: 280px;       /* pick a size that fits your layout */
