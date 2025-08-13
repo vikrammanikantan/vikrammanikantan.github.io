@@ -81,7 +81,7 @@ ol{
 }
 
 h1{
-	font-size: 64px;
+	font-size: 52px;
 	font-weight: 300;
 	font-style: normal;
 }
@@ -123,8 +123,8 @@ img{
 /* grid for the entire website */
 .grid-container {
 	display: grid;
-	grid-template-columns: 1fr 8fr 1fr;
-	column-gap: 2%;
+	grid-template-columns: 1fr 4fr 1fr;
+	column-gap: 0%;
 	background-color: white;
 
 	row-gap: 20px;
@@ -142,20 +142,23 @@ img{
 
 /* start navbar */
 div.navbar {
-	width: 100%;
-	/* grid-column: span 3; */
-	background-color: rgba(255, 255, 255, 0.9);
+	width: 70%;
+	min-width: 1000px;
+	margin: 0 auto;
 
+	position: fixed;
+	left: 0;
+	right: 0;
+
+	/* existing code untouched below */
+	background-color: rgba(255, 255, 255, 0.9);
 	display: grid;
 	grid-template-columns: 40% 44% 12%;
 	row-gap: 20px;
 	column-gap: 2%;
 	padding: 10px;
-
-	position: fixed;
 	top: 0px;
 	align-items: center;
-
 	line-height: 200%;
 }
 
