@@ -1,233 +1,386 @@
 <!DOCTYPE html>
 <html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Vikram Manikantan</title>
+    <link rel="icon" type="image/x-icon" href="images/pixel.png" />
+    <base target="_blank" />
 
-    <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">		
-        
-        <title>Vikram Manikantan</title>
-        <link rel="icon" type="image/x-icon" href="images/pixel.png" style="height: 50; width: 50; aspect-ratio: 1;">
-        <link rel="icon" type="image/x-icon" href="images/pixel.png" style="height: 50; width: 50; aspect-ratio: 1;">
-        <link rel="stylesheet" href="assets/css/main.css" />
-        <base target="_blank">
+    <link rel="stylesheet" href="https://use.typekit.net/qke6kvg.css" />
 
-    </head>
+    <style>
 
-    <body id="top">
+      :root {
+        --bg: #0b0b10;
+        --surface: #11121a;
+        --muted: #1a1b25;
+        --text: #e6e7ee;
+        --subtle: #b7b9c8;
+        --brand: #6aa8ff;
+        --brand-2: #ff6aa8;
+        --hl: rgba(106, 168, 255, 0.18);
+        --ring: rgba(106,168,255,0.35);
+        --shadow: 0 10px 30px rgba(0,0,0,0.35);
+        font-family: "garamond-premier-pro-display", serif;
+      }
 
-        <!-- nav bar always on -->
+      html {
+        font-family: var(--font-body);
+      }
 
-        <div class="navbar" id="navbar">
-            <div class="title">
-                <a href="javascript:void(0);" style="font-size:30px;" class="icon" target="_self" onclick="myFunction()">+ </a>
-                <a href="#top" target="_self" onclick="close_nav()" style="text-decoration: none; color: black;"> 
-                    Vikram Manikantan
-                </a>
-            </div>
+      /* Explicit theme palettes controlled by data-theme */
+      :root[data-theme="light"] {
+        --bg: #f7f7fb;
+        --surface: #ffffff;
+        --muted: #f1f2f6;
+        --text: #1a1a22;
+        --subtle: #51556a;
+        --hl: rgba(106,168,255,0.15);
+        --ring: rgba(106,168,255,0.45);
+        --shadow: 0 6px 20px rgba(0,0,0,0.08);
+      }
+      :root[data-theme="dark"] {
+        --bg: #0b0b10;
+        --surface: #11121a;
+        --muted: #1a1b25;
+        --text: #e6e7ee;
+        --subtle: #b7b9c8;
+        --brand: #6aa8ff;
+        --brand-2: #ff6aa8;
+        --hl: rgba(106, 168, 255, 0.18);
+        --ring: rgba(106,168,255,0.35);
+        --shadow: 0 10px 30px rgba(0,0,0,0.35);
+      }
 
-            <div class="links" id="links">
-                <a href="#about" target="_self" onclick="close_nav()"> About </a>
-                <a href="#research" target="_self" onclick="close_nav()"> Research </a>
-                <a href="#outreach" target="_self" onclick="close_nav()"> Mentorship </a>
-                <a href="#music" target="_self" onclick="close_nav()"> Music </a>
-                <a href="#contact" target="_self" onclick="close_nav()"> Contact </a>
-            </div>
+      #theme-toggle { background: none; border: 1px solid transparent; border-radius: 8px; font-size: 18px; padding: 4px 8px; cursor: pointer; color: var(--text); }
+      #theme-toggle:hover { background: var(--hl); }
+
+      html { scroll-behavior: smooth; }
+      body {
+        margin: 0;
+        background: radial-gradient(60% 60% at 40% 40%, var(--muted), transparent 70%),
+                    conic-gradient(from 120deg at 50% 50%, var(--muted), var(--surface));
+        color: var(--text);
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 1.6;
+        font-family: "proxima-nova", ProximaNova, "Helvetica Neue", Arial, sans-serif;
+      }
+      a { color: var(--brand); text-decoration: none; }
+      a:hover { text-decoration: underline; }
+      img { max-width: 100%; display: block; border-radius: 14px; }
+
+      /* ====== Layout ====== */
+      .container { max-width: 1024px; margin: 0 auto; padding: 20px; }
+
+      /* ====== Navbar ====== */
+      .nav-wrap { position: sticky; top: 0; z-index: 50; }
+      .navbar {
+        backdrop-filter: saturate(140%) blur(10px);
+        background: color-mix(in oklab, var(--surface) 78%, transparent);
+        border-bottom: 1px solid rgba(255,255,255,0.06);
+        box-shadow: var(--shadow);
+      }
+      .nav { display: flex; align-items: center; justify-content: space-between; padding: 10px 20px; }
+      .brand { display: flex; align-items: center; gap: 10px; }
+      .brand a { color: var(--text); font-weight: 700; letter-spacing: 0.2px; }
+      .brand .toggle { display: none; font-size: 26px; padding: 6px 10px; border-radius: 10px; border: 1px solid transparent; }
+      .brand .toggle:hover { background: var(--hl); cursor: pointer; }
+      .links { display: flex; gap: 18px; align-items: center; }
+      .links a { color: var(--text); opacity: 0.9; padding: 8px 12px; border-radius: 10px; border: 1px solid transparent;}
+      .links a:hover { background: var(--hl); text-decoration: none; }
+
+      /* Mobile menu */
+      @media (max-width: 760px) {
+        .brand .toggle { display: inline-block; }
+        .links { position: absolute; left: 12px; right: 12px; top: 58px; display: none; flex-direction: column; background: color-mix(in oklab, var(--surface) 88%, transparent); border: 1px solid rgba(255,255,255,0.08); padding: 10px; border-radius: 14px; box-shadow: var(--shadow); z-index: 60; }
+        .links.show { display: flex; }
+      }
+
+      /* ====== Hero ====== */
+      .hero { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 28px; align-items: center; padding: 28px 20px 10px; }
+      .hero h1 { font-size: clamp(28px, 4vw, 44px); line-height: 1.15; margin: 0 0 8px; }
+      .hero h2 { font-size: clamp(18px, 2.5vw, 24px); font-weight: 650; margin: 6px 0 2px; color: var(--subtle); }
+      .lead { font-size: 17px; color: var(--subtle); }
+      .chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; }
+      .chip { display: inline-flex; gap: 8px; align-items: center; padding: 8px 12px; border-radius: 999px; background: var(--hl); border: 1px solid var(--ring); }
+      .hero .photo { aspect-ratio: 4 / 5; object-fit: cover; width: 100%; border-radius: 18px; box-shadow: var(--shadow); }
+      @media (max-width: 900px) { .hero { grid-template-columns: 1fr; padding-top: 18px; } }
+
+      /* ====== Sections ====== */
+      section { padding: 28px 20px; }
+      section .section-title { font-size: 20px; letter-spacing: 0.4px; text-transform: uppercase; color: var(--subtle); margin: 0 0 14px; }
+      .card { background: color-mix(in oklab, var(--surface) 92%, transparent); border: 1px solid rgba(255,255,255,0.08); border-radius: 16px; padding: 16px; box-shadow: var(--shadow); }
+      .grid { display: grid; gap: 16px; }
+      .grid.two { grid-template-columns: 1.2fr 0.8fr; }
+      .grid.three { grid-template-columns: repeat(3, 1fr); }
+      @media (max-width: 900px) { .grid.two, .grid.three { grid-template-columns: 1fr; } }
+
+      /* ====== Publications ====== */
+      .pubs ol { list-style: none; padding: 0; margin: 8px 0 0; counter-reset: item var(--count, 4); }
+      .pubs li { counter-increment: item -1; display: grid; grid-template-columns: auto 1fr; gap: 12px; padding: 12px; margin: 10px 0; border: 1px dashed rgba(255,255,255,0.12); border-radius: 12px; background: rgba(0,0,0,0.03); }
+      .pubs li::before { content: counter(item) "."; font-weight: 800; color: var(--brand); }
+      .pub-title { font-weight: 700; }
+      .venue { background: var(--hl); border: 1px solid var(--ring); padding: 2px 8px; border-radius: 999px; font-size: 13px; white-space: nowrap; }
+      .pub-meta { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin-top: 6px; }
+
+      /* ====== Outreach cards ====== */
+      .tiles { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; }
+      @media (max-width: 900px) { .tiles { grid-template-columns: 1fr; } }
+
+      /* ====== Music ====== */
+      .mosaic { display: grid; grid-template-columns: repeat(6, 1fr); grid-auto-rows: 90px; gap: 8px; }
+      .mosaic img { width: 100%; height: 100%; object-fit: cover; border-radius: 10px; }
+      .mosaic .large { grid-column: span 3; grid-row: span 3; }
+      .mosaic .wide { grid-column: span 3; grid-row: span 2; }
+
+      .figure {
+        width: min(100%, 720px);
+        margin: 16px auto 0;
+        border-radius: 18px;
+        box-shadow: var(--shadow);
+      }
+
+      /* ====== Footer ====== */
+      footer { text-align: center; color: var(--subtle); padding: 30px 10px 60px; }
+
+      /* Anchor offset for sticky header */
+      section, .hero { scroll-margin-top: 70px; }
+
+      mark { background: var(--hl); padding: 2px 6px; border-radius: 8px; border: 1px solid var(--ring); color: inherit; }
+      sup { font-size: 0.7em; opacity: 0.85; }
+
+      html {
+        transition: background-color 0.3s ease, color 0.3s ease;
+      }
+      body, .card, img, .section-title {
+        transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+      }
+
+      #hero-photo {
+        width: 280px;       /* pick a size that fits your layout */
+        aspect-ratio: 1 / 1;
+        object-fit: cover;
+        border-radius: 50%; /* keep the circular look */
+        transition: all 0.3s ease;
+        box-shadow: var(--shadow);
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- ===== Navbar ===== -->
+    <div class="nav-wrap">
+      <div class="navbar">
+        <div class="container nav">
+          <div class="brand">
+            <button class="toggle" aria-label="Open menu" onclick="toggleMenu()">☰</button>
+            <a href="#top" target="_self">Vikram Manikantan</a>
+            <button id="theme-toggle" aria-label="Toggle dark mode">🌙</button>
+          </div>
+          <nav id="nav-links" class="links">
+            <a href="#about" target="_self" onclick="closeMenu()">About</a>
+            <a href="#research" target="_self" onclick="closeMenu()">Research</a>
+            <a href="#outreach" target="_self" onclick="closeMenu()">Mentorship</a>
+            <a href="#music" target="_self" onclick="closeMenu()">Music</a>
+            <a href="#contact" target="_self" onclick="closeMenu()">Contact</a>
+          </nav>
         </div>
+      </div>
+    </div>
 
-        <div class="grid-container">
-
-            <div class="landing">
-                
-                <div>
-                    <p>My name is <mark><a href="#contact" target="_self">Vikram Manikantan</a></mark>. I am an </p>
-                    <h2>Astrophysics PhD Candidate</h2>
-                    <p> at <a href="https://astro.arizona.edu/">Steward Observatory</a>, at the University of Arizona. I study</p>
-                    <h2>binary black holes, accretion disks, relativistic jets, and their multi-messenger emission.</h2>
-
-                    <p style="font-size: 20px;">
-                        <!-- and I built <a href="https://github.com/vikrammanikantan/vikrammanikantan.github.io/">this website from scratch</a> -->
-
-                        <br>
-                        contact me: <a href="mailto:vik@arizona.edu">vik@arizona.edu</a>, <a href="https://bsky.app/profile/vikmani.bsky.social">@vikmani.bsky.social</a>
-                    </p>
-                </div>
-
-            </div>  
-
-            <div class="section" id="about"> 
-                <h1> About </h1>
-                <div class="image" style="justify-content: left;">
-                    <img src="images/vikram2.jpg" alt="Vikram Manikantan" style="width: 90%; max-width: 400px; display: block; object-fit: cover;">
-                </div>
-                <div class="content">
-                    <p>
-                        I am a computational/theoretical astrophysicist and 3rd year PhD student at <a href="https://astro.arizona.edu">Steward Observatory,</a> at the University of Arizona. I have a B.A. in Physics and a minor in Computer Science from Northwestern University. I am passionate about science education, soccer, and music. 
-                        
-                    </p>
-                    <p> 
-                        I currently work with Prof. Vasilis Paschalidis on simulating magnetohydrodynamic accretion onto binary black holes and uncovering their multi-messenger emission. I am part of the <a href="https://tap.arizona.edu/">Theoretical Astrophysics Program</a> (TAP) and the <a href="https://astro-sonata.github.io/">Transient Astrophysics</a> group (SONATA) at the University of Arizona.
-                    </p>
-                    <p>
-                        Previously, I was at the <a href="https://ciera.northwestern.edu/"> Center for Interdisciplinary Exploration and Research in Astrophysics</a> (CIERA) at Northwestern University, where I worked with Prof. Sasha Tchekhovskoy on <a href="https://iopscience.iop.org/article/10.3847/1538-4357/ad323d">angular momentum transport mechanisms</a> in magnetically arrested disks around spinning black holes.
-                    </p>
-                </div>
-            </div>
-
-            <div class="section" id="research"> 
-                <h1>Research </h1>
-                <div class="content">
-                    <p>
-                        I am a theoretical and computational astrophysicist whose research focuses on the multi-messenger nature of compact objects such as supermassive (binary) black holes. I use numerical relativity and magnetohydrodynamic codes, such as Einstein Toolkit, IllinoisGRMHD, and H-AMR, to simulate these systems from first principles. 
-                    </p>
-                    <p>
-                        Currently, I am studying accretion onto supermassive binary black holes, with a specific interest in uncovering the electromagnetic counterparts to gravitational wave signals from these systems. We simulate these systems by solving Einstein's equations of general relativity to accurately model the spacetime, and then evolving the magnetohydrodynamic equations on the curved spacetime to simulate the accretion flow. 
-                    </p>
-                </div>
-                <div class="image">
-                    <img src="images/bh_image.png" alt="Binary Black Hole" style="width: 90%; display: block;">
-                </div>
-
-                <h1 style="height: 20px;"> </h1>
-
-                <div class="content" style="width: 65%;">
-                    <h2 style="margin-bottom: 0;">
-                        Publications
-                    </h2>
-                    <p>
-                        <a href="https://scholar.google.com/citations?user=cscvnHUAAAAJ&hl=en">google scholar</a>,<sup>&nearr;</sup> <a href="https://ui.adsabs.harvard.edu/search/q=author%3A%22Manikantan%2C%20Vikram%22">ADS</a><sup>&nearr;</sup>
-                    </p>
-                    <ol reversed style="line-height: 130%;">
-                        <li>
-                            "Effects of Eccentricity on Accreting Binary Black Holes: MHD Simulations in Full GR Reveal Novel Periodicities in Jet Power and Synchrotron Spectra" 
-
-                            <mark> Vikram Manikantan</mark>, <a href="https://astro.arizona.edu/person/vasileios-vasilis-paschalidis">Vasileios Paschalidis</a>, and <a href="https://sbozzolo.github.io/">Gabriele Bozzola</a>, 2025. 
-
-                            <mark style="background-color: var(--highlight-dark);">Phys. Rev. D 112, 043004</mark>. [<a href="https://doi.org/10.1103/js22-3hfx">publisher</a>] [<a href="files/effects.pdf">pdf</a>]
-                        </li>
-                        <li style="margin-top: 20px;">
-                            "Coincident Multimessenger Bursts from Eccentric Supermassive Binary Black Holes" 
-                            
-                            <mark> Vikram Manikantan</mark>, <a href="https://astro.arizona.edu/person/vasileios-vasilis-paschalidis">Vasileios Paschalidis</a>, and <a href="https://sbozzolo.github.io/">Gabriele Bozzola</a>, 2025, 
-                            
-                            <mark style="background-color: var(--highlight-dark);">ApJL, 984 L47</mark>. [<a href="https://doi.org/10.3847/2041-8213/adccb8">publisher</a>] [<a href="files/coincident.pdf">pdf</a>]
-                        </li>
-                        <li style="margin-top: 20px;"> 
-                            "Winds and Disk Turbulence Exert Equal Torques on Magnetically Arrested Disks" <mark>Vikram Manikantan</mark>, <a href="https://ciera.northwestern.edu/directory/nicholas-omahen/">Nick Kaaz</a>, <a href="https://ciera.northwestern.edu/directory/jonatan-jacquemin-ide/">Jonatan Jacquemin-Ide</a>, et al. 2024, <mark style="background-color: var(--highlight-dark);">ApJ, 965 175</mark>. [<a href="http://doi.org/10.3847/1538-4357/ad323d">publisher</a>] [<a href="files/winds.pdf">pdf</a>]
-                        </li>
-                    </ol>
-                    
-                    
-                </div>
-            </div>
-
-            <div class="section" id="outreach">
-                <h1> Mentorship / Outreach </h1>
-                <div class="content" style="width: 100%; margin: auto;">
-                    <p>
-                        I am passionate about developing programs that increase undergraduate students success in astrophysics research. I currently focus on two aspects of this: 1. training students with <mark style="background-color: var(--highlight-dark);">fundamental skills</mark> needed to perform leading research, and 2. providing mentorship and a support structure to create <mark style="background-color: var(--highlight-dark);">sustainable success</mark> and increase retention of underrepresented groups.
-                    </p>
-                    <p>
-                        To do this, I have taken leadership roles in several programs at the University of Arizona, including the <a href="https://timestep.arizona.edu/programs/timestep-research-apprenticeship" target="_blank">TIMESTEP Research Apprenticeship</a> program and the <a href="">Computational and Mathematical Program for incoming Arizona Science Students</a> (COMPASS). I am also interested in, and attended a workshop on, developing <a href="https://ur.arizona.edu/content/course-based-research-undergraduate-experiences-cures"> Course-based Undergraduate Research Experiences</a> (CUREs) to increase undergraduate research opportunities. 
-                    </p>
-
-                    <p>
-                        You can learn more about my mentorship and outreach efforts below:
-                    </p>
-                </div>
-
-                <div class="square">
-                    <h3><a href="https://timestep.arizona.edu/programs/timestep-research-apprenticeship" target="_blank">TIMESTEP Research Apprenticeship</a></h3>
-                    <p><mark>Graduate Student Coordinator</mark> of the Research Apprenticeship program; a mentorship program that provides second year undergraduates with a paid opportunity to build technical and professional skills applicable to both research and industry.</p>
-                </div>
-                <div class="square">
-                    <h3><a href="compass.html" target="_blank">COMPASS</a></h3>
-                    <p><mark>Co-organizer and instructor</mark> for COMPASS, a computational and mathematical workshop for incoming undergraduates that aims to remove barriers to entering STEM by providing necessary technical training.</p>
-                </div>
-                <div class="square">
-                    <h3><a href="https://twitter.com/StewardAstro">Steward Social Media</a></h3>
-                    <p><mark>Graduate Student Lead</mark> for Steward Observatory's new social media initiative which includes creating and running our <a href="https://www.instagram.com/stewardobservatory">Instagram</a>, <a href="https://twitter.com/StewardAstro">Twitter</a>, <a href="https://bsky.app/profile/stewardobservatory.bsky.social">Bluesky</a> and <a href="https://www.facebook.com/StewardAstronomy/">Facebook</a> accounts, as well as developing content to post three times a week.</p>
-                </div>
-                <div class="square">
-                    <h3><a href="https://timestep.arizona.edu/programs/timestep-summer-tech-internship" target="_blank">TIMESTEP Internship</a></h3>
-                    <p><mark>Graduate Student Coordinator</mark> of the Summer Tech Internship program; a mentorship program supporting undergraduates entering the STEM workforce by matching them with companies for a summer internship and providing a support structure.</p>
-                </div>
-                    
-                
-            </div>
-
-            <div class="section" id="music">  
-                <h1> Music </h1>
-                <div class="content">
-                    <p style="margin-right:10px;">
-                        I have played the electric guitar for over 14 years and am an experienced live performer. I also play the electric bass and, as a last resort, the drums. My proudest moments came as part of Poor Man's Yacht Club, a band my best friends and I started in our dorm during our freshman year. It kept us going through the pandemic. We won Northwestern University's Battle of the Bands, played many shows in the Evanston area, and wrote, recorded, and released our own music.
-                    </p>
-                    <p>
-                        Check us out on <a href="https://open.spotify.com/artist/2Ck3OQPalGyoPDUCMRT149?si=02TgpXEoQ9G5eNChxUtyrA">Spotify</a><sup>&nearr;</sup>
-                    </p>
-                    <p>
-                        Find us on <a href="https://www.instagram.com/pmyctunes/">Instagram</a><sup>&nearr;</sup>
-                    </p>
-                    <p>
-                        They wrote an <a href="https://dailynorthwestern.com/2022/05/16/ae/mayfest-hosts-battle-of-the-artists-provides-platforms-to-student-performers/">article</a><sup>&nearr;</sup> about our battle of the bands win.
-                    </p>
-                    <p>
-                        I also have a personal <a href="https://www.instagram.com/quitarvik/">Instagram music account</a>.<sup>&nearr;</sup>
-                    </p>
-                </div>
-
-                <div class="image">
-                    <iframe style="border-radius:12px" src="https://open.spotify.com/embed/artist/2Ck3OQPalGyoPDUCMRT149?utm_source=generator" width="100%" height="400" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-                </div>
-                
-                <div class="mosaic">
-                    <img class="large" src="images/music.jpg">
-                    <img class="wide" src="images/BATTLES_5.jpg">
-                    <img class="wide" src="images/block3.jpg">
-                    <img class="wide" src="images/grad.jpg">
-                    <img class="wide" src="images/park.jpg">
-                    <img class="" src="images/block1.jpg">
-                    <img class="wide" src="images/lake.jpg">
-                    <img class="" src="images/kitt.jpg">
-                </div>
-                
-            </div>
-
-            <div class="section" id="contact">
-                <h1> Contact </h1>
-                <div class="content">
-                    <p>
-                        Email: <a href="mailto:vik@arizona.edu">vik@arizona.edu</a><sup> &nearr;</sup>
-                        <br>
-                        Bluesky: <a href="https://bsky.app/profile/vikmani.bsky.social">@vikmani.bsky.social</a>
-                        <br>
-                        Github: <a href="https://github.com/vikrammanikantan">vikrammanikantan</a><sup> &nearr;</sup>
-                        <br>
-                        Publications: <a href="https://scholar.google.com/citations?user=cscvnHUAAAAJ&hl=en">Google Scholar</a><sup> &nearr;</sup>; <a href="https://ui.adsabs.harvard.edu/search/q=author%3A%22Manikantan%2C%20Vikram%22">Astrophysics Data System (ADS)</a><sup> &nearr;</sup>
-                    </p>
-                </div>
-            </div>
+    <main class="container">
+      <!-- ===== Hero ===== -->
+      <section id="top" class="hero">
+        <div class="hero-text">
+          <p>My name is <mark>Vikram Manikantan</mark>. I am an</p>
+          <h2>Astrophysics PhD Candidate</h1>
+          <p>at <a href="https://astro.arizona.edu/">Steward Observatory</a>, University of Arizona. I study</p>
+          <h2>binary black holes, accretion disks, relativistic jets, and their multi‑messenger emission.</h2>
+          <div class="chips">
+            <span class="chip"><a href="mailto:vik@arizona.edu">vik@arizona.edu</a></span>
+            <span class="chip"><a href="https://bsky.app/profile/vikmani.bsky.social">@vikmani.bsky.social</a></span>
+          </div>
         </div>
+        <img id="hero-photo" src="images/vikram2.jpg" alt="Vikram Manikantan" />
+      </section>
 
+      <!-- ===== About ===== -->
+      <section id="about">
+        <h3 class="section-title">About</h3>
+        <div class="card">
+          <p>
+            I am a computational/theoretical astrophysicist and 4th year PhD candidate at <a href="https://astro.arizona.edu">Steward Observatory</a>, at the University of Arizona. I have a B.A. in Physics and a minor in Computer Science from Northwestern University. I am passionate about science education, soccer, and music.
+          </p>
+          <p>
+            I currently work with Prof. Vasilis Paschalidis on simulating magnetohydrodynamic accretion onto binary black holes and uncovering their multi‑messenger emission. I am part of the <a href="https://tap.arizona.edu/">Theoretical Astrophysics Program</a> (TAP) and the <a href="https://astro-sonata.github.io/">Transient Astrophysics</a> group (SONATA) at the University of Arizona.
+          </p>
+          <p>
+            Previously, I was at the <a href="https://ciera.northwestern.edu/">Center for Interdisciplinary Exploration and Research in Astrophysics</a> (CIERA) at Northwestern University, where I worked with Prof. Sasha Tchekhovskoy on <a href="https://iopscience.iop.org/article/10.3847/1538-4357/ad323d">angular momentum transport mechanisms</a> in magnetically arrested disks around spinning black holes.
+          </p>
+        </div>
+      </section>
 
-        <div class="footer" style="padding-top: 40px;">
-            <p style="font-size: 16px;">
-                Copyright &copy; 2025, <a href="https://github.com/vikrammanikantan/vikrammanikantan.github.io/">Vikram Manikantan</a><sup style="font-size: 8px;"> &nearr;</sup>
+      <!-- ===== Research ===== -->
+      <section id="research">
+        <h3 class="section-title">Research</h3>
+        <div class="grid two">
+          <div class="card">
+            <p>
+              I am a theoretical and computational astrophysicist whose research focuses on the multi‑messenger nature of compact objects such as supermassive (binary) black holes. I use numerical relativity and magnetohydrodynamic codes, such as Einstein Toolkit, IllinoisGRMHD, and H‑AMR, to simulate these systems from first principles.
             </p>
+            <p>
+              Currently, I am studying accretion onto supermassive binary black holes, with a specific interest in uncovering the electromagnetic counterparts to gravitational wave signals from these systems. We simulate these systems by solving Einstein's equations of general relativity to accurately model the spacetime, and then evolving the magnetohydrodynamic equations on the curved spacetime to simulate the accretion flow.
+            </p>
+          </div>
+          <img src="images/bh_image.png" alt="Binary Black Hole" />
         </div>
+        <div class="card pubs" style="margin-top:14px;">
+          <div style="display:flex; align-items:center; gap:10px; margin-bottom:6px;">
+            <h4 style="margin:0;">Publications</h4>
+            <span class="venue"><a href="https://scholar.google.com/citations?user=cscvnHUAAAAJ&hl=en">Google Scholar</a></span>
+            <span class="venue"><a href="https://ui.adsabs.harvard.edu/search/q=author%3A%22Manikantan%2C%20Vikram%22">ADS</a></span>
+          </div>
+          <ol reversed>
+            <li>
+              <div>
+                <div class="pub-title">Effects of Eccentricity on Accreting Binary Black Holes: MHD Simulations in Full GR Reveal Novel Periodicities in Jet Power and Synchrotron Spectra</div>
+                <div> <mark>Vikram Manikantan</mark>, <a href="https://astro.arizona.edu/person/vasileios-vasilis-paschalidis">Vasileios Paschalidis</a>, and <a href="https://sbozzolo.github.io/">Gabriele Bozzola</a>, 2025. <span class="venue">Phys. Rev. D 112, 043004</span> [<a href="https://doi.org/10.1103/js22-3hfx">publisher</a>] [<a href="files/effects.pdf">pdf</a>]
+                </div>
+              </div>
+            </li>
+            <li>
+              <div>
+                <div class="pub-title">Coincident Multimessenger Bursts from Eccentric Supermassive Binary Black Holes</div>
+                <div> <mark>Vikram Manikantan</mark>, <a href="https://astro.arizona.edu/person/vasileios-vasilis-paschalidis">Vasileios Paschalidis</a>, and <a href="https://sbozzolo.github.io/">Gabriele Bozzola</a>, 2025. <span class="venue">ApJL, 984 L47</span> [<a href="https://doi.org/10.3847/2041-8213/adccb8">publisher</a>] [<a href="files/coincident.pdf">pdf</a>]
+                </div>
+              </div>
+            </li>
+            <li>
+              <div>
+                <div class="pub-title">Winds and Disk Turbulence Exert Equal Torques on Magnetically Arrested Disks</div>
+                <div> <mark>Vikram Manikantan</mark>, <a href="https://ciera.northwestern.edu/directory/nicholas-omahen/">Nick Kaaz</a>, <a href="https://ciera.northwestern.edu/directory/jonatan-jacquemin-ide/">Jonatan Jacquemin‑Ide</a>, et al., 2024. <span class="venue">ApJ, 965 175</span> [<a href="http://doi.org/10.3847/1538-4357/ad323d">publisher</a>] [<a href="files/winds.pdf">pdf</a>]
+                </div>
+              </div>
+            </li>
+          </ol>
+        </div>
+      </section>
 
-    </body>
-    
+      <!-- ===== Outreach ===== -->
+      <section id="outreach">
+        <h3 class="section-title">Mentorship / Outreach</h3>
+        <div class="card">
+          <p>
+            I am passionate about developing programs that increase undergraduate students success in astrophysics research. I currently focus on two aspects of this: 1. training students with <mark>fundamental skills</mark> needed to perform leading research, and 2. providing mentorship and a support structure to create <mark>sustainable success</mark> and increase retention of underrepresented groups.
+          </p>
+          <p>
+            To do this, I have taken leadership roles in several programs at the University of Arizona, including the <a href="https://timestep.arizona.edu/programs/timestep-research-apprenticeship">TIMESTEP Research Apprenticeship</a> program and the <a href="">Computational and Mathematical Program for incoming Arizona Science Students</a> (COMPASS). I am also interested in, and attended a workshop on, developing <a href="https://ur.arizona.edu/content/course-based-research-undergraduate-experiences-cures">Course‑based Undergraduate Research Experiences</a> (CUREs) to increase undergraduate research opportunities.
+          </p>
+          <p>You can learn more about my mentorship and outreach efforts below:</p>
+        </div>
+        <div class="tiles" style="margin-top:14px;">
+          <div class="card">
+            <h4 style="margin:0 0 4px;"><a href="https://timestep.arizona.edu/programs/timestep-research-apprenticeship">TIMESTEP Research Apprenticeship</a></h4>
+            <p><mark>Graduate Student Coordinator</mark> of the Research Apprenticeship program; a mentorship program that provides second year undergraduates with a paid opportunity to build technical and professional skills applicable to both research and industry.</p>
+          </div>
+          <div class="card">
+            <h4 style="margin:0 0 4px;"><a href="https://arizona-relativity.github.io/extras/compass.html">COMPASS</a></h4>
+            <p><mark>Co‑organizer and instructor</mark> for COMPASS, a computational and mathematical workshop for incoming undergraduates that aims to remove barriers to entering STEM by providing necessary technical training.</p>
+          </div>
+          <div class="card">
+            <h4 style="margin:0 0 4px;"><a href="https://twitter.com/StewardAstro">Steward Social Media</a></h4>
+            <p><mark>Graduate Student Lead</mark> for Steward Observatory's new social media initiative which includes creating and running our <a href="https://www.instagram.com/stewardobservatory">Instagram</a>, <a href="https://twitter.com/StewardAstro">Twitter</a>, <a href="https://bsky.app/profile/stewardobservatory.bsky.social">Bluesky</a> and <a href="https://www.facebook.com/StewardAstronomy/">Facebook</a> accounts, as well as developing content to post three times a week.</p>
+          </div>
+          <div class="card">
+            <h4 style="margin:0 0 4px;"><a href="https://timestep.arizona.edu/programs/timestep-summer-tech-internship">TIMESTEP Internship</a></h4>
+            <p><mark>Graduate Student Coordinator</mark> of the Summer Tech Internship program; a mentorship program supporting undergraduates entering the STEM workforce by matching them with companies for a summer internship and providing a support structure.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== Music ===== -->
+      <section id="music">
+        <h3 class="section-title">Music</h3>
+        <div class="grid two">
+          <div class="card">
+            <p>
+              I have played the electric guitar for over 14 years and am an experienced live performer. I also play the electric bass and, as a last resort, the drums. My proudest moments came as part of Poor Man's Yacht Club, a band my best friends and I started in our dorm during our freshman year. It kept us going through the pandemic. We won Northwestern University's Battle of the Bands, played many shows in the Evanston area, and wrote, recorded, and released our own music.
+            </p>
+            <p>Check us out on <a href="https://open.spotify.com/artist/2Ck3OQPalGyoPDUCMRT149?si=02TgpXEoQ9G5eNChxUtyrA">Spotify</a> </p>
+            <p>Find us on <a href="https://www.instagram.com/pmyctunes/">Instagram</a> </p>
+            <p>They wrote an <a href="https://dailynorthwestern.com/2022/05/16/ae/mayfest-hosts-battle-of-the-artists-provides-platforms-to-student-performers/">article</a>  about our battle of the bands win.</p>
+            <p>I also have a personal <a href="https://www.instagram.com/quitarvik/">Instagram music account</a>. </p>
+          </div>
+          <div class="card">
+            <iframe style="border-radius:12px; width:100%; height:340px;" src="https://open.spotify.com/embed/artist/2Ck3OQPalGyoPDUCMRT149?utm_source=generator" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+          </div>
+        </div>
+        <div class="mosaic" style="margin-top:12px;">
+          <img class="large" src="images/music.jpg" alt="Music" />
+          <img class="wide" src="images/BATTLES_5.jpg" alt="Battles" />
+          <img class="wide" src="images/block3.jpg" alt="Block 3" />
+          <img class="wide" src="images/grad.jpg" alt="Graduation" />
+          <img class="wide" src="images/park.jpg" alt="Park" />
+          <img src="images/block1.jpg" alt="Block 1" />
+          <img class="wide" src="images/lake.jpg" alt="Lake" />
+          <img src="images/kitt.jpg" alt="Kitt" />
+        </div>
+      </section>
+
+      <!-- ===== Contact ===== -->
+      <section id="contact">
+        <h3 class="section-title">Contact</h3>
+        <div class="card">
+          <p>
+            Email: <a href="mailto:vik@arizona.edu">vik@arizona.edu</a> <br />
+            Bluesky: <a href="https://bsky.app/profile/vikmani.bsky.social">@vikmani.bsky.social</a><br />
+            Github: <a href="https://github.com/vikrammanikantan">vikrammanikantan</a> <br />
+            Publications: <a href="https://scholar.google.com/citations?user=cscvnHUAAAAJ&hl=en">Google Scholar</a> ; <a href="https://ui.adsabs.harvard.edu/search/q=author%3A%22Manikantan%2C%20Vikram%22">Astrophysics Data System (ADS)</a> 
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>Copyright &copy; 2025, <a href="https://github.com/vikrammanikantan/vikrammanikantan.github.io/">Vikram Manikantan</a> </p>
+    </footer>
+
     <script>
-        function myFunction() {
-            var x = document.getElementById("links");
-            if (x.className === "links") {
-            x.className += " responsive";
-            } else {
-            x.className = "links";
-            }
-        }
+      // Mobile nav
+      const links = document.getElementById('nav-links');
+      function toggleMenu(){ links.classList.toggle('show'); }
+      function closeMenu(){ links.classList.remove('show'); }
+      document.addEventListener('click', (e) => {
+        const within = e.target.closest('#nav-links') || e.target.closest('.toggle');
+        if(!within) closeMenu();
+      });
 
-        function close_nav(){
-            var x = document.getElementById("links");
-            x.className = "links";
+      // === Theme toggle & hero image swap ===
+      (function(){
+        const root = document.documentElement;
+        const btn = document.getElementById('theme-toggle');
+        const hero = document.getElementById('hero-photo');
+        const stored = localStorage.getItem('theme');
+        const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+        const initial = stored || (prefersDark ? 'dark' : 'light');
+        apply(initial);
+        if(btn){
+          btn.textContent = initial === 'dark' ? '☀️' : '🌙';
+          btn.addEventListener('click', () => {
+            const next = (root.getAttribute('data-theme') === 'dark') ? 'light' : 'dark';
+            apply(next);
+            btn.textContent = next === 'dark' ? '☀️' : '🌙';
+            localStorage.setItem('theme', next);
+          });
         }
+        function apply(mode){
+          root.setAttribute('data-theme', mode);
+          if(hero){ hero.src = mode === 'dark' ? 'images/vikram1.jpg' : 'images/vikram2.jpg'; }
+          document.body.style.background = '';
+        }
+      })();
     </script>
+  </body>
+</html>
