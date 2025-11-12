@@ -12,8 +12,6 @@
 
     </head>
 
-
-
     <body id="top">
 
         <!-- nav bar always on -->
@@ -28,26 +26,23 @@
 
         <div class="grid-container">
 
-            <div class="landing" style="background-color: white;">
 
-                <div class="image" style="width: 40%; background-color:white;">
-                    <img src="images/vikram2.jpg" alt="Vikram Manikantan" style="width: 100%; max-width: 350px; display: block; object-fit: cover; border-radius: 50%;">
-                </div>
-
-                <div style="width: 60%; background-color:white;">
-                    <p>My name is <mark>Vikram Manikantan</mark>. I am an </p>
-                    <h2>Astrophysics PhD Candidate</h2>
-                    <p> at <a href="https://astro.arizona.edu/">Steward Observatory</a>, at the University of Arizona. I study</p>
-                    <h2>binary black holes, accretion disks, relativistic jets, and their multi-messenger emission.</h2>
-
-                    <p style="font-size: 20px;">
-                        <!-- and I built <a href="https://github.com/vikrammanikantan/vikrammanikantan.github.io/">this website from scratch</a> -->
-                        contact me: <a href="mailto:vik@arizona.edu">vik@arizona.edu</a>, <a href="https://bsky.app/profile/vikmani.bsky.social">@vikmani.bsky.social</a>
+            <div class="section" id="teaching">
+                <h1> Teaching </h1>
+                <div class="content" style="width: 100%; margin: auto;">
+                    <p>
+                        I am passionate about developing programs that increase undergraduate students success in astrophysics research. I currently focus on two aspects of this: 1. training students with <mark style="background-color: var(--highlight-dark);">fundamental skills</mark> needed to perform leading research, and 2. providing mentorship and a support structure to create <mark style="background-color: var(--highlight-dark);">sustainable success</mark> and increase retention of underrepresented groups.
+                    </p>
+                    <p>
+                        To do this, I have taken leadership roles in several programs at the University of Arizona, including the <a href="https://timestep.arizona.edu/programs/timestep-research-apprenticeship" target="_blank">TIMESTEP Research Apprenticeship</a> program and the <a href="">Computational and Mathematical Program for incoming Arizona Science Students</a> (COMPASS). I am also interested in, and attended a workshop on, developing <a href="https://ur.arizona.edu/content/course-based-research-undergraduate-experiences-cures"> Course-based Undergraduate Research Experiences</a> (CUREs) to increase undergraduate research opportunities. 
                     </p>
                 </div>
-
+                    
+                
             </div>
-        </div>  
+
+        </div>
+
 
         <div id="footer-container"></div>
 
@@ -56,7 +51,6 @@
             .then(res => res.text())
             .then(html => document.getElementById("footer-container").innerHTML = html);
         </script>
-
 
     </body>
     

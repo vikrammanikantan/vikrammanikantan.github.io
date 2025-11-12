@@ -228,18 +228,20 @@ div.landing{
 	margin-top: 100px;
 	min-height: 85vh;
 
+	width: 100%;
+
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
 	
-	justify-content: flex-start; /* Align items to the left */
-	align-items:end; /* Optionally center items vertically */
+	justify-content: center; /* Align items to the left */
+	align-items: center; /* Optionally center items vertically */
 }
 
 .landing div{
-	text-align: left;
-	width: 60%;
-	min-width: 400px;
+	text-align: right;
+	width: 50%;
+	min-width: 375px;
 }
 
 div.landing a{
@@ -283,7 +285,7 @@ div.section{
 
 .section div.content{
 	width: 60%;
-	min-width: 400px;
+	min-width: 375;
 	padding-top: 0;
 }
 
@@ -299,7 +301,7 @@ div.section{
 
 .section div.square{
 	width: 30%;
-	min-width: 400px;
+	min-width: 375px;
 	margin: auto;
 	margin-top: 0;
 

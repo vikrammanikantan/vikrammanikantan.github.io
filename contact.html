@@ -12,8 +12,6 @@
 
     </head>
 
-
-
     <body id="top">
 
         <!-- nav bar always on -->
@@ -27,27 +25,22 @@
         </script>
 
         <div class="grid-container">
-
-            <div class="landing" style="background-color: white;">
-
-                <div class="image" style="width: 40%; background-color:white;">
-                    <img src="images/vikram2.jpg" alt="Vikram Manikantan" style="width: 100%; max-width: 350px; display: block; object-fit: cover; border-radius: 50%;">
-                </div>
-
-                <div style="width: 60%; background-color:white;">
-                    <p>My name is <mark>Vikram Manikantan</mark>. I am an </p>
-                    <h2>Astrophysics PhD Candidate</h2>
-                    <p> at <a href="https://astro.arizona.edu/">Steward Observatory</a>, at the University of Arizona. I study</p>
-                    <h2>binary black holes, accretion disks, relativistic jets, and their multi-messenger emission.</h2>
-
-                    <p style="font-size: 20px;">
-                        <!-- and I built <a href="https://github.com/vikrammanikantan/vikrammanikantan.github.io/">this website from scratch</a> -->
-                        contact me: <a href="mailto:vik@arizona.edu">vik@arizona.edu</a>, <a href="https://bsky.app/profile/vikmani.bsky.social">@vikmani.bsky.social</a>
+            <div class="section" id="contact">
+                <h1> Contact </h1>
+                <div class="content">
+                    <p>
+                        Email: <a href="mailto:vik@arizona.edu">vik@arizona.edu</a>
+                        <br>
+                        Bluesky: <a href="https://bsky.app/profile/vikmani.bsky.social">@vikmani.bsky.social</a>
+                        <br>
+                        Github: <a href="https://github.com/vikrammanikantan">vikrammanikantan</a>
+                        <br>
+                        Publications: <a href="https://scholar.google.com/citations?user=cscvnHUAAAAJ&hl=en">Google Scholar</a>, <a href="https://ui.adsabs.harvard.edu/search/q=author%3A%22Manikantan%2C%20Vikram%22">Astrophysics Data System (ADS)</a>
                     </p>
                 </div>
-
             </div>
-        </div>  
+        </div>
+
 
         <div id="footer-container"></div>
 
@@ -56,7 +49,6 @@
             .then(res => res.text())
             .then(html => document.getElementById("footer-container").innerHTML = html);
         </script>
-
 
     </body>
     

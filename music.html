@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">		
+        
+        <title>Vikram Manikantan</title>
+        <link rel="icon" type="image/x-icon" href="images/pixel.png" style="height: 50; width: 50; aspect-ratio: 1;">
+        <link rel="icon" type="image/x-icon" href="images/pixel.png" style="height: 50; width: 50; aspect-ratio: 1;">
+        <link rel="stylesheet" href="assets/css/main.css" />
+        <base target="_blank">
+
+    </head>
+
+    <body id="top">
+
+        <!-- nav bar always on -->
+
+       <div id="navbar-container"></div>
+
+        <script>
+        fetch("navbar.html")
+            .then(res => res.text())
+            .then(html => document.getElementById("navbar-container").innerHTML = html);
+        </script>
+
+        <div class="grid-container">
+
+            <div class="section" id="music">  
+                <h1> Music </h1>
+                <div class="content">
+                    <!-- <p style="margin-right:10px;">
+                        
+                    </p> -->
+                    <p>
+                        Check us out on <a href="https://open.spotify.com/artist/2Ck3OQPalGyoPDUCMRT149?si=02TgpXEoQ9G5eNChxUtyrA">Spotify</a>
+                    </p>
+                    <p>
+                        Find us on <a href="https://www.instagram.com/pmyctunes/">Instagram</a>
+                    </p>
+                    <!-- <p>
+                        They wrote an <a href="https://dailynorthwestern.com/2022/05/16/ae/mayfest-hosts-battle-of-the-artists-provides-platforms-to-student-performers/">article</a><sup>&nearr;</sup> about our battle of the bands win.
+                    </p> -->
+                    <!-- <p>
+                        I also have a personal <a href="https://www.instagram.com/quitarvik/">Instagram music account</a>.<sup>&nearr;</sup>
+                    </p> -->
+                </div>
+
+                <div class="image">
+                    <iframe style="border-radius:12px" src="https://open.spotify.com/embed/artist/2Ck3OQPalGyoPDUCMRT149?utm_source=generator" width="100%" height="400" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                </div>
+                
+                <div class="mosaic">
+                    <img class="large" src="images/music.jpg">
+                    <img class="wide" src="images/BATTLES_5.jpg">
+                    <img class="wide" src="images/block3.jpg">
+                    <img class="wide" src="images/grad.jpg">
+                    <img class="wide" src="images/park.jpg">
+                    <img class="" src="images/block1.jpg">
+                    <img class="wide" src="images/lake.jpg">
+                    <img class="" src="images/kitt.jpg">
+                </div>
+                
+            </div>
+
+        </div>
+        
+        <div id="footer-container"></div>
+
+        <script>
+        fetch("footer.html")
+            .then(res => res.text())
+            .then(html => document.getElementById("footer-container").innerHTML = html);
+        </script>
+
+    </body>
+    
+    <script>
+        function myFunction() {
+            var x = document.getElementById("links");
+            if (x.className === "links") {
+            x.className += " responsive";
+            } else {
+            x.className = "links";
+            }
+        }
+
+        function close_nav(){
+            var x = document.getElementById("links");
+            x.className = "links";
+        }
+    </script>
