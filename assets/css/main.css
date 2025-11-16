@@ -13,6 +13,7 @@
 	--black: black;
 
 	--bg-color: #F7F7F2;  /* F7F7F2, #FAFAF7 */
+	--link-color: #5E3931;
 
 	--arizona-red:#AB0520;
     --arizona-blue:#0C234B;
@@ -45,8 +46,10 @@
 	--textdark: var(--base3);
 	--textmed: var(--base1);
 
-	--highlight-dark:rgb(225, 16, 121, 0.3);
-	--highlight-light: yellow;
+	/* --highlight-dark:rgb(225, 16, 121, 0.3); */
+	/* --highlight-light: yellow; */
+	--highlight-dark: #D5B6AF;
+	--highlight-light: #F3DCA5;
 
 	--animation-type: ease-in-out;
 	--time-animate: 3s;
@@ -67,6 +70,11 @@
 body{
 	padding: 0px;
 	margin: 0px;
+}
+
+mark{
+	background-color: var(--highlight-light);
+	color: var(--black);
 }
 
 /* text */
@@ -108,15 +116,27 @@ h3{
 }
 
 a{
-	color: var(--base02);
-	text-decoration: none;
+	color: var(--link-color);
+	text-decoration: underline;
 	text-decoration-thickness: 1px;
 	text-underline-offset: 3.5px;
 }
 
+a.nu{
+	text-decoration: none;
+	color: var(--link-color);
+}
+
 a:hover{
+	text-decoration: none;
+	color: var(--link-color);
+	text-decoration-thickness: 1px;
+	text-underline-offset: 3.2px;
+}
+
+a.nu:hover{
 	text-decoration: underline;
-	color: var(--black);
+	color: var(--link-color);
 	text-decoration-thickness: 1px;
 	text-underline-offset: 3.2px;
 }
@@ -253,18 +273,18 @@ div.landing{
 
 .landing div{
 	width: 100%;
-	min-width: 275px;
+	min-width: 105px;
 }
 
 .profile-image{
 	max-width: 40%;
-	min-width: 200px;
+	min-width: 100px;
 }
 
 .landing-info{
 	text-align: right;
 	max-width: 60%;
-	min-width: 200px;
+	min-width: 100px;
 }
 
 div.landing a{
@@ -328,6 +348,20 @@ div.section{
 
 	margin-bottom: 30px;
 }
+
+.image-row {
+  display: flex;
+  flex-wrap: wrap;          /* allows wrapping on small screens */
+  justify-content: center;  /* center horizontally */
+  gap: 15px;                /* space between images */
+}
+
+.image-row img {
+  flex: 1 1 45%;            /* grow/shrink, default 45% width */
+  min-width: 250px;         /* prevent images from getting too small */
+  max-width: 100%;          /* prevent overflow */
+}
+
 
 .crop {
   width: 100%;       /* desired rectangle width */
