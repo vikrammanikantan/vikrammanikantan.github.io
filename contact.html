@@ -19,7 +19,7 @@
         <div id="navbar-container"></div>
 
         <script>
-        fetch("navbar.html")
+        fetch("partials/navbar.html")
             .then(res => res.text())
             .then(html => document.getElementById("navbar-container").innerHTML = html);
         </script>
@@ -31,8 +31,8 @@
                     <p>
                         Email: <a href="mailto:vik@arizona.edu">vik@arizona.edu</a>
                         <br>
-                        Bluesky: <a href="https://bsky.app/profile/vikmani.bsky.social">@vikmani.bsky.social</a>
-                        <br>
+                        <!-- Bluesky: <a href="https://bsky.app/profile/vikmani.bsky.social">@vikmani.bsky.social</a>
+                        <br> -->
                         Github: <a href="https://github.com/vikrammanikantan">vikrammanikantan</a>
                         <br>
                         Publications: <a href="https://scholar.google.com/citations?user=cscvnHUAAAAJ&hl=en">Google Scholar</a>, <a href="https://ui.adsabs.harvard.edu/search/q=author%3A%22Manikantan%2C%20Vikram%22">Astrophysics Data System (ADS)</a>
@@ -45,7 +45,7 @@
         <div id="footer-container"></div>
 
         <script>
-        fetch("footer.html")
+        fetch("pafooter.html")
             .then(res => res.text())
             .then(html => document.getElementById("footer-container").innerHTML = html);
         </script>

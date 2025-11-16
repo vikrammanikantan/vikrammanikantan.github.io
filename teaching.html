@@ -19,7 +19,7 @@
         <div id="navbar-container"></div>
 
         <script>
-        fetch("navbar.html")
+        fetch("partials/navbar.html")
             .then(res => res.text())
             .then(html => document.getElementById("navbar-container").innerHTML = html);
         </script>
@@ -70,7 +70,7 @@
         <div id="footer-container"></div>
 
         <script>
-        fetch("footer.html")
+        fetch("partials/footer.html")
             .then(res => res.text())
             .then(html => document.getElementById("footer-container").innerHTML = html);
         </script>

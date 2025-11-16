@@ -4,15 +4,13 @@
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">		
         
-        <title>Vikram Manikantan: Computational Astrophysicist</title>
+        <title>Vikram Manikantan</title>
         <link rel="icon" type="image/x-icon" href="images/pixel.png" style="height: 50; width: 50; aspect-ratio: 1;">
         <link rel="icon" type="image/x-icon" href="images/pixel.png" style="height: 50; width: 50; aspect-ratio: 1;">
         <link rel="stylesheet" href="assets/css/main.css" />
         <base target="_blank">
 
     </head>
-
-
 
     <body id="top">
 
@@ -21,7 +19,7 @@
         <div id="navbar-container"></div>
 
         <script>
-        fetch("navbar.html")
+        fetch("partials/navbar.html")
             .then(res => res.text())
             .then(html => document.getElementById("navbar-container").innerHTML = html);
         </script>
@@ -29,19 +27,23 @@
         <div class="grid-container">
             <div class="landing">
 
-                <div class="image" style="width: 40%; min-width: 375px;">
-                    <img src="images/vikram2.jpg" alt="Vikram Manikantan" style="width: 100%; max-width: 350px; display: block; object-fit: cover; border-radius: 50%; padding-bottom: 10px;">
+                <div class="profile-image">
+                    <img src="images/vikram2.jpg" alt="Vikram Manikantan" style="width: 100%; max-width: 350px; display: block; object-fit: cover; border-radius: 50%; padding-bottom: 25px;">
                 </div>
 
-                <div style="width: 60%; min-width: 375px">
-                    <p>My name is <mark>Vikram Manikantan</mark>. I am an </p>
+                <div class="landing-info">
+                    <p>My name is <mark>Vikram Manikantan</mark>. I am a computational astrophysicist and </p>
                     <h2>Astrophysics PhD Candidate</h2>
                     <p> at <a href="https://astro.arizona.edu/">Steward Observatory</a>, at the University of Arizona. I study</p>
                     <h2>binary black holes, accretion disks, relativistic jets, and their multi-messenger emission.</h2>
 
                     <p style="font-size: 20px;">
                         <!-- and I built <a href="https://github.com/vikrammanikantan/vikrammanikantan.github.io/">this website from scratch</a> -->
-                        contact me: <a href="mailto:vik@arizona.edu">vik@arizona.edu</a>, <a href="https://bsky.app/profile/vikmani.bsky.social">@vikmani.bsky.social</a>
+                        contact me: <a href="mailto:vik@arizona.edu">vik@arizona.edu</a>, 
+                        <!-- <a href="https://bsky.app/profile/vikmani.bsky.social">@vikmani.bsky.social</a> -->
+                        <br> other links: 
+                        <a href="https://github.com/vikrammanikantan">GitHub</a>, 
+                        <a href="https://scholar.google.com/citations?user=cscvnHUAAAAJ&hl=en">Google Scholar</a>, <a href="https://ui.adsabs.harvard.edu/search/q=author%3A%22Manikantan%2C%20Vikram%22">ADS</a>
                     </p>
                 </div>
 
@@ -51,7 +53,7 @@
         <div id="footer-container"></div>
 
         <script>
-        fetch("footer.html")
+        fetch("partials/footer.html")
             .then(res => res.text())
             .then(html => document.getElementById("footer-container").innerHTML = html);
         </script>

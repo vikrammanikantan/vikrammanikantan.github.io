@@ -20,7 +20,7 @@
         <div id="navbar-container"></div>
 
         <script>
-        fetch("navbar.html")
+        fetch("partials/navbar.html")
             .then(res => res.text())
             .then(html => document.getElementById("navbar-container").innerHTML = html);
         </script>
@@ -47,16 +47,21 @@
             </div> -->
 
             <div class="section" id="research"> 
-                <div class="crop">
+                <div class="crop"> 
+                    <!-- TODO: make this a GIF that plays -->
                     <img src="images/bh_image.png" alt="Binary Black Hole" style="width: 100%; display: block;">
                 </div>
-                <h1>Research </h1>
+                <h1>Research </h1> 
+                <p>
+                    [<a href="https://scholar.google.com/citations?user=cscvnHUAAAAJ&hl=en">Google Scholar</a>] 
+                    [<a href="https://ui.adsabs.harvard.edu/search/q=author%3A%22Manikantan%2C%20Vikram%22">ADS</a>]
+                </p>
                 <div class="content" style="width: clamp(375px, 100%, 1000px);">
                     <p>
-                        I am a theoretical and computational astrophysicist whose research focuses on the multi-messenger nature of compact objects such as supermassive (binary) black holes. I use numerical relativity and magnetohydrodynamic codes, such as Einstein Toolkit, IllinoisGRMHD, and H-AMR, to simulate these systems from first principles. 
+                        I am a theoretical and computational astrophysicist. My research focuses on understanding multi-messenger emission from the accretion flows and outflows of compact objects such as supermassive (binary) black holes. I use numerical relativity and magnetohydrodynamic codes, such as the <a href="https://einsteintoolkit.org/"> Einstein Toolkit</a>, <a href="https://arxiv.org/abs/1501.07276">IllinoisGRMHD</a>, and <a href="https://arxiv.org/abs/1912.10192">H-AMR</a>, to simulate these systems from first principles. 
                     </p>
                     <p>
-                        Currently, I am studying accretion onto supermassive binary black holes, with the goal of identifying unique electromagnetic signals from these systems. We study these systems by solving Einstein's equations of general relativity to accurately model the spacetime, and then evolving the magnetohydrodynamic equations on the curved spacetime to simulate the accretion flow. 
+                        Currently, I am studying accretion onto supermassive binary black holes, with the goal of identifying unique electromagnetic signals from these systems. We study these systems by solving Einstein's equations of general relativity to accurately model the spacetime, and then evolving the magnetohydrodynamic equations on the curved spacetime to simulate the accretion flow. Below, you can find some of my recent projects.
                     </p>
                 </div>
 
@@ -78,9 +83,8 @@
                         Selected Publications
                     </h2>
                     <p>
-                        <a href="https://scholar.google.com/citations?user=cscvnHUAAAAJ&hl=en">google scholar</a>, <a href="https://ui.adsabs.harvard.edu/search/q=author%3A%22Manikantan%2C%20Vikram%22">ADS</a>
-
-                        <!-- <sup>&nearr;</sup> -->
+                        [<a href="https://scholar.google.com/citations?user=cscvnHUAAAAJ&hl=en">google scholar</a>] 
+                        [<a href="https://ui.adsabs.harvard.edu/search/q=author%3A%22Manikantan%2C%20Vikram%22">ADS</a>]
                     </p>
                     <ol reversed style="line-height: 130%;">
                         <li>
@@ -135,7 +139,7 @@
         <div id="footer-container"></div>
 
         <script>
-        fetch("footer.html")
+        fetch("partials/footer.html")
             .then(res => res.text())
             .then(html => document.getElementById("footer-container").innerHTML = html);
         </script>

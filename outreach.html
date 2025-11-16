@@ -19,7 +19,7 @@
         <div id="navbar-container"></div>
 
         <script>
-        fetch("navbar.html")
+        fetch("partials/navbar.html")
             .then(res => res.text())
             .then(html => document.getElementById("navbar-container").innerHTML = html);
         </script>
@@ -27,24 +27,14 @@
         <div class="grid-container">
 
             <div class="section" id="outreach">
-                <h1> Mentorship / Outreach </h1>
-                <div class="content" style="width: 100%; margin: auto;">
-                    <p>
-                        I am passionate about developing programs that increase undergraduate students success in astrophysics research. I currently focus on two aspects of this: 1. training students with <mark style="background-color: var(--highlight-dark);">fundamental skills</mark> needed to perform leading research, and 2. providing mentorship and a support structure to create <mark style="background-color: var(--highlight-dark);">sustainable success</mark> and increase retention of underrepresented groups.
-                    </p>
-                    <p>
-                        To do this, I have taken leadership roles in several programs at the University of Arizona, including the <a href="https://timestep.arizona.edu/programs/timestep-research-apprenticeship" target="_blank">TIMESTEP Research Apprenticeship</a> program and the <a href="">Computational and Mathematical Program for incoming Arizona Science Students</a> (COMPASS). I am also interested in, and attended a workshop on, developing <a href="https://ur.arizona.edu/content/course-based-research-undergraduate-experiences-cures"> Course-based Undergraduate Research Experiences</a> (CUREs) to increase undergraduate research opportunities. 
-                    </p>
-
-                    <p>
-                        You can learn more about my mentorship and outreach efforts below:
-                    </p>
-                </div>
+                <h1> Public Outreach </h1>
 
                 <div class="content" style="width: 100%; margin: auto;">
 
-                    <h2>Astronomy on Tap [<a href="https://timestep.arizona.edu/programs/timestep-research-apprenticeship" target="_blank">video</a>]</h2>
-                    <p>Speaker at Space Draft number [number here], Tucson's flavor of astronomy on tap</p>
+                    <h2>Astronomy on Tap [<a href="https://www.youtube.com/live/xdDyrJsMcR4?si=JGNTEoBLXJqK-WhK&t=2667" target="_blank">recording</a>]</h2>
+                    <p>Speaker at Space Draft #107, Tucson's flavor of astronomy on tap. </p>
+
+                    <img src="images/spacedrafts.png" alt="Astronomy on Tap Tucson" style="width: 100%; display: block; margin-left: auto; margin-right: auto; padding-bottom: 15px;">
 
                     <h2>Steward Social Media [<a href="https://twitter.com/StewardAstro">Twitter</a>]</h2>
                     <p><mark>Graduate Student Lead</mark> for Steward Observatory's new social media initiative which includes creating and running our <a href="https://www.instagram.com/stewardobservatory">Instagram</a>, <a href="https://twitter.com/StewardAstro">Twitter</a>, <a href="https://bsky.app/profile/stewardobservatory.bsky.social">Bluesky</a> and <a href="https://www.facebook.com/StewardAstronomy/">Facebook</a> accounts, as well as developing content to post up to three times a week.</p>
@@ -62,7 +52,7 @@
         <div id="footer-container"></div>
 
         <script>
-        fetch("footer.html")
+        fetch("partials/footer.html")
             .then(res => res.text())
             .then(html => document.getElementById("footer-container").innerHTML = html);
         </script>
