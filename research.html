@@ -48,8 +48,17 @@
 
             <div class="section" id="research"> 
                 <div class="crop"> 
-                    <!-- TODO: make this a GIF that plays -->
-                    <img src="images/bh_image.png" alt="Binary Black Hole" style="width: 100%; display: block;">
+                    <video
+                        id="research-video"
+                        autoplay
+                        controls
+                        muted
+                        playsinline
+                        preload="metadata"
+                        style="width: 100%; height: auto; position: absolute; top: 50%; left: 0; transform: translateY(-50%);"
+                    >
+                        <source src="images/a30.mp4" type="video/mp4">
+                    </video>
                 </div>
                 <h1>Research </h1> 
                 <p>
@@ -58,7 +67,7 @@
                 </p>
                 <div class="content" style="width: clamp(375px, 100%, 1200px);">
                     <p>
-                        I am a high-energy theoretical and computational astrophysicist. My research focuses on understanding multi-messenger emission from the accretion flows and outflows of compact objects such as supermassive (binary) black holes. I use numerical relativity and magnetohydrodynamic codes, such as the <a href="https://einsteintoolkit.org/"> Einstein Toolkit</a>, <a href="https://arxiv.org/abs/1501.07276">IllinoisGRMHD</a>, and <a href="https://arxiv.org/abs/1912.10192">H-AMR</a>, to simulate these systems from first principles.
+                        I am a high-energy theoretical and computational astrophysicist. My research focuses on understanding multimessenger emission from the accretion flows and outflows of compact objects such as supermassive (binary) black holes. I use numerical relativity and magnetohydrodynamic codes, such as the <a href="https://einsteintoolkit.org/"> Einstein Toolkit</a>, <a href="https://arxiv.org/abs/1501.07276">IllinoisGRMHD</a>, and <a href="https://arxiv.org/abs/1912.10192">H-AMR</a>, to simulate these systems from first principles.
                     </p>
                     <p>
                         Currently, I work with Professor Vasileios Paschalidis to study accretion onto supermassive binary black holes with the goal of identifying their unique electromagnetic signals. We study these systems by solving Einstein's equations of general relativity to accurately model the spacetime, and then evolving the magnetohydrodynamic equations on the curved spacetime to simulate the accretion flow. 
@@ -66,11 +75,11 @@
                         <!-- Below, you can find some of my recent projects. -->
                     </p>
                     <p>
-                        I am a member of the <a href="https://tap.arizona.edu/">Theoretical Astrophysics Program</a> (TAP) and the <a href="https://astro-sonata.github.io/">Transient Astrophysics</a> group (SONATA) at the University of Arizona. Additionally, I am a Core Member of the <a href="https://www.lisamission.org/">Laser Interferometer Space Antenna (LISA) Consortium</a> within the Astrophysics Working Group.
+                        I am a member of the <a href="https://tap.arizona.edu/">Theoretical Astrophysics Program</a> (TAP) and the <a href="https://astro-sonata.github.io/">Transient Astrophysics</a> group (SONATA) at the University of Arizona. Additionally, I am a core member of the <a href="https://www.lisamission.org/">Laser Interferometer Space Antenna (LISA) Consortium</a> within the Astrophysics Working Group.
                     </p>
                 </div>
 
-                <!-- TODO: Add project descriptions and movies here -->
+                <!-- TODO: Add project descriptions and movies here --> 
                 <!-- <div class="content">
                     <h2> Magnetically Arrested Minidisks</h2>
                     <p>[<a class="nu" href="https://arxiv.org/abs/2509.18254">arXiv</a>] [<a class="nu"href="files/binary_mad.pdf">pdf</a>]</p>
@@ -211,5 +220,26 @@
         function close_nav(){
             var x = document.getElementById("links");
             x.className = "links";
+        }
+
+        const researchVideo = document.getElementById("research-video");
+        if (researchVideo) {
+            let clipStart = 0;
+            let clipEnd = 0;
+
+            researchVideo.addEventListener("loadedmetadata", () => {
+                const duration = researchVideo.duration;
+                const clipLength = Math.min(30, duration);
+                clipStart = Math.max(0, (duration - clipLength) / 2);
+                clipEnd = clipStart + clipLength;
+                researchVideo.currentTime = clipStart;
+                researchVideo.play().catch(() => {});
+            });
+
+            researchVideo.addEventListener("timeupdate", () => {
+                if (researchVideo.currentTime >= clipEnd) {
+                    researchVideo.currentTime = clipStart;
+                }
+            });
         }
     </script>
