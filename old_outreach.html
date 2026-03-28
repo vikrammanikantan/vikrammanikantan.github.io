@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">		
+        
+        <title>Vikram Manikantan</title>
+        <link rel="icon" type="image/x-icon" href="images/pixel.png" style="height: 50; width: 50; aspect-ratio: 1;">
+        <link rel="icon" type="image/x-icon" href="images/pixel.png" style="height: 50; width: 50; aspect-ratio: 1;">
+        <link rel="stylesheet" href="assets/css/main.css" />
+        <base target="_blank">
+
+    </head>
+
+    <body id="top">
+
+        <!-- nav bar always on -->
+
+        <div id="navbar-container"></div>
+
+        <script>
+        fetch("partials/navbar.html")
+            .then(res => res.text())
+            .then(html => document.getElementById("navbar-container").innerHTML = html);
+        </script>
+
+        <div class="grid-container">
+
+            <div class="section" id="outreach">
+                <h1> Public Outreach </h1>
+
+                <div class="content" style="width: 100%; margin: auto; flex-direction: row;">
+
+                    <h2>Astronomy on Tap </h2>
+                    <p>[<a class="nu" href="https://www.youtube.com/live/xdDyrJsMcR4?si=JGNTEoBLXJqK-WhK&t=2667" target="_blank">recording</a>] [<a class="nu" href="files/spacedrafts107.pdf">slides</a>]</p>
+
+                    <p>Speaker at Space Draft #107, Tucson's flavor of astronomy on tap. </p>
+
+                    <div class="image-row">
+                        <img src="images/spacedrafts.png" alt="Astronomy on Tap Tucson">
+                        <img src="images/spacedrafts_timeline.png" alt="Astronomy on Tap Tucson">
+                    </div>
+
+
+                    <h2>Steward Social Media [<a href="https://twitter.com/StewardAstro">Twitter</a>]</h2>
+                    <p><mark>Graduate Student Lead</mark> for Steward Observatory's new social media initiative which includes creating and running our <a href="https://www.instagram.com/stewardobservatory">Instagram</a>, <a href="https://twitter.com/StewardAstro">Twitter</a>, <a href="https://bsky.app/profile/stewardobservatory.bsky.social">Bluesky</a> and <a href="https://www.facebook.com/StewardAstronomy/">Facebook</a> accounts, as well as developing content to post up to three times a week.</p>
+
+                    <h2>TIMESTEP Internship [<a href="https://timestep.arizona.edu/programs/timestep-summer-tech-internship" target="_blank">website</a>]</h2>
+                    <p><mark>Graduate Student Coordinator</mark> of the Summer Tech Internship program; a mentorship program supporting undergraduates entering the STEM workforce by matching them with companies for a summer internship and providing a support structure.</p>
+                </div>
+                    
+                
+            </div>
+
+        </div>
+
+
+        <div id="footer-container"></div>
+
+        <script>
+        fetch("partials/footer.html")
+            .then(res => res.text())
+            .then(html => document.getElementById("footer-container").innerHTML = html);
+        </script>
+
+    </body>
+    
+    <script>
+        function myFunction() {
+            var x = document.getElementById("links");
+            if (x.className === "links") {
+            x.className += " responsive";
+            } else {
+            x.className = "links";
+            }
+        }
+
+        function close_nav(){
+            var x = document.getElementById("links");
+            x.className = "links";
+        }
+    </script>
