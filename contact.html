@@ -2,13 +2,11 @@
 <html lang="en-US">
 
     <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">		
-        
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
         <title>Vikram Manikantan</title>
-        <link rel="icon" type="image/x-icon" href="images/pixel.png" style="height: 50; width: 50; aspect-ratio: 1;">
-        <link rel="icon" type="image/x-icon" href="images/pixel.png" style="height: 50; width: 50; aspect-ratio: 1;">
+        <link rel="icon" type="image/x-icon" href="images/pixel.png">
         <link rel="stylesheet" href="assets/css/main.css" />
-        <base target="_blank">
 
     </head>
 
@@ -25,21 +23,19 @@
         </script>
 
         <div class="grid-container" style="min-height: 92vh;">
-            <div class="section" id="contact"  style="align-content: flex-start;">
+            <div class="section" id="contact" style="align-content: flex-start;">
                 <h1> Contact </h1>
                 <div class="content">
                     <p>
                         Email: <a href="mailto:vik@arizona.edu">vik@arizona.edu</a>
                         <br>
-                        <!-- Bluesky: <a href="https://bsky.app/profile/vikmani.bsky.social">@vikmani.bsky.social</a>
-                        <br> -->
-                        Github: <a href="https://github.com/vikrammanikantan">vikrammanikantan</a>
+                        Github: <a href="https://github.com/vikrammanikantan" target="_blank">vikrammanikantan</a>
                         <br>
-                        Publications: <a href="https://scholar.google.com/citations?user=cscvnHUAAAAJ&hl=en">Google Scholar</a>, <a href="https://ui.adsabs.harvard.edu/search/q=author%3A%22Manikantan%2C%20Vikram%22">Astrophysics Data System (ADS)</a>
+                        Publications: <a href="https://scholar.google.com/citations?user=cscvnHUAAAAJ&hl=en" target="_blank">Google Scholar</a>, <a href="https://ui.adsabs.harvard.edu/search/q=author%3A%22Manikantan%2C%20Vikram%22" target="_blank">Astrophysics Data System (ADS)</a>
                         <br>
-                        ORCID: <a href="https://orcid.org/0000-0003-0547-6158">0000-0003-0547-6158</a>
+                        ORCID: <a href="https://orcid.org/0000-0003-0547-6158" target="_blank">0000-0003-0547-6158</a>
                         <br>
-                        Department Profile: <a href="https://astro.arizona.edu/person/vikram-manikantan">Steward Observatory</a>
+                        Department Profile: <a href="https://astro.arizona.edu/person/vikram-manikantan" target="_blank">Steward Observatory</a>
                     </p>
                 </div>
             </div>
@@ -54,20 +50,7 @@
             .then(html => document.getElementById("footer-container").innerHTML = html);
         </script>
 
+        <script src="assets/js/main.js"></script>
     </body>
-    
-    <script>
-        function myFunction() {
-            var x = document.getElementById("links");
-            if (x.className === "links") {
-            x.className += " responsive";
-            } else {
-            x.className = "links";
-            }
-        }
 
-        function close_nav(){
-            var x = document.getElementById("links");
-            x.className = "links";
-        }
-    </script>
+</html>

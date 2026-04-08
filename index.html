@@ -2,13 +2,11 @@
 <html lang="en-US">
 
     <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">		
-        
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
         <title>Vikram Manikantan</title>
-        <link rel="icon" type="image/x-icon" href="images/pixel.png" style="height: 50; width: 50; aspect-ratio: 1;">
-        <link rel="icon" type="image/x-icon" href="images/pixel.png" style="height: 50; width: 50; aspect-ratio: 1;">
+        <link rel="icon" type="image/x-icon" href="images/pixel.png">
         <link rel="stylesheet" href="assets/css/main.css" />
-        <base target="_blank">
 
     </head>
 
@@ -28,30 +26,30 @@
             <div class="landing">
 
                 <div class="profile-image">
-                    <img src="images/vikram2.jpg" alt="Vikram Manikantan" style="width: 100%; max-width: 350px; display: block; object-fit: cover; border-radius: 50%; padding-bottom: 25px;">
+                    <img src="images/vikram2.jpg" alt="Vikram Manikantan">
                 </div>
 
                 <div class="landing-info">
                     <p style="font-size: clamp(26px, 2.5vw, 32px); margin-bottom: 12px;">Hi, my name is <mark>Vikram Manikantan</mark>.</p>
-                    
-                    <p>I am an astrophysics PhD candidate and theoretical/computational astrophysicist at <a href="https://astro.arizona.edu/">Steward Observatory</a>, at the University of Arizona. I study binary black holes, accretion disks, relativistic jets, and their multimessenger emission using cutting edge numerical simulations.</p>
+
+                    <p>I am an astrophysics PhD candidate and theoretical/computational astrophysicist at <a href="https://astro.arizona.edu/" target="_blank">Steward Observatory</a>, at the University of Arizona. I study binary black holes, accretion disks, relativistic jets, and their multimessenger emission using cutting edge numerical simulations.</p>
 
                     <p style="font-size: 20px;">
-                        learn more: <a href="research.html">research</a>, 
-                        <a href="teaching.html">teaching</a>, 
+                        learn more: <a href="research.html">research</a>,
+                        <a href="teaching.html">teaching</a>,
                         <a href="outreach.html">outreach</a>.
                         <br>
                         contact me: <a href="mailto:vik@arizona.edu">vik@arizona.edu</a>
-                        <br> other links: 
-                        <!-- <a href="files/cv_latest.pdf">CV</a>, -->
-                        <a href="https://github.com/vikrammanikantan">GitHub</a>, 
-                        <a href="https://scholar.google.com/citations?user=cscvnHUAAAAJ&hl=en">Google Scholar</a>, 
-                        <a href="https://scixplorer.org/search?d=astrophysics&p=1&q=author%3A%22Manikantan%2C+Vikram%22&sort=score+desc&sort=date+desc">SciX</a>
+                        <br> other links:
+                        <!-- <a href="files/cv_latest.pdf" target="_blank">CV</a>, -->
+                        <a href="https://github.com/vikrammanikantan" target="_blank">GitHub</a>,
+                        <a href="https://scholar.google.com/citations?user=cscvnHUAAAAJ&hl=en" target="_blank">Google Scholar</a>,
+                        <a href="https://scixplorer.org/search?d=astrophysics&p=1&q=author%3A%22Manikantan%2C+Vikram%22&sort=score+desc&sort=date+desc" target="_blank">SciX</a>
                     </p>
                 </div>
 
             </div>
-        </div>  
+        </div>
 
         <div id="footer-container"></div>
 
@@ -61,21 +59,7 @@
             .then(html => document.getElementById("footer-container").innerHTML = html);
         </script>
 
-
+        <script src="assets/js/main.js"></script>
     </body>
-    
-    <script>
-        function myFunction() {
-            var x = document.getElementById("links");
-            if (x.className === "links") {
-            x.className += " responsive";
-            } else {
-            x.className = "links";
-            }
-        }
 
-        function close_nav(){
-            var x = document.getElementById("links");
-            x.className = "links";
-        }
-    </script>
+</html>

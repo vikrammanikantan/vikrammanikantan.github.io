@@ -1,61 +1,22 @@
 @import url("https://use.typekit.net/sdh6jxb.css");
 
-*, html {
-	scroll-behavior: smooth !important;
+html {
+	scroll-behavior: smooth;
 	scroll-margin-top: 0px;
-  }
+}
 
 
 
 /* root */
 :root{
-	--white: white;
+	--bg-color: #F7F7F2;
+	--link-color: #5E3931;
 	--black: black;
 
-	--bg-color: #F7F7F2;  /* F7F7F2, #FAFAF7 */
-	--link-color: #5E3931;
-
-	--arizona-red:#AB0520;
-    --arizona-blue:#0C234B;
-
-    --bloom: #EF4056;
-    --sky: #81D3EB;
-    --leaf: #70B865;
-    --river: #007D84;
-    --mesa: #A95C42;
-
-    --chili: #8B0015;
-    --midnight: #001C48;
-    --azurite: #1E5288;
-    --oasis:#378DBD;
-
-	--warmgrey: #F4EDE5;
-    --coolgrey: #E2E9EB;
-
-	/* --base03: #001613; */
-	--base03: #000000;
-	--base02: #073642;
-	--base01: #586e75;
-	--base00: #657b83;
-	--base0: #839496;
-	--base1: #93a1a1;
-	--base2: #eee8d5;
-	--base3: #fdf6e3;
-
-	--textvdark: var(--base3);
-	--textdark: var(--base3);
-	--textmed: var(--base1);
-
-	/* --highlight-dark:rgb(225, 16, 121, 0.3); */
-	/* --highlight-light: yellow; */
 	--highlight-dark: #D5B6AF;
 	--highlight-light: #F3DCA5;
 
-	--animation-type: ease-in-out;
-	--time-animate: 3s;
-
 	font-family: "garamond-premier-pro-display", serif;
-
 	font-weight: 300;
 	font-style: normal;
 
@@ -79,45 +40,27 @@ mark{
 
 /* text */
 p{
-	font-size: 24px;
 	font-size: clamp(22px, 2vw, 24px);
-	font-weight: 300;
-	font-style: normal;
-
 	margin-top: 0;
 }
 
 ol{
-	font-size: 24px;
 	font-size: clamp(22px, 2vw, 24px);
-	font-weight: 300;
-	font-style: normal;
 }
 
 h1{
-	font-size: 62px;
 	font-size: clamp(28px, 10vw, 65px);
-	font-weight: 300;
-	font-style: normal;
 	margin-bottom: 0;
-
 	scroll-margin-top: 70px;
 }
 
 h2{
-	font-size: 40px;
 	font-size: clamp(28px, 10vw, 40px);
-	font-weight: 300;
-	font-style: normal;
-	/* margin-top: 10px; */
-
 	scroll-margin-top: 100px;
 }
 
 h3{
 	font-size: 30px;
-	font-weight: 300;
-	font-style: normal;
 }
 
 a{
@@ -155,6 +98,10 @@ img{
 	border-radius: 1%;
 }
 
+ol li + li {
+	margin-top: 20px;
+}
+
 
 /* grid for the entire website */
 .grid-container {
@@ -167,18 +114,18 @@ img{
 	padding: 0px;
 	margin: 0px;
 }
-  
+
 .grid-container > div {
 	background-color: var(--bg-color);
 	text-align: left;
-	grid-column: span;
+	grid-column: 2;
 	padding: 0px 0px;
 }
 
 
 /* start navbar */
 div.navbar {
-	z-index: 1000; 
+	z-index: 1000;
 
 	width: 70%;
 	min-width: 800px;
@@ -188,7 +135,6 @@ div.navbar {
 	left: 0;
 	right: 0;
 
-	/* existing code untouched below */
 	background-color: var(--bg-color);
 	display: grid;
 	grid-template-columns: 40% 44% 12%;
@@ -213,7 +159,7 @@ div.navbar {
 	text-align: left;
 	font-size: 28px;
 	display: flex;
-	align-items: left;
+	align-items: flex-start;
 
 	padding-left: 10px;
 }
@@ -222,8 +168,8 @@ div.navbar {
 .links {
 	grid-column: 3;
 	display: flex;
-	align-items: right;
-	justify-content: right;
+	align-items: flex-end;
+	justify-content: flex-end;
 
 	font-size: 25px;
 }
@@ -246,12 +192,10 @@ div.navbar {
 /* start footer */
 div.footer{
 	width: 100%;
-	/* grid-column: span 3; */
 	background-color: var(--bg-color);
 	color: black;
 
 	text-align: center;
-	justify-content: bottom;
 
 	padding: 0px;
 	bottom: 0px;
@@ -271,9 +215,9 @@ div.landing{
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
-	
-	justify-content: center; /* Align items to the left */
-	align-items: center; /* Optionally center items vertically */
+
+	justify-content: center;
+	align-items: center;
 }
 
 .landing div{
@@ -286,6 +230,15 @@ div.landing{
 	max-width: 40%;
 	min-width: 100px;
 	order: 2;
+}
+
+.profile-image img {
+	width: 100%;
+	max-width: 350px;
+	display: block;
+	object-fit: cover;
+	border-radius: 50%;
+	padding-bottom: 25px;
 }
 
 .landing-info{
@@ -312,7 +265,6 @@ div.section{
 	text-align: left;
 
 	padding-top: 50px;
-	/* min-height: 90vh; */
 
 	display: flex;
 	flex-direction: row;
@@ -322,71 +274,70 @@ div.section{
 	justify-content: flex-start;
 }
 
-
-/* .section h1, .section .content, .section .image{
-	background-color: #fff;
-} */
-
 /* subtitles have 100% width, so nothing is inline with it */
 .section h1{
 	width: 100%;
 	height: fit-content;
 	margin-bottom: 10px;
-	/* margin: 0px; */
 }
 
 .section h2{
 	width: 100%;
 	height: fit-content;
 	margin-bottom: 10px;
-	/* margin: 0px; */
 }
 
 .section div.content{
 	width: 100%;
-	min-width: 375;
+	min-width: 375px;
+	padding-top: 0;
+}
+
+/* narrow content column used for publications/talks */
+.section div.content-narrow {
+	width: 65%;
+	min-width: 375px;
 	padding-top: 0;
 }
 
 .section .image{
 	width: 40%;
-	/* min-width: 300px; */
-	display: flex;          /* Make .image a flex container */
-	justify-content: center;  /* Horizontally center */
-	align-items: center; 
+	display: flex;
+	justify-content: center;
+	align-items: center;
 
 	margin-bottom: 30px;
 }
 
 .image-row {
   display: flex;
-  flex-wrap: wrap;          /* allows wrapping on small screens */
-  justify-content: center;  /* center horizontally */
-  gap: 15px;                /* space between images */
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
 }
 
 .image-row img {
-  flex: 1 1 45%;            /* grow/shrink, default 45% width */
-  min-width: 250px;         /* prevent images from getting too small */
-  max-width: 100%;          /* prevent overflow */
+  flex: 1 1 45%;
+  min-width: 250px;
+  max-width: 100%;
 }
 
 
 .crop {
-  width: 100%;       /* desired rectangle width */
-  min-height: 30vw;      /* desired rectangle height */
+  width: 100%;
+  min-height: 30vw;
   max-height: 400px;
-  overflow: hidden;   /* hide outside parts */
+  overflow: hidden;
   position: relative;
 }
 
 .crop img {
-  width: 100%;        /* make image fill the width */
-  height: auto;       /* maintain aspect ratio */
+  width: 100%;
+  height: auto;
   position: absolute;
-  top: 50%;           /* move image down 50% */
+  top: 50%;
   left: 0;
-  transform: translateY(-50%); /* center vertically in container */
+  transform: translateY(-50%);
 }
 
 
@@ -400,7 +351,7 @@ div.section{
 
 .mosaic {
 	display: grid;
-	grid-template-columns: repeat(4, 1fr); /* Default: 4 equal columns */
+	grid-template-columns: repeat(4, 1fr);
 	grid-template-rows: auto auto 400px;
 	gap: 5px;
 }
@@ -428,10 +379,10 @@ div.section{
   /* Responsive design for mobile devices */
 @media (max-width: 768px) {
 	.mosaic {
-		grid-template-columns: 1fr; /* 2 columns on smaller screens */
+		grid-template-columns: 1fr;
 	}
 
-	.large .tall .wide{
+	.large, .tall, .wide {
 		grid-column: span 1;
 		grid-row: span 1;
 	}
@@ -453,7 +404,7 @@ div.section{
 
 	.landing-info{
 		text-align: center;
-		max-width: 100%; 
+		max-width: 100%;
 		width: 100%;
 		order: 2;
 		padding-right: 0;
@@ -496,9 +447,15 @@ div.section{
 	}
 
 	.section div.content{
-		max-width: none;
-		min-width: none;
-		width: 100%; 
+		max-width: unset;
+		min-width: unset;
+		width: 100%;
+		margin: auto;
+	}
+
+	.section div.content-narrow {
+		width: 100%;
+		min-width: unset;
 		margin: auto;
 	}
 
@@ -506,7 +463,7 @@ div.section{
 		width: 100%;
 		margin: auto;
 	}
-	
+
 }
 
 /* end basic settings */
