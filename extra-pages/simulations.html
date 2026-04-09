@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>How Do We Simulate Black Holes? — Vikram Manikantan</title>
+        <link rel="icon" type="image/x-icon" href="images/pixel.png">
+        <link rel="stylesheet" href="assets/css/main.css" />
+
+    </head>
+
+    <body id="top">
+
+        <div id="navbar-container"></div>
+        <script>
+        fetch("partials/navbar.html")
+            .then(res => res.text())
+            .then(html => document.getElementById("navbar-container").innerHTML = html);
+        </script>
+
+        <div class="grid-container">
+            <div class="section">
+                <h1>How Do We Simulate Black Holes?</h1>
+                <p><a class="nu" href="research.html" target="_self">← back to research</a></p>
+                <div class="content" style="width: clamp(375px, 100%, 900px);">
+
+                    <!-- Add content here -->
+
+                </div>
+            </div>
+        </div>
+
+        <div id="footer-container"></div>
+        <script>
+        fetch("partials/footer.html")
+            .then(res => res.text())
+            .then(html => document.getElementById("footer-container").innerHTML = html);
+        </script>
+
+        <script src="assets/js/main.js"></script>
+    </body>
+
+</html>
