@@ -128,30 +128,32 @@ ol li + li {
 }
 
 a.tile {
-	position: relative;
-	display: block;
-	border-radius: 8px;
+	display: flex;
+	flex-direction: column;
+	border: 1px solid var(--black);
+	border-radius: 4px;
 	overflow: hidden;
-	aspect-ratio: 16 / 9;
 	text-decoration: none;
-	transition: transform 0.25s ease, box-shadow 0.25s ease;
+	background-color: var(--bg-color);
+	transition: border-color 0.2s ease;
 }
 
 a.tile:hover {
-	transform: translateY(-4px);
-	box-shadow: 0 10px 28px rgba(49, 46, 46, 0.25);
+	border-color: var(--link-color);
 }
 
-a.tile img {
+.tile-image {
+	width: 100%;
+	aspect-ratio: 16 / 9;
+	overflow: hidden;
+	flex-shrink: 0;
+}
+
+.tile-image img {
 	width: 100%;
 	height: 100%;
 	object-fit: cover;
 	border-radius: 0;
-	transition: transform 0.35s ease;
-}
-
-a.tile:hover img {
-	transform: scale(1.04);
 }
 
 .tile-bg {
@@ -159,16 +161,41 @@ a.tile:hover img {
 	height: 100%;
 }
 
-.tile-label {
-	position: absolute;
-	bottom: 0;
-	left: 0;
-	right: 0;
-	padding: 48px 16px 16px;
-	background: linear-gradient(transparent, rgba(0, 0, 0, 0.72));
-	color: #f0ece4;
-	font-size: clamp(23px, 1.8vw, 26px);
+.tile-info {
+	flex: 1;
+	padding: 14px 18px 18px;
+	border-top: 1px solid var(--black);
+	background-color: var(--bg-color);
+	transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+a.tile:hover .tile-info {
+	background-color: var(--link-color);
+	border-color: var(--link-color);
+}
+
+.tile-title {
+	font-size: clamp(18px, 1.6vw, 22px);
 	line-height: 1.3;
+	color: var(--black);
+	margin: 0;
+	transition: color 0.2s ease;
+}
+
+a.tile:hover .tile-title {
+	color: #f0ece4;
+}
+
+.tile-subtitle {
+	font-size: clamp(14px, 1.1vw, 16px);
+	color: var(--link-color);
+	margin: 5px 0 0;
+	line-height: 1.3;
+	transition: color 0.2s ease;
+}
+
+a.tile:hover .tile-subtitle {
+	color: #f0ece4;
 }
 
 @media (max-width: 600px) {
