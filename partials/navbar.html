@@ -1,7 +1,7 @@
 <div class="navbar" id="navbar">
   <div class="title">
     <a href="javascript:void(0);" style="font-size:30px;" class="icon" target="_self" onclick="myFunction()">+ </a>
-    <a href="index.html" target="_self" onclick="close_nav()" style="text-decoration: none; color: black;"> 
+    <a href="index.html" target="_self" onclick="close_nav()" style="text-decoration: none; color: var(--black);">
       Vikram Manikantan
     </a>
   </div>
@@ -11,5 +11,8 @@
     <a href="teaching.html" target="_self" onclick="close_nav()">Teaching</a>
     <a href="outreach.html" target="_self" onclick="close_nav()">Outreach/Music</a>
     <a href="contact.html" target="_self" onclick="close_nav()">Contact</a>
+    <button id="theme-toggle" onclick="toggleTheme()" aria-label="Toggle dark mode">
+      <span class="toggle-track"><span class="toggle-thumb"></span></span>
+    </button>
   </div>
 </div>

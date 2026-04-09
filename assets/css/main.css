@@ -11,7 +11,7 @@ html {
 :root{
 	--bg-color: #F7F7F2;
 	--link-color: #5E3931;
-	--black: black;
+	--black: #1a1a1a;
 
 	--highlight-dark: #D5B6AF;
 	--highlight-light: #F3DCA5;
@@ -28,9 +28,21 @@ html {
 	background-color: var(--bg-color);
 }
 
+[data-theme="dark"] {
+	--bg-color: #1a1a16;
+	--link-color: #c9938a;
+	--black: #e8e2d6;
+
+	--highlight-dark: #5a2e2e;
+	--highlight-light: #6b5520;
+}
+
 body{
 	padding: 0px;
 	margin: 0px;
+	color: var(--black);
+	background-color: var(--bg-color);
+	transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 mark{
@@ -107,6 +119,11 @@ ol li + li {
 }
 
 
+/* smooth dark mode transitions */
+.grid-container, .grid-container > div, div.navbar, div.footer, div.landing, div.section, mark {
+	transition: background-color 0.3s ease, color 0.3s ease;
+}
+
 /* grid for the entire website */
 .grid-container {
 	display: grid;
@@ -154,7 +171,7 @@ div.navbar {
 .navbar .icon {
 	display: none;
 	text-decoration: none;
-	color: black;
+	color: var(--black);
 }
 
 /* title/name in the top left */
@@ -172,7 +189,7 @@ div.navbar {
 .links {
 	grid-column: 3;
 	display: flex;
-	align-items: flex-end;
+	align-items: center;
 	justify-content: flex-end;
 
 	font-size: 25px;
@@ -182,8 +199,49 @@ div.navbar {
 .links a{
 	margin: 0px 20px;
 	text-decoration: none;
-	color: black;
+	color: var(--black);
 }
+
+#theme-toggle {
+	background: none;
+	border: none;
+	cursor: pointer;
+	padding: 0 0 0 15px;
+	margin: 0;
+	display: flex;
+	align-items: center;
+}
+
+.toggle-track {
+	position: relative;
+	display: block;
+	width: 42px;
+	height: 24px;
+	background: #c8c8c0;
+	border-radius: 12px;
+	transition: background 0.3s ease;
+}
+
+[data-theme="dark"] .toggle-track {
+	background: var(--link-color);
+}
+
+.toggle-thumb {
+	position: absolute;
+	top: 3px;
+	left: 3px;
+	width: 18px;
+	height: 18px;
+	background: #f7f7f2;
+	border-radius: 50%;
+	transition: transform 0.3s ease, background 0.3s ease;
+}
+
+[data-theme="dark"] .toggle-thumb {
+	transform: translateX(18px);
+	background: #1a1a16;
+}
+
 
 /* hover formatting */
 .links a:hover{
@@ -197,7 +255,7 @@ div.navbar {
 div.footer{
 	width: 100%;
 	background-color: var(--bg-color);
-	color: black;
+	color: var(--black);
 
 	text-align: center;
 
