@@ -118,6 +118,68 @@ ol li + li {
 	margin-top: 20px;
 }
 
+/* teaching cards */
+.teaching-card {
+	width: 100%;
+	border-top: 1px solid var(--black);
+}
+
+.teaching-card:last-of-type {
+	border-bottom: 1px solid var(--black);
+	margin-bottom: 10px;
+}
+
+.teaching-card details {
+	width: 100%;
+}
+
+.teaching-card details summary {
+	display: flex;
+	flex-direction: column;
+	cursor: pointer;
+	padding: 20px 44px 20px 0;
+	position: relative;
+	list-style: none;
+	user-select: none;
+}
+
+.teaching-card details summary::-webkit-details-marker {
+	display: none;
+}
+
+.teaching-card details summary::after {
+	content: "+";
+	position: absolute;
+	right: 4px;
+	top: 50%;
+	transform: translateY(-50%);
+	font-size: 26px;
+	font-weight: 300;
+	font-family: sans-serif;
+	color: var(--black);
+	line-height: 1;
+}
+
+.teaching-card details[open] summary::after {
+	content: "−";
+}
+
+.teaching-card h3 {
+	font-size: clamp(22px, 2.2vw, 30px);
+	margin: 0 0 8px;
+}
+
+.teaching-meta {
+	font-size: clamp(15px, 1.3vw, 17px);
+	margin: 0;
+	line-height: 1.6;
+}
+
+.teaching-body {
+	padding: 20px 0 28px;
+	border-top: 1px solid var(--black);
+}
+
 /* tile grid */
 .tile-grid {
 	display: grid;
