@@ -83,7 +83,7 @@ a{
 	color: var(--link-color);
 	text-decoration: underline;
 	text-decoration-thickness: 1px;
-	text-underline-offset: 3.5px;
+	text-underline-offset: 2.5px;
 }
 
 a.nu{
@@ -95,14 +95,14 @@ a:hover{
 	text-decoration: none;
 	color: var(--link-color);
 	text-decoration-thickness: 1px;
-	text-underline-offset: 3.2px;
+	text-underline-offset: 2.5px;
 }
 
 a.nu:hover{
 	text-decoration: underline;
 	color: var(--link-color);
 	text-decoration-thickness: 1px;
-	text-underline-offset: 3.2px;
+	text-underline-offset: 2.5px;
 }
 
 sup{
