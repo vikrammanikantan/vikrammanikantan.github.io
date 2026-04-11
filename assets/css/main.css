@@ -118,6 +118,40 @@ ol li + li {
 	margin-top: 20px;
 }
 
+/* contact list */
+.contact-list {
+	width: 100%;
+	max-width: 700px;
+	border-top: 0px solid var(--black);
+}
+
+.contact-row {
+	display: grid;
+	grid-template-columns: 160px 1fr;
+	gap: 0 18px;
+	padding: 12px 0;
+	border-bottom: 0px solid var(--black);
+	align-items: baseline;
+}
+
+.contact-label {
+	font-size: clamp(20px, 1.6vw, 22px);
+	text-transform: none;
+	letter-spacing: 0.07em;
+	opacity: 1;
+}
+
+.contact-value {
+	font-size: clamp(20px, 1.6vw, 22px);
+}
+
+@media (max-width: 600px) {
+	.contact-row {
+		grid-template-columns: 1fr;
+		gap: 4px;
+	}
+}
+
 /* teaching cards */
 .teaching-card {
 	width: 100%;
