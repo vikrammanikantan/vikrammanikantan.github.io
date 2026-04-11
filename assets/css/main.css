@@ -118,6 +118,18 @@ ol li + li {
 	margin-top: 20px;
 }
 
+.section figure {
+	width: 100%;
+	margin: 0;
+}
+
+figcaption {
+	font-size: clamp(13px, 1.1vw, 15px);
+	opacity: 0.65;
+	margin-top: 8px;
+	line-height: 1.5;
+}
+
 /* contact list */
 .contact-list {
 	width: 100%;
@@ -563,8 +575,7 @@ div.section{
 
 .crop {
   width: 100%;
-  min-height: 30vw;
-  max-height: 400px;
+  aspect-ratio: 16 / 9;
   overflow: hidden;
   position: relative;
 }
